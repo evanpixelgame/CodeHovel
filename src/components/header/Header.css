@@ -1,7 +1,28 @@
 #header {
+  position: absolute;
+  width: 100vw;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+
+  background: #d9d9d9;
+  mix-blend-mode: multiply;
 }
 
 #siteTitle {
+  position: absolute;
+  width: 177px;
+  height: 58px;
+  left: 15px;
+  top: 21px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #fb8b24;
 }
 
 #navBar {

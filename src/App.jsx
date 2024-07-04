@@ -9,11 +9,9 @@ function App() {
 
   return (
     <>
-      <Main>
-        <Header />
-        <h1>Code Hovel on React/Vite</h1>
-        <Footer />
-      </Main>
+      <Main />
+      <Header />
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,12 @@
 #footer {
+  position: absolute;
+  width: 100vw;
+  height: 94px;
+  left: 0px;
+  top: 700px;
+
+  background: #d9d9d9;
+  mix-blend-mode: multiply;
 }
 
 #socialLinks {

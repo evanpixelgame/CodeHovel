@@ -4,7 +4,11 @@ import NavBar from "./NavBar";
 import SiteTitle from "./SiteTitle";
 
 const Header = () => {
-  return <header id="header">Header</header>;
+  return (
+    <header id="header">
+      <SiteTitle />
+    </header>
+  );
 };
 
 export default Header;

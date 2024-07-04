@@ -1,11 +1,56 @@
 #main {
+  /* HomeFrameDark */
+  width: 100vw;
+  height: 100vh;
+
+  background: #3b3b3b;
+}
+
+#mainText,
+#subText {
+  /* HomeTextGroup */
+
+  position: absolute;
+  width: 512px;
+  height: 255px;
+  left: 288px;
+  top: 123px;
+  font-family: "Roboto";
+  color: #ffffff;
 }
 
 #mainText {
+  position: absolute;
+  width: 512px;
+  height: 141px;
+  left: 288px;
+  top: 123px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 47px;
 }
 
 #subText {
+  position: absolute;
+  width: 408px;
+  height: 96px;
+  left: 288px;
+  top: 282px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 #homeImage {
+  position: absolute;
+  width: 209px;
+  height: 195px;
+  left: 32px;
+  top: 135px;
+
+  border-radius: 90px;
 }

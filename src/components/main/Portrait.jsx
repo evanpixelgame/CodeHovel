@@ -1,11 +1,9 @@
+import avatar from "../../assets/homeAvatar.png";
+
 const Portrait = () => {
   return (
     <div>
-      <img
-        src="../../assets/react.svg"
-        alt="Code Hovel Home Image"
-        id="homeImage"
-      />
+      <img src={avatar} alt="Code Hovel Home Image" id="homeImage" />
     </div>
   );
 };
