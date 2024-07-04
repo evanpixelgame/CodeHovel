@@ -1,5 +1,6 @@
 # Access this github at:
-https://evanpixelgame.github.io/CodeHovel/....TBD
+
+https://evanpixelgame.github.io/CodeHovel.git
 
 # React + Vite
 
