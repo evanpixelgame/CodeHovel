@@ -1,4 +1,4 @@
 const SocialLinks = () => {
-  return <div>SocialLinks</div>;
+  return <div id="socialLinks">SocialLinks</div>;
 };
 export default SocialLinks;

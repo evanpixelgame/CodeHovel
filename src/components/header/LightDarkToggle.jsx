@@ -1,4 +1,4 @@
 const LightDarkToggle = () => {
-  return <div>LightDarkToggle</div>;
+  return <div id="toggle">LightDarkToggle</div>;
 };
 export default LightDarkToggle;
