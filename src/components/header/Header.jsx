@@ -3,8 +3,8 @@ import LightDarkToggle from "./LightDarkToggle";
 import NavBar from "./NavBar";
 import SiteTitle from "./SiteTitle";
 
-export const Header = () => {
-  return <div>Header</div>;
+const Header = () => {
+  return <header id="header">Header</header>;
 };
 
 export default Header;
