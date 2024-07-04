@@ -3,7 +3,12 @@ import Portrait from "./Portrait";
 import HomeText from "./HomeText";
 
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <body id="main">
+      <Portrait />
+      <HomeText />
+    </body>
+  );
 };
 
 export default Main;

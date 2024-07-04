@@ -1,4 +1,4 @@
 const SiteTitle = () => {
-  return <div>SiteTitle</div>;
+  return <h1>Code Hovel</h1>;
 };
 export default SiteTitle;
