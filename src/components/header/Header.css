@@ -19,6 +19,12 @@
   left: 15px;
   top: 21px;
 
+  position: absolute;
+  width: 11%;
+  height: 61.7%;
+  left: 1.875%;
+  top: 4.66%;
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 800;
@@ -38,6 +44,12 @@
   height: 47px;
   left: 216px;
   top: 25px;
+
+  position: absolute;
+  width: 22.9%;
+  height: 50%;
+  left: 27%;
+  top: 26.6%;
 
   background: #f5f5f5;
   border: 1px solid #d3d3d3;
@@ -85,6 +97,12 @@
   height: 48px;
   left: 675px;
   top: 10px;
+
+  position: absolute;
+  width: 13.75%;
+  height: 10.66%;
+  left: 84.375%;
+  top: 30%;
 
   display: flex;
   justify-content: center;
