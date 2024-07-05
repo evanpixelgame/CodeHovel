@@ -1,12 +1,19 @@
 #footer {
   position: absolute;
-  width: 100vw;
-  height: 94px;
-  left: 0px;
-  top: 90%;
+  width: 80%;
+  height: 15%;
+  left: 10%;
+  bottom: 0px;
 
   background: #343434;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  background: #d9d9d9;
+  mix-blend-mode: multiply;
+  */
 }
 
 #socialLinks {

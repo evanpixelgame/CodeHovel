@@ -1,6 +1,6 @@
 const HomeText = () => {
   return (
-    <div>
+    <div id="home-text-group">
       <h1 id="mainText">
         Full-stack web developer. Ready to meet your online needs.
       </h1>

@@ -4,10 +4,12 @@ import HomeText from "./HomeText";
 
 const Main = () => {
   return (
-    <body id="main">
-      <Portrait />
-      <HomeText />
-    </body>
+    <div id="main">
+      <div id="home-content">
+        <Portrait />
+        <HomeText />
+      </div>
+    </div>
   );
 };
 
