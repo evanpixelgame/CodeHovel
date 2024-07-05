@@ -7,6 +7,8 @@ const Header = () => {
   return (
     <header id="header">
       <SiteTitle />
+      <NavBar />
+      <LightDarkToggle />
     </header>
   );
 };
