@@ -3,9 +3,10 @@
   width: 100vw;
   height: 94px;
   left: 0px;
-  top: 700px;
+  top: 90%;
 
   background: #343434;
+  overflow-x: hidden;
 }
 
 #socialLinks {

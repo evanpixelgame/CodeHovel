@@ -6,6 +6,7 @@
   top: 0px;
 
   background: #343434;
+  overflow-x: hidden;
   /*
   background: #d9d9d9;
   mix-blend-mode: multiply;
@@ -48,7 +49,7 @@
   position: absolute;
   width: 22.9%;
   height: 50%;
-  left: 27%;
+  left: 32%;
   top: 26.6%;
 
   background: #f5f5f5;
@@ -118,93 +119,3 @@
   width: 24px;
   height: 24px;
 }
-
-.toggle {
-}
-/* Toggle_light
-
-Keywords: on, off, switch
-*/
-
-position: absolute;
-width: 48px;
-height: 48px;
-left: 754px;
-top: 10px;
-
-background: #3b3b3b;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-/* Icon */
-
-position: absolute;
-left: 95.83%;
-right: -87.5%;
-top: 20.83%;
-bottom: 20.83%;
-
-border: 4px solid #9893da;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-/* Toggle_dark
-
-Keywords: on, off, switch
-*/
-
-position: absolute;
-width: 48px;
-height: 48px;
-left: 706px;
-top: 10px;
-
-background: #3b3b3b;
-
-/* Icon */
-
-position: absolute;
-left: 4.17%;
-right: 4.17%;
-top: 20.83%;
-bottom: 20.83%;
-
-border: 4px solid #9893da;
-
-/* dark_mode */
-
-position: absolute;
-width: 24px;
-height: 24px;
-left: 761px;
-top: 20px;
-
-background: #3b3b3b;
-
-/* icon */
-
-position: absolute;
-left: 12.5%;
-right: 12.5%;
-top: 12.5%;
-bottom: 12.5%;
-
-background: #9893da;
-
-/* light_mode */
-
-position: absolute;
-width: 24px;
-height: 24px;
-left: 675px;
-top: 20px;
-
-background: #3b3b3b;
-
-/* icon */
-
-position: absolute;
-left: 4.17%;
-right: 4.17%;
-top: 4.17%;
-bottom: 4.17%;
-
-background: #9893da;

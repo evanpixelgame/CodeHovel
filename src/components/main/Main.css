@@ -4,6 +4,7 @@
   height: 100vh;
 
   background: #3b3b3b;
+  overflow-x: hidden;
 }
 
 #mainText,
