@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext } from "react";
 // Create the context
 const ThemeContext = createContext();
 
-// Define the themes
+// Define the themes, finish filling out then use this for the style changes if using inline
 const themes = {
   light: {
     background: "#ffffff",
@@ -18,7 +18,7 @@ const themes = {
   fullBorder: {},
 };
 
-// Create a provider component
+// Create a provider component / set default
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("dark");
 
