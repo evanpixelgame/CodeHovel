@@ -17,7 +17,8 @@
 }
 
 .light #footer,
-.full-bars-light #footer {
+.full-bars-light #footer,
+.full-border-light #footer {
   background: #b4b4b4;
 }
 

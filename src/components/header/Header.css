@@ -18,7 +18,8 @@
 
 .light #header,
 .no-bars-light #header,
-.full-bars-light #header {
+.full-bars-light #header,
+.full-border-light #header {
   background: #b4b4b4;
 }
 

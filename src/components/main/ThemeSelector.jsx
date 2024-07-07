@@ -8,8 +8,8 @@ const themeOptions = [
   "no-bars-light",
   "full-bars-dark",
   "full-bars-light",
-  "full-border-(D)",
-  "full-border-(L)",
+  "full-border-dark",
+  "full-border-light",
 ];
 
 function ThemeSelector() {
