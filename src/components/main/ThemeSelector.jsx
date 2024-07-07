@@ -44,7 +44,19 @@ function ThemeSelector() {
           <option value="full-border-dark">Full Border Dark</option>
           <option value="full-border-light">Full Border Light</option>
         </select>
-        <button onClick={handleNextTheme}>Next Theme</button>
+        <button id="themeButton" onClick={handleNextTheme}>
+          Next Theme
+          <br />
+          <span
+            style={{
+              fontSize: "10px",
+              position: "absolute",
+              transform: "translateX(-50%)",
+            }}
+          >
+            Click Me!
+          </span>
+        </button>
       </div>
     </>
   );
