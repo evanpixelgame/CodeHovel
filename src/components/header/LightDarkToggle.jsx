@@ -1,22 +1,35 @@
+import React, { useState } from "react";
 import darkIcon from "../../assets/darkIcon.png";
 import lightIcon from "../../assets/lightIcon.png";
 import toggleOnDark from "../../assets/toggleDarkIcon.png";
 import toggleOnLight from "../../assets/toggleLightIcon.png";
+import { useThemeContext } from "../../ThemeContext";
 
 const LightDarkToggle = () => {
-  return (
-    <div id="toggleDiv">
-      <img src={lightIcon} alt="lightIcon" id="lightIcon" className="icon" />
-      <img
-        src={toggleOnDark}
-        alt="toggleOnDark"
-        id="toggleDark"
-        className="toggle"
-      />
+  const [currentTheme, setCurrentTheme] = useState("dark");
 
-      {/*<img src={toggleOnLight} alt="toggleOnLight" id="toggleLight" className="toggle" />*/}
-      <img src={darkIcon} alt="darkIcon" id="darkIcon" className="icon" />
+  const handleNextTheme = () => {
+    setCurrentTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    selectTheme(prevTheme === "light" ? "dark" : "light");
+  };
+
+  return (
+    <div id="toggleDiv" onClick={handleNextTheme}>
+      {currentTheme === "light" ? (
+        <>
+          <img src={lightIcon} alt="lightIcon" className="icon" />
+          <img src={toggleOnDark} alt="toggleOnLight" className="toggle" />
+          <img src={darkIcon} alt="darkIcon" className="icon" />
+        </>
+      ) : (
+        <>
+          <img src={lightIcon} alt="lightIcon" className="icon" />
+          <img src={toggleOnLight} alt="toggleOnDark" className="toggle" />
+          <img src={darkIcon} alt="darkIcon" className="icon" />
+        </>
+      )}
     </div>
   );
 };
+
 export default LightDarkToggle;
