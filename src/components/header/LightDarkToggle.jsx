@@ -19,15 +19,11 @@ const LightDarkToggle = () => {
     <div id="toggleDiv" onClick={handleNextTheme}>
       {currentTheme === "light" ? (
         <>
-          <img src={lightIcon} alt="lightIcon" className="icon" />
           <img src={toggleOnDark} alt="toggleOnLight" className="toggle" />
-          <img src={darkIcon} alt="darkIcon" className="icon" />
         </>
       ) : (
         <>
-          <img src={lightIcon} alt="lightIcon" className="icon" />
           <img src={toggleOnLight} alt="toggleOnDark" className="toggle" />
-          <img src={darkIcon} alt="darkIcon" className="icon" />
         </>
       )}
     </div>
