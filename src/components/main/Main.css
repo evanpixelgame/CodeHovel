@@ -68,4 +68,8 @@
   max-width: 140px;
   margin: 10px;
   padding: 10px;
+  background-color: #8b85d5;
+  opacity: 0.6;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
