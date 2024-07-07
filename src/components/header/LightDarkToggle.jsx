@@ -13,9 +13,7 @@ const LightDarkToggle = () => {
   // const [currentTheme, setCurrentTheme] = useState("dark");
 
   const handleNextTheme = () => {
-    // setCurrentTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     selectTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    // selectTheme(prevTheme === "light" ? "dark" : "light");
   };
 
   return (

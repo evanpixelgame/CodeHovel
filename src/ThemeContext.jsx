@@ -13,10 +13,43 @@ const themes = {
     background: "#000000",
     color: "#ffffff",
   },
-  noBars: {},
-  fullBars: {},
-  fullBorder: {},
+  "no-bars-dark": {
+    background: "#ED6A5A",
+    color: "#ED6A5A",
+  },
+  "no-bars-light": {
+    background: "#ED6A5A",
+    color: "#ED6A5A",
+  },
+  "full-bars-dark": {
+    background: "#ED6A5A",
+    color: "#ED6A5A",
+  },
+  "full-bars-light": {
+    background: "#ED6A5A",
+    color: "#ED6A5A",
+  },
+  "full-border-dark": {
+    background: "#ED6A5A",
+    color: "#ED6A5A",
+  },
+  "full-border-light": {
+    background: "#ED6A5A",
+    color: "#ED6A5A",
+  },
 };
+
+//reference of select Options
+const themeOptions = [
+  "light",
+  "dark",
+  "no-bars-dark",
+  "no-bars-light",
+  "full-bars-dark",
+  "full-bars-light",
+  "full-border-dark",
+  "full-border-light",
+];
 
 // Create a provider component / set default
 export function ThemeProvider({ children }) {

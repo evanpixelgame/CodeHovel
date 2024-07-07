@@ -1,8 +1,13 @@
+import { useThemeContext } from "../../ThemeContext";
+
 const SideBorders = () => {
+  const { theme, themes } = useThemeContext();
+  const currentTheme = themes[theme];
+
   return (
     <>
-      <div id="border-left"></div>
-      <div id="border-right"></div>
+      <div className="side-border" id="border-left"></div>
+      <div className="side-border" id="border-right"></div>
     </>
   );
 };
