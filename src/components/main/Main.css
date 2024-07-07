@@ -11,17 +11,10 @@
   align-items: center;
 }
 
-.app.light#main {
-  /* HomeFrameDark */
-  width: 100vw;
-  height: 100vh;
-
+.light #main,
+.no-bars-light #main,
+.full-bars-light #main {
   background: #d3d3d3;
-  overflow-x: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #home-content {
@@ -52,6 +45,12 @@
   font-weight: 800;
   font-family: "Roboto";
   color: #ffffff;
+}
+
+.light #home-text-group,
+.no-bars-light #home-text-group,
+.full-bars-light #home-text-group {
+  color: #3b3b3b;
 }
 
 #mainText {

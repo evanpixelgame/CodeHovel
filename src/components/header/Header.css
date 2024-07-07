@@ -16,6 +16,23 @@
   */
 }
 
+.light #header,
+.no-bars-light #header,
+.full-bars-light #header {
+  background: #b4b4b4;
+}
+
+.no-bars-dark #header,
+.no-bars-light #header {
+  background: none;
+}
+
+.full-bars-dark #header,
+.full-bars-light #header {
+  width: 100%;
+  left: 0%;
+}
+
 #siteTitle {
   font-family: "Roboto";
   font-style: normal;
@@ -26,6 +43,11 @@
   padding-bottom: 3%;
   padding-left: 1%;
   color: #ce721d;
+}
+
+.full-bars-dark #siteTitle,
+.full-bars-light #siteTitle {
+  padding-left: 10%;
 }
 
 #navBar {
@@ -88,6 +110,11 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+
+.full-bars-dark #toggleDiv,
+.full-bars-light #toggleDiv {
+  padding-right: 10%;
 }
 
 .icon {

@@ -16,6 +16,22 @@
   */
 }
 
+.light #footer,
+.full-bars-light #footer {
+  background: #b4b4b4;
+}
+
+.no-bars-dark #footer,
+.no-bars-light #footer {
+  background: none;
+}
+
+.full-bars-dark #footer,
+.full-bars-light #footer {
+  width: 100%;
+  left: 0%;
+}
+
 #socialLinks {
   display: flex;
   justify-content: center;
