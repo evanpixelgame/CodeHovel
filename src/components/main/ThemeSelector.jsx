@@ -1,7 +1,28 @@
+import { useState } from "react";
 import { useThemeContext } from "../../ThemeContext";
+
+const themeOptions = [
+  "light",
+  "dark",
+  "no-bars-dark",
+  "no-bars-light",
+  "full-bars-dark",
+  "full-bars-light",
+  "full-border-dark",
+  "full-border-light",
+];
 
 function ThemeSelector() {
   const { theme, selectTheme } = useThemeContext();
+
+  //should eventually switch to using the Themes object in ThemeContext.js but this is for quicksies
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNextTheme = () => {
+    const nextIndex = (currentIndex + 1) % themeOptions.length;
+    setCurrentIndex(nextIndex);
+    selectTheme(themeOptions[nextIndex]);
+  };
 
   return (
     <>
@@ -23,6 +44,7 @@ function ThemeSelector() {
           <option value="full-border-dark">Full Border Dark</option>
           <option value="full-border-light">Full Border Light</option>
         </select>
+        <button onClick={handleNextTheme}>Next Theme</button>
       </div>
     </>
   );
