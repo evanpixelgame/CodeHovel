@@ -105,3 +105,39 @@ button#themeButton {
   opacity: 0.9;
   font-size: larger;
 }
+
+#border-left,
+#border-right {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+
+  background: #343434;
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /*
+  background: #d9d9d9;
+  mix-blend-mode: multiply;
+  */
+}
+
+#border-left {
+  left: 0;
+}
+
+#border-right {
+  right: 0;
+}
+
+.full-border-dark #border-left,
+.full-border-dark #border-right {
+  display: block;
+}
+
+.full-border-light #border-left,
+.full-border-light #border-right {
+  display: block;
+  background: #b4b4b4;
+}
