@@ -5,6 +5,8 @@ import toggleOnDark from "../../assets/toggleDarkIcon.png";
 import toggleOnLight from "../../assets/toggleLightIcon.png";
 import { useThemeContext } from "../../ThemeContext";
 
+//add theme functioning
+
 const LightDarkToggle = () => {
   const [currentTheme, setCurrentTheme] = useState("dark");
 
