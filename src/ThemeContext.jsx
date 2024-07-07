@@ -13,6 +13,9 @@ const themes = {
     background: "#000000",
     color: "#ffffff",
   },
+  noBars: {},
+  fullBars: {},
+  fullBorder: {},
 };
 
 // Create a provider component
