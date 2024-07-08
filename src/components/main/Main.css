@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
 
-  background: #3b3b3b;
+  background: var(--primary-bg-color);
   overflow-x: hidden;
 
   display: flex;
@@ -46,8 +46,8 @@
   text-align: left;
   font-style: normal;
   font-weight: 800;
-  font-family: "Roboto";
-  color: #ffffff;
+  font-family: var(--primary-font-family);
+  color: var(--secondary-text-color);
 }
 
 .light #home-text-group,
@@ -58,12 +58,12 @@
 }
 
 #mainText {
-  font-size: 40px;
+  font-size: var(--main-text-font-size);
   line-height: 47px;
 }
 
 #subText {
-  font-size: 16px;
+  font-size: var(--sub-text-font-size);
   line-height: 19px;
 }
 
@@ -72,7 +72,7 @@
   max-width: 130px;
   margin: 10px;
   padding: 10px;
-  background-color: #8b85d5;
+  background-color: var(--theme-selector-bg-color);
   opacity: 0.6;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -109,12 +109,12 @@ button#themeButton {
 #border-left,
 #border-right {
   position: absolute;
-  width: 10%;
+  width: calc(50% - var(--header-width) / 2);
   height: 100%;
 
-  background: #343434;
+  background: var(--side-border-bg-color);
   overflow: hidden;
-  display: none;
+  display: var(--side-border-display);
   justify-content: center;
   align-items: center;
   /*

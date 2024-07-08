@@ -1,7 +1,32 @@
 #root {
-  /*max-width: 1280px;*/
   margin: 0 auto;
   text-align: center;
+}
+
+.dark {
+  /* dark theme reference from index.css */
+  --primary-bg-color: #3b3b3b;
+  --secondary-bg-color: #343434;
+  --primary-accent-color: #9995db;
+  --secondary-accent-color: #ed6a5a;
+  --tertiary-accent-color: #fb8b24;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #b4b4b4;
+
+  --site-title-color: #ce721d;
+  --site-title-font-family: "Roboto";
+  --primary-font-family: "Roboto";
+
+  --nav-bg-color: #f5f5f5;
+  --nav-link-color: #3b3b3b;
+  --nav-link-font-family: "Inter";
+
+  --header-width: 80%;
+  --header-height: 15%;
+  --header-start-left: calc(var(--header-width) / 2);
+
+  --toggle-placement-top: 5%;
+  --toggle-placement-right: 5%;
 }
 
 .logo {

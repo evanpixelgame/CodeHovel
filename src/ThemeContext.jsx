@@ -39,18 +39,6 @@ const themes = {
   },
 };
 
-//reference of select Options
-const themeOptions = [
-  "light",
-  "dark",
-  "no-bars-dark",
-  "no-bars-light",
-  "full-bars-dark",
-  "full-bars-light",
-  "full-border-dark",
-  "full-border-light",
-];
-
 // Create a provider component / set default
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("dark");

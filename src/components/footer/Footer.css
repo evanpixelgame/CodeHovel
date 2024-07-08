@@ -1,11 +1,11 @@
 #footer {
   position: absolute;
-  width: 80%;
-  height: 15%;
-  left: 10%;
+  width: var(--footer-width);
+  height: var(--footer-height);
+  left: calc(50% - var(--footer-width) / 2);
   bottom: 0px;
 
-  background: #343434;
+  background: var(--footer-bg-color);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -37,5 +37,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20%;
+  gap: var(--social-links-gap);
 }
