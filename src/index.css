@@ -52,6 +52,88 @@
   --social-links-gap: 20%;
 }
 
+.lightTheme {
+  /* Default Theme (dark) */
+  --primary-bg-color: #3b3b3b;
+  --secondary-bg-color: #343434;
+  --primary-accent-color: #9995db;
+  --secondary-accent-color: #ed6a5a;
+  --tertiary-accent-color: #fb8b24;
+
+  --primary-font-family: "Roboto";
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #b4b4b4;
+  --main-text-font-size: 40px;
+  --sub-text-font-size: 16px;
+
+  --site-title-font-family: "Roboto";
+  --site-title-color: #ce721d;
+  --site-title-font-size: 24px;
+
+  --nav-bg-color: #f5f5f5;
+  --nav-link-color: #3b3b3b;
+  --nav-link-font-family: "Inter";
+
+  --header-width: 80%;
+  --header-height: 15%;
+  --header-bg-color: #343434;
+
+  --footer-width: 80%;
+  --footer-height: 15%;
+  --footer-bg-color: #343434;
+
+  --toggle-placement-top: 5%;
+  --toggle-placement-right: 5%;
+
+  --theme-selector-bg-color: #8b85d5;
+
+  --side-border-bg-color: #343434;
+  --side-border-display: none;
+
+  --social-links-gap: 20%;
+}
+
+.backupDarkTheme {
+  /* Default Theme (dark) */
+  --primary-bg-color: #3b3b3b;
+  --secondary-bg-color: #343434;
+  --primary-accent-color: #9995db;
+  --secondary-accent-color: #ed6a5a;
+  --tertiary-accent-color: #fb8b24;
+
+  --primary-font-family: "Roboto";
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #b4b4b4;
+  --main-text-font-size: 40px;
+  --sub-text-font-size: 16px;
+
+  --site-title-font-family: "Roboto";
+  --site-title-color: #ce721d;
+  --site-title-font-size: 24px;
+
+  --nav-bg-color: #f5f5f5;
+  --nav-link-color: #3b3b3b;
+  --nav-link-font-family: "Inter";
+
+  --header-width: 80%;
+  --header-height: 15%;
+  --header-bg-color: #343434;
+
+  --footer-width: 80%;
+  --footer-height: 15%;
+  --footer-bg-color: #343434;
+
+  --toggle-placement-top: 5%;
+  --toggle-placement-right: 5%;
+
+  --theme-selector-bg-color: #8b85d5;
+
+  --side-border-bg-color: #343434;
+  --side-border-display: none;
+
+  --social-links-gap: 20%;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
