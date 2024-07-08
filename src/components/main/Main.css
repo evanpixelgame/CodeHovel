@@ -13,13 +13,6 @@
   align-items: center;
 }
 
-.light #main,
-.no-bars-light #main,
-.full-bars-light #main,
-.full-border-light #main {
-  background: #d3d3d3;
-}
-
 #home-content {
   display: flex;
   padding-left: 20%;
@@ -48,13 +41,6 @@
   font-weight: 800;
   font-family: var(--primary-font-family);
   color: var(--secondary-text-color);
-}
-
-.light #home-text-group,
-.no-bars-light #home-text-group,
-.full-bars-light #home-text-group,
-.full-border-light #home-text-group {
-  color: #3b3b3b;
 }
 
 #mainText {

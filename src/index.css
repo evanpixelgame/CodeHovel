@@ -20,14 +20,15 @@
   --tertiary-accent-color: #fb8b24;
 
   --primary-font-family: "Roboto";
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #b4b4b4;
+  --primary-text-color: #b4b4b4;
+  --secondary-text-color: #ffffff;
   --main-text-font-size: 40px;
   --sub-text-font-size: 16px;
 
   --site-title-font-family: "Roboto";
   --site-title-color: #ce721d;
   --site-title-font-size: 24px;
+  --site-title-pad-left: 1%;
 
   --nav-bg-color: #f5f5f5;
   --nav-link-color: #3b3b3b;
@@ -52,8 +53,66 @@
   --social-links-gap: 20%;
 }
 
-.lightTheme {
-  /* Default Theme (dark) */
+.light,
+.no-bars-light,
+.full-bars-light,
+.full-border-light {
+  /* light theme */
+  --primary-bg-color: #d3d3d3;
+  --secondary-bg-color: #b4b4b4;
+  --primary-accent-color: #9995db;
+  --secondary-accent-color: #ed6a5a;
+  --tertiary-accent-color: #fb8b24;
+
+  --primary-font-family: "Roboto";
+  --primary-text-color: #3b3b3b;
+  --secondary-text-color: #ffffff;
+  --main-text-font-size: 40px;
+  --sub-text-font-size: 16px;
+
+  --site-title-font-family: "Roboto";
+  --site-title-color: #ce721d;
+  --site-title-font-size: 24px;
+
+  --nav-bg-color: #f5f5f5;
+  --nav-link-color: #3b3b3b;
+  --nav-link-font-family: "Inter";
+
+  --header-width: 80%;
+  --header-height: 15%;
+  --header-bg-color: #b4b4b4;
+
+  --footer-width: 80%;
+  --footer-height: 15%;
+  --footer-bg-color: #b4b4b4;
+
+  --toggle-placement-top: 5%;
+  --toggle-placement-right: 5%;
+
+  --theme-selector-bg-color: #8b85d5;
+
+  --side-border-bg-color: #343434;
+  --side-border-display: none;
+
+  --social-links-gap: 20%;
+}
+
+.no-bars-light,
+.no-bars-dark {
+  --footer-bg-color: none;
+  --header-bg-color: none;
+}
+
+.full-bars-light,
+.full-bars-dark {
+  --header-width: 100%;
+  --footer-width: 100%;
+  --site-title-pad-left: 10%;
+  --toggle-placement-right: 10%;
+}
+
+.test-theme-1 {
+  /* Default Theme (dark) backup */
   --primary-bg-color: #3b3b3b;
   --secondary-bg-color: #343434;
   --primary-accent-color: #9995db;
@@ -61,14 +120,15 @@
   --tertiary-accent-color: #fb8b24;
 
   --primary-font-family: "Roboto";
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #b4b4b4;
+  --primary-text-color: #b4b4b4;
+  --secondary-text-color: #ffffff;
   --main-text-font-size: 40px;
   --sub-text-font-size: 16px;
 
   --site-title-font-family: "Roboto";
   --site-title-color: #ce721d;
   --site-title-font-size: 24px;
+  --site-title-pad-left: 1%;
 
   --nav-bg-color: #f5f5f5;
   --nav-link-color: #3b3b3b;
@@ -93,8 +153,8 @@
   --social-links-gap: 20%;
 }
 
-.backupDarkTheme {
-  /* Default Theme (dark) */
+.test-theme-2 {
+  /* Default Theme (dark) backup */
   --primary-bg-color: #3b3b3b;
   --secondary-bg-color: #343434;
   --primary-accent-color: #9995db;
@@ -102,14 +162,57 @@
   --tertiary-accent-color: #fb8b24;
 
   --primary-font-family: "Roboto";
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #b4b4b4;
+  --primary-text-color: #b4b4b4;
+  --secondary-text-color: #ffffff;
   --main-text-font-size: 40px;
   --sub-text-font-size: 16px;
 
   --site-title-font-family: "Roboto";
   --site-title-color: #ce721d;
   --site-title-font-size: 24px;
+  --site-title-pad-left: 1%;
+
+  --nav-bg-color: #f5f5f5;
+  --nav-link-color: #3b3b3b;
+  --nav-link-font-family: "Inter";
+
+  --header-width: 80%;
+  --header-height: 15%;
+  --header-bg-color: #343434;
+
+  --footer-width: 80%;
+  --footer-height: 15%;
+  --footer-bg-color: #343434;
+
+  --toggle-placement-top: 5%;
+  --toggle-placement-right: 5%;
+
+  --theme-selector-bg-color: #8b85d5;
+
+  --side-border-bg-color: #343434;
+  --side-border-display: none;
+
+  --social-links-gap: 20%;
+}
+
+.backup-dark {
+  /* Default Theme (dark) backup */
+  --primary-bg-color: #3b3b3b;
+  --secondary-bg-color: #343434;
+  --primary-accent-color: #9995db;
+  --secondary-accent-color: #ed6a5a;
+  --tertiary-accent-color: #fb8b24;
+
+  --primary-font-family: "Roboto";
+  --primary-text-color: #b4b4b4;
+  --secondary-text-color: #ffffff;
+  --main-text-font-size: 40px;
+  --sub-text-font-size: 16px;
+
+  --site-title-font-family: "Roboto";
+  --site-title-color: #ce721d;
+  --site-title-font-size: 24px;
+  --site-title-pad-left: 1%;
 
   --nav-bg-color: #f5f5f5;
   --nav-link-color: #3b3b3b;
