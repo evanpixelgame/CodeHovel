@@ -1,3 +1,4 @@
+import ThemeCustomizer from "./ThemeCustomizer";
 import ThemeSelector from "./ThemeSelector";
 
 const HomeText = () => {
