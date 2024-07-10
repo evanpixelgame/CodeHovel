@@ -1,5 +1,5 @@
 #header {
-  position: absolute;
+  position: fixed;
   width: var(--header-width);
   height: var(--header-height);
   left: calc(50% - var(--header-width) / 2);
