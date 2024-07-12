@@ -1,24 +1,21 @@
+// src/components/theme-customizer/ThemeCustomizer.js
 import React, { useState } from "react";
-import useThemeProperties from "./utils/useThemeProperties";
-import { HeaderControls, FooterControls } from "./controls";
-import PresetSelector from "./subcomponents/PresetSelector";
 import "./component.css";
+import { HeaderControls, FooterControls } from "./controls";
+import useThemeProperties from "./utils/useThemeProperties";
+import handleInputChange from "./utils/handleInputChange";
+import PresetSelector from "./subcomponents/PresetSelector";
+import InfoButton from "./subcomponents/InfoButton";
+import HideComponentButton from "./subcomponents/HideComponentButton";
+import ComponentTitle from "./subcomponents/ComponentTitle";
+import Instructions from "./subcomponents/Instructions";
+import LogButtons from "./subcomponents/LogButtons";
 
 const ThemeCustomizer = () => {
   const [themeProperties, setThemeProperties] = useThemeProperties();
+  const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
+
   const [selectedSection, setSelectedSection] = useState("header");
-
-  const handleInputChange = (property, value) => {
-    let formattedValue = typeof value === "number" ? `${value}px` : value;
-    if (property === "primaryFontFamily" && !value.startsWith('"')) {
-      formattedValue = `"${value}`;
-    }
-
-    setThemeProperties((prevProps) => ({
-      ...prevProps,
-      [property]: formattedValue,
-    }));
-  };
 
   const renderControls = () => {
     switch (selectedSection) {
@@ -26,14 +23,14 @@ const ThemeCustomizer = () => {
         return (
           <HeaderControls
             themeProperties={themeProperties}
-            handleInputChange={handleInputChange}
+            handleInputChange={handleInputChangeWithSetter}
           />
         );
       case "footer":
         return (
           <FooterControls
             themeProperties={themeProperties}
-            handleInputChange={handleInputChange}
+            handleInputChange={handleInputChangeWithSetter}
           />
         );
       case "presetThemes":
@@ -45,15 +42,8 @@ const ThemeCustomizer = () => {
 
   return (
     <div className="theme-customizer">
-      <p>
-        <strong>Theme customizer:</strong>
-        <br />
-        Select part to customize from dropdown
-        <br />
-        Click print css to log the adjustments
-        <br />
-        Or select Preset Themes to use existing
-      </p>
+      <InfoButton />
+      <ComponentTitle />
       <select
         value={selectedSection}
         onChange={(e) => setSelectedSection(e.target.value)}
@@ -68,9 +58,7 @@ const ThemeCustomizer = () => {
 
       {renderControls()}
 
-      <button type="button" className="themeButton">
-        Print CSS
-      </button>
+      <LogButtons />
     </div>
   );
 };
