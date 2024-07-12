@@ -1,0 +1,6 @@
+-add button functionality
+-maybe add separate button next to it, for print css for part or print css for all changed
+-separate the instructions
+-make it so customizer pops up when icon clicked
+-maybe maybe it so customizer takes place of text so it doesnt add extra elements
+-add a styled ? and a styled X to add 'more info' and 'exit customizer' options
