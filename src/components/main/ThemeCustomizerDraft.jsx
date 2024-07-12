@@ -59,9 +59,15 @@ const ThemeCustomizer = () => {
   }, [themeProperties]);
 
   const handleInputChange = (property, value) => {
+    // Append 'px' to the value if it's a number (assuming it's always a number in your case)
+    let formattedValue = typeof value === "number" ? `${value}px` : value;
+    if (property === "primaryFontFamily" && !value.startsWith('"')) {
+      formattedValue = `"${value}`; // Add quotes around the value
+    }
+
     setThemeProperties((prevProps) => ({
       ...prevProps,
-      [property]: value,
+      [property]: formattedValue,
     }));
   };
 
@@ -76,43 +82,42 @@ const ThemeCustomizer = () => {
         />
       </div>
       <div>
-        <label>Secondary Background Color:</label>
+        <label>Header Color:</label>
         <input
           type="color"
-          value={themeProperties.secondaryBgColor}
+          value={themeProperties.headerBgColor}
+          onChange={(e) => handleInputChange("headerBgColor", e.target.value)}
+        />
+      </div>
+
+      <div>
+        <label>Footer Color:</label>
+        <input
+          type="color"
+          value={themeProperties.footerBgColor}
+          onChange={(e) => handleInputChange("footerBgColor", e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Primary Font Family:</label>
+        <input
+          type="text"
+          value={themeProperties.primaryFontFamily}
           onChange={(e) =>
-            handleInputChange("secondaryBgColor", e.target.value)
+            handleInputChange("primaryFontFamily", e.target.value)
           }
         />
       </div>
       <div>
-        <label>Primary Accent Color:</label>
+        <label>Site Title Font Size:</label>
         <input
-          type="color"
-          value={themeProperties.primaryAccentColor}
+          type="number"
+          value={themeProperties.siteTitleFontSize}
           onChange={(e) =>
-            handleInputChange("primaryAccentColor", e.target.value)
+            handleInputChange("siteTitleFontSize", e.target.value)
           }
-        />
-      </div>
-      <div>
-        <label>Secondary Accent Color:</label>
-        <input
-          type="color"
-          value={themeProperties.secondaryAccentColor}
-          onChange={(e) =>
-            handleInputChange("secondaryAccentColor", e.target.value)
-          }
-        />
-      </div>
-      <div>
-        <label>Tertiary Accent Color:</label>
-        <input
-          type="color"
-          value={themeProperties.tertiaryAccentColor}
-          onChange={(e) =>
-            handleInputChange("tertiaryAccentColor", e.target.value)
-          }
+          min="10"
+          max="50"
         />
       </div>
       {/* Add more inputs for other properties */}

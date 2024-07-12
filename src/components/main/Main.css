@@ -15,7 +15,8 @@
 
 #home-content {
   display: flex;
-  padding-left: 20%;
+  padding-left: 10%;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -35,7 +36,7 @@
   /* HomeTextGroup */
 
   position: relative;
-  width: 50%;
+  width: 30%;
   text-align: left;
   font-style: normal;
   font-weight: 800;
@@ -53,11 +54,24 @@
   line-height: 19px;
 }
 
-#theme-selector {
+.theme-selector {
   border: 3px solid #ddd;
   max-width: 130px;
   margin: 10px;
   padding: 10px;
+  background-color: var(--theme-selector-bg-color);
+  opacity: 0.6;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.theme-customizer {
+  border: 3px solid #ddd;
+  max-width: 28%;
+  margin: 10px;
+  padding: 20px;
   background-color: var(--theme-selector-bg-color);
   opacity: 0.6;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
@@ -74,7 +88,7 @@ select {
   margin-left: 6px;
 }
 
-button#themeButton {
+.themeButton {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   border: 1px solid #3b3b3b;
   padding-bottom: 4px;

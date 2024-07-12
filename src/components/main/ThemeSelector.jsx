@@ -26,13 +26,7 @@ function ThemeSelector() {
 
   return (
     <>
-      <div
-        id="theme-selector"
-        style={{
-          background: theme.background,
-          color: theme.color,
-        }}
-      >
+      <div className="theme-selector">
         <p id="theme-text">
           The current theme is: <br />
           <span className="theme-name">{theme}</span>
@@ -48,7 +42,7 @@ function ThemeSelector() {
             <option value="full-border-dark">Full Border D</option>
             <option value="full-border-light">Full Border L</option>
           </select>
-          <button id="themeButton" onClick={handleNextTheme}>
+          <button className="themeButton" onClick={handleNextTheme}>
             <span
               style={{
                 fontSize: "10px",
