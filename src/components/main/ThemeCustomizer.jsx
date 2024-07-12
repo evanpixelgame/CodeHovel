@@ -146,7 +146,11 @@ const ThemeCustomizer = () => {
           </>
         );
       case "presetThemes":
-        return <ThemeSelector />;
+        return (
+          <div id="theme-selector-option">
+            <ThemeSelector />
+          </div>
+        );
 
       default:
         return null;

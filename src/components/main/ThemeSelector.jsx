@@ -27,10 +27,12 @@ function ThemeSelector() {
   return (
     <>
       <div className="theme-selector">
-        <p id="theme-text">
-          The current theme is: <br />
-          <span className="theme-name">{theme}</span>
+        {/*
+          <p id="theme-text">
+            The current theme is: <br />
+            <span className="theme-name">{theme}</span>
         </p>
+        */}
         <div id="buttonandselect">
           <select value={theme} onChange={(e) => selectTheme(e.target.value)}>
             <option value="light">Light</option>
