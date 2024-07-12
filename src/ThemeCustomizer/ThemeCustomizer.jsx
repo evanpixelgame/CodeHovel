@@ -32,17 +32,19 @@ const ThemeCustomizer = () => {
       />
       <ComponentTitle />
       {showInstructions && <Instructions />}
-      <select
-        value={selectedSection}
-        onChange={(e) => setSelectedSection(e.target.value)}
-      >
-        <option value="header">Header</option>
-        <option value="main">Main</option>
-        <option value="footer">Footer</option>
-        <option value="siteTitle">Site Title</option>
-        <option value="themeCustomizer">Theme Customizer</option>
-        <option value="presetThemes">Preset Themes</option>
-      </select>
+      <div id="selection-container">
+        <select
+          value={selectedSection}
+          onChange={(e) => setSelectedSection(e.target.value)}
+        >
+          <option value="header">Header</option>
+          <option value="main">Main</option>
+          <option value="footer">Footer</option>
+          <option value="siteTitle">Site Title</option>
+          <option value="themeCustomizer">Theme Customizer</option>
+          <option value="presetThemes">Preset Themes</option>
+        </select>
+      </div>
       {renderControls(selectedSection, setSelectedSection)}
       {/* Ensure proper usage */}
       <LogButtons />

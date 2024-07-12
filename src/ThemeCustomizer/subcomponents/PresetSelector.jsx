@@ -15,7 +15,6 @@ const themeOptions = [
 function PresetSelector() {
   const { theme, selectTheme } = useThemeContext();
 
-  //should eventually switch to using the Themes object in ThemeContext.js but this is for quicksies
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNextTheme = () => {
@@ -27,37 +26,29 @@ function PresetSelector() {
   return (
     <>
       <div className="theme-selector">
-        {/*
-          <p id="theme-text">
-            The current theme is: <br />
-            <span className="theme-name">{theme}</span>
-        </p>
-        */}
-        <div id="buttonandselect">
-          <select value={theme} onChange={(e) => selectTheme(e.target.value)}>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-            <option value="no-bars-dark">No Bars Dark</option>
-            <option value="no-bars-light">No Bars Light</option>
-            <option value="full-bars-dark">Full Bars Dark</option>
-            <option value="full-bars-light">Full Bars Light</option>
-            <option value="full-border-dark">Full Border D</option>
-            <option value="full-border-light">Full Border L</option>
-          </select>
-          <button className="themeButton" onClick={handleNextTheme}>
-            <span
-              style={{
-                fontSize: "10px",
-                position: "absolute",
-                transform: "translateX(-50%)",
-              }}
-            >
-              Click for
-            </span>
-            <br />
-            Next Theme
-          </button>
-        </div>
+        <select value={theme} onChange={(e) => selectTheme(e.target.value)}>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="no-bars-dark">No Bars Dark</option>
+          <option value="no-bars-light">No Bars Light</option>
+          <option value="full-bars-dark">Full Bars Dark</option>
+          <option value="full-bars-light">Full Bars Light</option>
+          <option value="full-border-dark">Full Border D</option>
+          <option value="full-border-light">Full Border L</option>
+        </select>
+        <button className="themeButton" onClick={handleNextTheme}>
+          <span
+            style={{
+              fontSize: "10px",
+              position: "absolute",
+              transform: "translateX(-50%)",
+            }}
+          >
+            Click for
+          </span>
+          <br />
+          Next Theme
+        </button>
       </div>
     </>
   );
