@@ -3,7 +3,7 @@ import darkIcon from "../../assets/darkIcon.png";
 import lightIcon from "../../assets/lightIcon.png";
 import toggleOnDark from "../../assets/toggleDarkIcon.png";
 import toggleOnLight from "../../assets/toggleLightIcon.png";
-import { useThemeContext } from "../../ThemeCustomizer/ContextProvider";
+import { useThemeContext } from "../../ThemeCustomizer/provider/ContextProvider";
 
 //add theme functioning
 
@@ -16,6 +16,7 @@ const LightDarkToggle = () => {
     selectTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  //can probably refactor this so that the image only flips horizontally instead of new png
   return (
     <div id="toggleDiv" onClick={handleNextTheme}>
       {theme === "dark" ? (

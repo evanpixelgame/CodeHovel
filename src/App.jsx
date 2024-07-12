@@ -1,6 +1,6 @@
 import "./App.css";
 //import { useThemeContext } from "./ThemeContext";
-import { useThemeContext } from "./ThemeCustomizer/ContextProvider";
+import { useThemeContext } from "./ThemeCustomizer/provider/ContextProvider";
 import Main from "./components/main/Main";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";

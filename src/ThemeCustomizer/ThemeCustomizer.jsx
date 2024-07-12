@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ThemeSelector from "./ThemeSelector";
-import "./themeComponent.css";
+import PresetSelector from "./subcomponents/PresetSelector";
+import "./component.css";
 
 const getCssVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement)
@@ -149,7 +149,7 @@ const ThemeCustomizer = () => {
       case "presetThemes":
         return (
           <div id="theme-selector-option">
-            <ThemeSelector />
+            <PresetSelector />
           </div>
         );
 

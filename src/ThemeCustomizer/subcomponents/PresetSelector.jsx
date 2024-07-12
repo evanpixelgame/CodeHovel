@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useThemeContext } from "./ContextProvider";
+import { useThemeContext } from "../provider/ContextProvider";
 
 const themeOptions = [
   "light",
@@ -12,7 +12,7 @@ const themeOptions = [
   "full-border-light",
 ];
 
-function ThemeSelector() {
+function PresetSelector() {
   const { theme, selectTheme } = useThemeContext();
 
   //should eventually switch to using the Themes object in ThemeContext.js but this is for quicksies
@@ -63,4 +63,4 @@ function ThemeSelector() {
   );
 }
 
-export default ThemeSelector;
+export default PresetSelector;
