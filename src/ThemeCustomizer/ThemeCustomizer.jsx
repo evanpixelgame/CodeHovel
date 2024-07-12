@@ -1,19 +1,12 @@
-// src/components/theme-customizer/ThemeCustomizer.js
 import React, { useState } from "react";
 import "./component.css";
-import { HeaderControls, FooterControls } from "./controls";
-import useThemeProperties from "./utils/useThemeProperties";
-import handleInputChange from "./utils/handleInputChange";
-import PresetSelector from "./subcomponents/PresetSelector";
 import ComponentTitle from "./subcomponents/ComponentTitle";
 import LogButtons from "./subcomponents/LogButtons";
 import TopButtons from "./subcomponents/TopButtons";
 import Instructions from "./subcomponents/Instructions";
+import renderControls from "./controls/renderControls";
 
 const ThemeCustomizer = () => {
-  const [themeProperties, setThemeProperties] = useThemeProperties();
-  const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
-
   const [selectedSection, setSelectedSection] = useState("header");
 
   const [showInstructions, setShowInstructions] = useState(false);
@@ -30,29 +23,6 @@ const ThemeCustomizer = () => {
   if (!showCustomizer) {
     return null;
   }
-
-  const renderControls = () => {
-    switch (selectedSection) {
-      case "header":
-        return (
-          <HeaderControls
-            themeProperties={themeProperties}
-            handleInputChange={handleInputChangeWithSetter}
-          />
-        );
-      case "footer":
-        return (
-          <FooterControls
-            themeProperties={themeProperties}
-            handleInputChange={handleInputChangeWithSetter}
-          />
-        );
-      case "presetThemes":
-        return <PresetSelector />;
-      default:
-        return null;
-    }
-  };
 
   return (
     <div className="theme-customizer">
@@ -73,9 +43,8 @@ const ThemeCustomizer = () => {
         <option value="themeCustomizer">Theme Customizer</option>
         <option value="presetThemes">Preset Themes</option>
       </select>
-
-      {renderControls()}
-
+      {renderControls(selectedSection, setSelectedSection)}
+      {/* Ensure proper usage */}
       <LogButtons />
     </div>
   );
