@@ -1,4 +1,4 @@
-const Instructions = () => {
+const Instructions = ({ toggleInstructions }) => {
   return (
     <>
       <p>

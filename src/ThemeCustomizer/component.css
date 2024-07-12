@@ -56,10 +56,14 @@ select {
 #theme-selector-option {
 }
 
-.log-buttons {
+.log-buttons,
+.top-buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  gap: 5px;
   margin: 0px;
   padding-top: 10px;
+}
+
+.top-buttons {
+  justify-content: flex-end;
 }

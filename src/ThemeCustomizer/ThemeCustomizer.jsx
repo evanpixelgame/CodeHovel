@@ -5,17 +5,31 @@ import { HeaderControls, FooterControls } from "./controls";
 import useThemeProperties from "./utils/useThemeProperties";
 import handleInputChange from "./utils/handleInputChange";
 import PresetSelector from "./subcomponents/PresetSelector";
-import InfoButton from "./subcomponents/InfoButton";
-import HideComponentButton from "./subcomponents/HideComponentButton";
 import ComponentTitle from "./subcomponents/ComponentTitle";
-import Instructions from "./subcomponents/Instructions";
 import LogButtons from "./subcomponents/LogButtons";
+import TopButtons from "./subcomponents/TopButtons";
+import Instructions from "./subcomponents/Instructions";
 
 const ThemeCustomizer = () => {
   const [themeProperties, setThemeProperties] = useThemeProperties();
   const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
 
   const [selectedSection, setSelectedSection] = useState("header");
+
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [showCustomizer, setShowCustomizer] = useState(true);
+
+  const toggleInstructions = () => {
+    setShowInstructions(!showInstructions);
+  };
+
+  const hideCustomizer = () => {
+    setShowCustomizer(false);
+  };
+
+  if (!showCustomizer) {
+    return null;
+  }
 
   const renderControls = () => {
     switch (selectedSection) {
@@ -42,8 +56,12 @@ const ThemeCustomizer = () => {
 
   return (
     <div className="theme-customizer">
-      <InfoButton />
+      <TopButtons
+        toggleInstructions={toggleInstructions}
+        hideCustomizer={hideCustomizer}
+      />
       <ComponentTitle />
+      {showInstructions && <Instructions />}
       <select
         value={selectedSection}
         onChange={(e) => setSelectedSection(e.target.value)}

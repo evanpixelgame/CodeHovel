@@ -1,20 +1,12 @@
-import React, { useState } from "react";
-import Instructions from "./Instructions";
-
-const InfoButton = () => {
-  const [showInstructions, setShowInstructions] = useState(false);
-
-  const toggleInstructions = () => {
-    setShowInstructions(!showInstructions);
-  };
-
+const InfoButton = ({ toggleInstructions }) => {
   return (
-    <div>
-      <button className="info-button" onClick={toggleInstructions}>
-        ?
-      </button>
-      {showInstructions && <Instructions />}
-    </div>
+    <button
+      className="theme-button"
+      id="info-button"
+      onClick={toggleInstructions}
+    >
+      ?
+    </button>
   );
 };
 

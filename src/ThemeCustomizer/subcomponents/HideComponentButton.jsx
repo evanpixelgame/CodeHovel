@@ -1,9 +1,8 @@
-const HideComponentButton = () => {
+const HideComponentButton = ({ hideCustomizer }) => {
   return (
-    <div>
-      HideComponentButton
-      <h1></h1>
-    </div>
+    <button className="theme-button" id="hide-button" onClick={hideCustomizer}>
+      X
+    </button>
   );
 };
 
