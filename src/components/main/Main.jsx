@@ -2,7 +2,7 @@ import "./Main.css";
 import Portrait from "./Portrait";
 import HomeText from "./HomeText";
 import SideBorders from "./SideBorders";
-import ThemeCustomizer from "./ThemeCustomizer";
+import ThemeCustomizer from "../../ThemeCustomizer/ThemeCustomizer";
 
 const Main = () => {
   return (

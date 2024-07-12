@@ -1,6 +1,3 @@
-//make a folder for all the internal files
-//make it so the main text and the customizer swap places and
-
 import React, { useState, useEffect } from "react";
 
 const getCssVariableValue = (variableName) => {

@@ -1,7 +1,6 @@
-//make a folder for all the internal files
-//make it so the main text and the customizer swap places and
-
 import React, { useState, useEffect } from "react";
+import ThemeSelector from "./ThemeSelector";
+import "./themeComponent.css";
 
 const getCssVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement)
@@ -52,6 +51,8 @@ const ThemeCustomizer = () => {
     socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
   });
 
+  const [selectedSection, setSelectedSection] = useState("header");
+
   useEffect(() => {
     for (const [key, value] of Object.entries(themeProperties)) {
       const cssVariableName = `--${key
@@ -62,7 +63,6 @@ const ThemeCustomizer = () => {
   }, [themeProperties]);
 
   const handleInputChange = (property, value) => {
-    // Append 'px' to the value if it's a number (assuming it's always a number in your case)
     let formattedValue = typeof value === "number" ? `${value}px` : value;
     if (property === "primaryFontFamily" && !value.startsWith('"')) {
       formattedValue = `"${value}`; // Add quotes around the value
@@ -74,56 +74,118 @@ const ThemeCustomizer = () => {
     }));
   };
 
+  const renderControls = () => {
+    switch (selectedSection) {
+      case "header":
+        return (
+          <>
+            <div>
+              <label>Header Background Color:</label>
+              <input
+                type="color"
+                value={themeProperties.headerBgColor}
+                onChange={(e) =>
+                  handleInputChange("headerBgColor", e.target.value)
+                }
+              />
+            </div>
+            <div>
+              <label>Header Width:</label>
+              <input
+                type="text"
+                value={themeProperties.headerWidth}
+                onChange={(e) =>
+                  handleInputChange("headerWidth", e.target.value)
+                }
+              />
+            </div>
+            <div>
+              <label>Header Height:</label>
+              <input
+                type="text"
+                value={themeProperties.headerHeight}
+                onChange={(e) =>
+                  handleInputChange("headerHeight", e.target.value)
+                }
+              />
+            </div>
+          </>
+        );
+      case "footer":
+        return (
+          <>
+            <div>
+              <label>Footer Background Color:</label>
+              <input
+                type="color"
+                value={themeProperties.footerBgColor}
+                onChange={(e) =>
+                  handleInputChange("footerBgColor", e.target.value)
+                }
+              />
+            </div>
+            <div>
+              <label>Footer Width:</label>
+              <input
+                type="text"
+                value={themeProperties.footerWidth}
+                onChange={(e) =>
+                  handleInputChange("footerWidth", e.target.value)
+                }
+              />
+            </div>
+            <div>
+              <label>Footer Height:</label>
+              <input
+                type="text"
+                value={themeProperties.footerHeight}
+                onChange={(e) =>
+                  handleInputChange("footerHeight", e.target.value)
+                }
+              />
+            </div>
+          </>
+        );
+      case "presetThemes":
+        return (
+          <div id="theme-selector-option">
+            <ThemeSelector />
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="theme-customizer">
-      <div>
-        <label>Primary Background Color:</label>
-        <input
-          type="color"
-          value={themeProperties.primaryBgColor}
-          onChange={(e) => handleInputChange("primaryBgColor", e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Header Color:</label>
-        <input
-          type="color"
-          value={themeProperties.headerBgColor}
-          onChange={(e) => handleInputChange("headerBgColor", e.target.value)}
-        />
-      </div>
+      <p>
+        <strong>Theme customizer:</strong>
+        <br />
+        Please select a part to customize from dropdown
+        <br />
+        Press print css to console log the css adjustments
+        <br />
+        Or select Preset Themes from drop to use existing
+      </p>
+      <select
+        value={selectedSection}
+        onChange={(e) => setSelectedSection(e.target.value)}
+      >
+        <option value="header">Header</option>
+        <option value="main">Main</option>
+        <option value="footer">Footer</option>
+        <option value="siteTitle">Site Title</option>
+        <option value="customThemeTool">Custom Theme Tool</option>
+        <option value="presetThemes">Preset Themes</option>
+      </select>
 
-      <div>
-        <label>Footer Color:</label>
-        <input
-          type="color"
-          value={themeProperties.footerBgColor}
-          onChange={(e) => handleInputChange("footerBgColor", e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Primary Font Family:</label>
-        <input
-          type="text"
-          value={themeProperties.primaryFontFamily}
-          onChange={(e) =>
-            handleInputChange("primaryFontFamily", e.target.value)
-          }
-        />
-      </div>
-      <div>
-        <label>Site Title Font Size:</label>
-        <input
-          type="number"
-          value={themeProperties.siteTitleFontSize}
-          onChange={(e) =>
-            handleInputChange("siteTitleFontSize", e.target.value)
-          }
-          min="10"
-          max="50"
-        />
-      </div>
-      {/* Add more inputs for other properties */}
+      {renderControls()}
+
+      <button type="button" className="themeButton">
+        Print CSS
+      </button>
     </div>
   );
 };

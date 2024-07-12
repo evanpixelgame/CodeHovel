@@ -176,7 +176,7 @@ const ThemeCustomizer = () => {
         <option value="main">Main</option>
         <option value="footer">Footer</option>
         <option value="siteTitle">Site Title</option>
-        <option value="customThemeTool">Custom Theme Tool</option>
+        <option value="themeCustomizer">Theme Customizer</option>
         <option value="presetThemes">Preset Themes</option>
       </select>
 

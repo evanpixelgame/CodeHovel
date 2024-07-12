@@ -3,7 +3,7 @@ import darkIcon from "../../assets/darkIcon.png";
 import lightIcon from "../../assets/lightIcon.png";
 import toggleOnDark from "../../assets/toggleDarkIcon.png";
 import toggleOnLight from "../../assets/toggleLightIcon.png";
-import { useThemeContext } from "../../ThemeContext";
+import { useThemeContext } from "../../ThemeCustomizer/ContextProvider";
 
 //add theme functioning
 
