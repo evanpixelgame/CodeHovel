@@ -1,15 +1,13 @@
-// ShowCustomizerButton.js
-
 import React from "react";
 
-const ShowCustomizerButton = ({ setShowCustomizer }) => {
-  const showCustomizer = () => {
-    setShowCustomizer(true);
+const ShowCustomizerButton = ({ showCustomizer, setShowCustomizer }) => {
+  const toggleCustomizer = () => {
+    setShowCustomizer(!showCustomizer);
   };
 
   return (
-    <button className="theme-button" onClick={showCustomizer}>
-      Show Customizer
+    <button className="theme-button" onClick={toggleCustomizer}>
+      {showCustomizer ? "Hide Customizer" : "Show Customizer"}
     </button>
   );
 };
