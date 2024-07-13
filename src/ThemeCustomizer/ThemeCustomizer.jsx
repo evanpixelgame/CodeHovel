@@ -10,14 +10,14 @@ import LogButtons from "./subcomponents/LogButtons";
 import TopButtons from "./subcomponents/TopButtons";
 import Instructions from "./subcomponents/Instructions";
 
-const ThemeCustomizer = () => {
+const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   const [themeProperties, setThemeProperties] = useThemeProperties();
   const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
 
   const [selectedSection, setSelectedSection] = useState("header");
 
   const [showInstructions, setShowInstructions] = useState(false);
-  const [showCustomizer, setShowCustomizer] = useState(true);
+  //const [showCustomizer, setShowCustomizer] = useState(true);
 
   const toggleInstructions = () => {
     setShowInstructions(!showInstructions);
