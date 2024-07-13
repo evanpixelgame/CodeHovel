@@ -1,4 +1,3 @@
-// src/components/theme-customizer/ThemeCustomizer.js
 import React, { useState } from "react";
 import "./component.css";
 import { HeaderControls, FooterControls } from "./controls";
@@ -11,8 +10,9 @@ import TopButtons from "./subcomponents/TopButtons";
 import Instructions from "./subcomponents/Instructions";
 
 const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
+  const [initialThemeProperties] = useState(useThemeProperties()[0]);
   const [themeProperties, setThemeProperties] = useThemeProperties();
-  const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
+  const handleInputChangeWithSetter = handleInputChange(setThemeProperties);
 
   const [selectedSection, setSelectedSection] = useState("header");
   const [showInstructions, setShowInstructions] = useState(false);
@@ -72,7 +72,11 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
         <option value="presetThemes">Preset Themes</option>
       </select>
       <div className="controls">{renderControls()}</div>
-      <LogButtons />
+      <LogButtons
+        initialThemeProperties={initialThemeProperties}
+        themeProperties={themeProperties}
+        selectedSection={selectedSection}
+      />
     </div>
   );
 };

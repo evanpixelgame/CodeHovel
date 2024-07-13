@@ -1,30 +1,38 @@
 import UnitAppender from "../subcomponents/UnitAppender";
+import handleInputChangeWithLogging from "../utils/handleInputChangeWithLogging";
 
-const HeaderControls = ({ themeProperties, handleInputChange }) => (
-  <>
-    <div>
-      <label>Background Color:</label>
-      <input
-        type="color"
-        value={themeProperties.headerBgColor}
-        onChange={(e) => handleInputChange("headerBgColor", e.target.value)}
-      />
-    </div>
-    <div>
-      <label>Width:</label>
-      <UnitAppender
-        value={themeProperties.headerWidth}
-        onChange={(value) => handleInputChange("headerWidth", value)}
-      />
-    </div>
-    <div>
-      <label>Height:</label>
-      <UnitAppender
-        value={themeProperties.headerHeight}
-        onChange={(value) => handleInputChange("headerHeight", value)}
-      />
-    </div>
-  </>
-);
+const HeaderControls = ({ themeProperties, handleInputChange }) => {
+  const handleInputChangeLogged =
+    handleInputChangeWithLogging(handleInputChange);
+
+  return (
+    <>
+      <div>
+        <label>Background Color:</label>
+        <input
+          type="color"
+          value={themeProperties.headerBgColor}
+          onChange={(e) =>
+            handleInputChangeLogged("headerBgColor", e.target.value)
+          }
+        />
+      </div>
+      <div>
+        <label>Width:</label>
+        <UnitAppender
+          value={themeProperties.headerWidth}
+          onChange={(value) => handleInputChangeLogged("headerWidth", value)}
+        />
+      </div>
+      <div>
+        <label>Height:</label>
+        <UnitAppender
+          value={themeProperties.headerHeight}
+          onChange={(value) => handleInputChangeLogged("headerHeight", value)}
+        />
+      </div>
+    </>
+  );
+};
 
 export default HeaderControls;
