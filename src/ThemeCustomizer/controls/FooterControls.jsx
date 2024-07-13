@@ -1,3 +1,6 @@
+import React from "react";
+import UnitAppender from "../subcomponents/UnitAppender";
+
 const FooterControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
@@ -8,20 +11,18 @@ const FooterControls = ({ themeProperties, handleInputChange }) => (
         onChange={(e) => handleInputChange("footerBgColor", e.target.value)}
       />
     </div>
-    <div>
-      <label>Footer Width:</label>
-      <input
-        type="text"
+    <div className="appended-unit">
+      <label>Footer Width: </label>
+      <UnitAppender
         value={themeProperties.footerWidth}
-        onChange={(e) => handleInputChange("footerWidth", e.target.value)}
+        onChange={(value) => handleInputChange("footerWidth", value)}
       />
     </div>
-    <div>
-      <label>Footer Height:</label>
-      <input
-        type="text"
+    <div className="appended-unit">
+      <label>Footer Height: </label>
+      <UnitAppender
         value={themeProperties.footerHeight}
-        onChange={(e) => handleInputChange("footerHeight", e.target.value)}
+        onChange={(value) => handleInputChange("footerHeight", value)}
       />
     </div>
   </>

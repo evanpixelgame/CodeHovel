@@ -1,3 +1,5 @@
+import UnitAppender from "../subcomponents/UnitAppender";
+
 const HeaderControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
@@ -15,10 +17,16 @@ const HeaderControls = ({ themeProperties, handleInputChange }) => (
         value={themeProperties.headerWidth}
         onChange={(e) => handleInputChange("headerWidth", e.target.value)}
       />
+      <UnitAppender />
     </div>
     <div>
       <label>Header Height:</label>
-      <input
+      {/*<input
+        type="text"
+        value={themeProperties.headerHeight}
+        onChange={(e) => handleInputChange("headerHeight", e.target.value)}
+      />*/}
+      <UnitAppender
         type="text"
         value={themeProperties.headerHeight}
         onChange={(e) => handleInputChange("headerHeight", e.target.value)}

@@ -81,3 +81,18 @@ select {
   justify-content: flex-end;
   margin-bottom: 5px;
 }
+
+.controls {
+  text-align: left;
+}
+
+input {
+  max-width: 25%;
+}
+
+.appended-unit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

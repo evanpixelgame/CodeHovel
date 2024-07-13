@@ -45,8 +45,9 @@ const ThemeCustomizer = () => {
           <option value="presetThemes">Preset Themes</option>
         </select>
       </div>
-      {renderControls(selectedSection, setSelectedSection)}
-      {/* Ensure proper usage */}
+      <div className="controls">
+        {renderControls(selectedSection, setSelectedSection)}
+      </div>
       <LogButtons />
     </div>
   );
