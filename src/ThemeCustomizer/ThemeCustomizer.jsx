@@ -15,9 +15,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
 
   const [selectedSection, setSelectedSection] = useState("header");
-
   const [showInstructions, setShowInstructions] = useState(false);
-  //const [showCustomizer, setShowCustomizer] = useState(true);
 
   const toggleInstructions = () => {
     setShowInstructions(!showInstructions);
