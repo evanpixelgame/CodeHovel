@@ -1,14 +1,19 @@
 import React from "react";
-import ShowCustomizerButton from "../../ThemeCustomizer/subcomponents/ShowComponentButton";
+import ThemeCustomizer from "../../ThemeCustomizer/ThemeCustomizer";
+import ShowCustomizerButton from "../../ThemeCustomizer/subcomponents/ShowCustomizerButton";
 
-const HomeText = ({ setShowCustomizer }) => {
+const HomeText = ({ showCustomizer, setShowCustomizer }) => {
   return (
     <div id="home-text-group">
       <h1 id="mainText">
         Full-stack web developer. Ready to meet your online needs.
       </h1>
       <h3 id="subText">Bring your ideas to life today.</h3>
-      <ShowCustomizerButton setShowCustomizer={setShowCustomizer} />
+      {showCustomizer && <ThemeCustomizer />}
+      <ShowCustomizerButton
+        showCustomizer={showCustomizer}
+        setShowCustomizer={setShowCustomizer}
+      />
     </div>
   );
 };
