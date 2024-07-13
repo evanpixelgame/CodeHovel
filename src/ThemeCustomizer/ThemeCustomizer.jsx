@@ -36,6 +36,7 @@ const ThemeCustomizer = () => {
         <select
           value={selectedSection}
           onChange={(e) => setSelectedSection(e.target.value)}
+          className="main-select"
         >
           <option value="header">Header</option>
           <option value="main">Main</option>

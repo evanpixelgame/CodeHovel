@@ -7,7 +7,7 @@
 
 .theme-customizer {
   border: 3px solid var(--theme-customizer-border-color);
-  max-width: 28%;
+  max-width: 20%;
   margin: 10px;
   padding: 20px;
 
@@ -47,7 +47,7 @@ select {
   border: 4px solid var(--theme-customizer-border-color);
   border-radius: 10px;
   height: 30px;
-  margin: 8px;
+  margin: 4px;
 }
 
 .theme-button {
@@ -82,17 +82,48 @@ select {
   margin-bottom: 5px;
 }
 
+.log-buttons {
+  margin-top: 10px;
+}
 .controls {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls div {
+  display: flex;
+  line-height: 1;
+  justify-content: left;
+  align-items: center;
 }
 
 input {
   max-width: 25%;
+  line-height: 1.5;
+}
+
+.unit-appender {
+  display: flex;
+  max-width: fit-content;
 }
 
 .appended-unit {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  margin: 10px;
+  width: fit-content;
+  gap: 5px;
+}
+
+div.unit-appender {
+  max-width: min-content;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+select.main-select {
+  margin-bottom: 20px;
 }
