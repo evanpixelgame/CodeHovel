@@ -18,8 +18,9 @@
   margin-top: 0px;
   padding-top: 0px;
 
-  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .theme-selector {
@@ -82,9 +83,6 @@ select {
   margin-bottom: 5px;
 }
 
-.log-buttons {
-  margin-top: 10px;
-}
 .controls {
   display: flex;
   flex-direction: column;
@@ -96,6 +94,10 @@ select {
   line-height: 1;
   justify-content: left;
   align-items: center;
+}
+
+div.controls {
+  margin-top: 10px;
 }
 
 input {

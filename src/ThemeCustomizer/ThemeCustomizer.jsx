@@ -1,12 +1,19 @@
+// src/components/theme-customizer/ThemeCustomizer.js
 import React, { useState } from "react";
 import "./component.css";
+import { HeaderControls, FooterControls } from "./controls";
+import useThemeProperties from "./utils/useThemeProperties";
+import handleInputChange from "./utils/handleInputChange";
+import PresetSelector from "./subcomponents/PresetSelector";
 import ComponentTitle from "./subcomponents/ComponentTitle";
 import LogButtons from "./subcomponents/LogButtons";
 import TopButtons from "./subcomponents/TopButtons";
 import Instructions from "./subcomponents/Instructions";
-import renderControls from "./controls/renderControls";
 
 const ThemeCustomizer = () => {
+  const [themeProperties, setThemeProperties] = useThemeProperties();
+  const handleInputChangeWithSetter = handleInputChange(setThemeProperties); // Pass setThemeProperties here
+
   const [selectedSection, setSelectedSection] = useState("header");
 
   const [showInstructions, setShowInstructions] = useState(false);
@@ -24,6 +31,29 @@ const ThemeCustomizer = () => {
     return null;
   }
 
+  const renderControls = () => {
+    switch (selectedSection) {
+      case "header":
+        return (
+          <HeaderControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "footer":
+        return (
+          <FooterControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "presetThemes":
+        return <PresetSelector />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="theme-customizer">
       <TopButtons
@@ -32,23 +62,18 @@ const ThemeCustomizer = () => {
       />
       <ComponentTitle />
       {showInstructions && <Instructions />}
-      <div id="selection-container">
-        <select
-          value={selectedSection}
-          onChange={(e) => setSelectedSection(e.target.value)}
-          className="main-select"
-        >
-          <option value="header">Header</option>
-          <option value="main">Main</option>
-          <option value="footer">Footer</option>
-          <option value="siteTitle">Site Title</option>
-          <option value="themeCustomizer">Theme Customizer</option>
-          <option value="presetThemes">Preset Themes</option>
-        </select>
-      </div>
-      <div className="controls">
-        {renderControls(selectedSection, setSelectedSection)}
-      </div>
+      <select
+        value={selectedSection}
+        onChange={(e) => setSelectedSection(e.target.value)}
+      >
+        <option value="header">Header</option>
+        <option value="main">Main</option>
+        <option value="footer">Footer</option>
+        <option value="siteTitle">Site Title</option>
+        <option value="themeCustomizer">Theme Customizer</option>
+        <option value="presetThemes">Preset Themes</option>
+      </select>
+      <div className="controls">{renderControls()}</div>
       <LogButtons />
     </div>
   );
