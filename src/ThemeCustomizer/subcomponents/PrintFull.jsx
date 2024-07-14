@@ -1,7 +1,11 @@
 const PrintFull = ({ themeProperties }) => {
+  const printFull = () => {
+    console.log(themeProperties);
+  };
+
   return (
     <>
-      <button type="button" className="theme-button">
+      <button onClick={printFull} type="button" className="theme-button">
         Print New
         <br />
         Full List

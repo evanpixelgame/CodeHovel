@@ -6,10 +6,14 @@ import PrintFull from "./PrintFull";
 import useThemeProperties from "../utils/useThemeProperties";
 
 const LogButtons = () => {
-  const [themeProperties, setThemeProperties] = useThemeProperties();
+  const [themeProperties, setThemeProperties, initialVarListRef] =
+    useThemeProperties();
   return (
     <div className="log-buttons">
-      <PrintNew themeProperties={themeProperties} />
+      <PrintNew
+        themeProperties={themeProperties}
+        initialVarListRef={initialVarListRef}
+      />
       <PrintFull themeProperties={themeProperties} />
     </div>
   );

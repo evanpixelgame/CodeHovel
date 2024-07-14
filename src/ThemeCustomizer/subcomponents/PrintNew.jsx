@@ -1,6 +1,10 @@
-const PrintNew = ({ themeProperties }) => {
+import getObjectDifferences from "../utils/getObjectDifferences";
+
+const PrintNew = ({ themeProperties, initialVarListRef }) => {
   const printNew = () => {
-    console.log(themeProperties);
+    //  console.log(themeProperties);
+    // console.log(initialVarListRef);
+    getObjectDifferences(themeProperties, initialVarListRef);
   };
 
   return (
@@ -8,7 +12,7 @@ const PrintNew = ({ themeProperties }) => {
       <button onClick={printNew} type="button" className="theme-button">
         Print New
         <br />
-        Section
+        CSS Vars
       </button>
     </>
   );

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const getCssVariableValue = (variableName) => {
   return getComputedStyle(document.documentElement)
@@ -49,6 +49,8 @@ const useThemeProperties = () => {
     socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
   });
 
+ const initialVarListRef = useRef(themeProperties);
+
   useEffect(() => {
     for (const [key, value] of Object.entries(themeProperties)) {
       const cssVariableName = `--${key
@@ -58,7 +60,7 @@ const useThemeProperties = () => {
     }
   }, [themeProperties]);
 
-  return [themeProperties, setThemeProperties];
+  return [themeProperties, setThemeProperties, initialVarListRef];
 };
 
 export default useThemeProperties;
