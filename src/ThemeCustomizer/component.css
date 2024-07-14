@@ -79,8 +79,22 @@ select {
 }
 
 .top-buttons {
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 5px;
+}
+
+.top-right-buttons {
+  justify-content: flex-end;
+  justify-self: flex-end;
+  justify-items: flex-end;
+}
+
+#drag-checkbox {
+  justify-content: flex-start;
+  font-weight: normal;
+  display: inline-flex;
+  font-size: 12px;
+  align-items: center;
 }
 
 .log-buttons {

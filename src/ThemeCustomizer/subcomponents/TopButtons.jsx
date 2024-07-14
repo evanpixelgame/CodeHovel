@@ -3,12 +3,24 @@
 
 import InfoButton from "./InfoButton";
 import HideComponentButton from "./HideComponentButton";
+import DragCheckbox from "./DragCheckbox";
 
-const TopButtons = ({ toggleInstructions, hideCustomizer }) => {
+const TopButtons = ({
+  toggleInstructions,
+  hideCustomizer,
+  isDraggable,
+  handleCheckboxChange,
+}) => {
   return (
     <div className="top-buttons">
-      <InfoButton toggleInstructions={toggleInstructions} />
-      <HideComponentButton hideCustomizer={hideCustomizer} />
+      <DragCheckbox
+        isDraggable={isDraggable}
+        handleCheckboxChange={handleCheckboxChange}
+      />
+      <div className="top-right-buttons">
+        <InfoButton toggleInstructions={toggleInstructions} />
+        <HideComponentButton hideCustomizer={hideCustomizer} />
+      </div>
     </div>
   );
 };

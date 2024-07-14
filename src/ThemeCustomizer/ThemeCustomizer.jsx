@@ -17,6 +17,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
 
   const [selectedSection, setSelectedSection] = useState("header");
   const [showInstructions, setShowInstructions] = useState(false);
+  const [isDraggable, setIsDraggable] = useState(false);
 
   const toggleInstructions = () => {
     setShowInstructions(!showInstructions);
@@ -29,6 +30,10 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   if (!showCustomizer) {
     return null;
   }
+
+  const handleCheckboxChange = () => {
+    setIsDraggable(!isDraggable);
+  };
 
   const renderControls = () => {
     switch (selectedSection) {
@@ -58,6 +63,8 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
       <TopButtons
         toggleInstructions={toggleInstructions}
         hideCustomizer={hideCustomizer}
+        isDraggable={isDraggable}
+        handleCheckboxChange={handleCheckboxChange}
       />
       <ComponentTitle />
       {showInstructions && <Instructions />}
