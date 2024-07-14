@@ -1,3 +1,5 @@
+//want to make the buttons print to screen and console
+
 import React from "react";
 import PrintNew from "./PrintNew";
 import PrintFull from "./PrintFull";
