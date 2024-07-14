@@ -1,3 +1,6 @@
+//add a checkbox for top left to enable drag
+//dragging it outside flexbox should remove it from flex container so the other elements place appropriates
+
 import InfoButton from "./InfoButton";
 import HideComponentButton from "./HideComponentButton";
 
