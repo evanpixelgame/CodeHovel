@@ -1,7 +1,7 @@
 import React from "react";
-import useThemeProperties from "../utils/useThemeProperties"; // Ensure useThemeProperties is imported correctly
-import handleInputChange from "../utils/handleInputChange"; // Ensure handleInputChange is imported correctly
-import { HeaderControls, FooterControls } from "./index"; // Adjust the import path as per your actual file structure
+import useThemeProperties from "../utils/useThemeProperties";
+import handleInputChange from "../utils/handleInputChange";
+import { HeaderControls, FooterControls } from "./index";
 import PresetSelector from "../subcomponents/PresetSelector";
 
 const renderControls = (selectedSection, setSelectedSection) => {

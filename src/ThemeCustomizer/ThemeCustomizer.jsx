@@ -5,7 +5,7 @@ import useThemeProperties from "./utils/useThemeProperties";
 import handleInputChange from "./utils/handleInputChange";
 import PresetSelector from "./subcomponents/PresetSelector";
 import ComponentTitle from "./subcomponents/ComponentTitle";
-import LogButtons from "./subcomponents/LogButtons";
+import PrintButtons from "./subcomponents/PrintButtons";
 import TopButtons from "./subcomponents/TopButtons";
 import Instructions from "./subcomponents/Instructions";
 
@@ -72,7 +72,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
         <option value="presetThemes">Preset Themes</option>
       </select>
       <div className="controls">{renderControls()}</div>
-      <LogButtons
+      <PrintButtons
         initialThemeProperties={initialThemeProperties}
         themeProperties={themeProperties}
         selectedSection={selectedSection}

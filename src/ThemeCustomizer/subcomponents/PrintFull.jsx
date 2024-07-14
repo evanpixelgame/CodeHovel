@@ -1,12 +1,12 @@
-const PrintButton = () => {
+const PrintFull = ({ themeProperties }) => {
   return (
     <>
       <button type="button" className="theme-button">
-        Log This
+        Print New
         <br />
-        Selection
+        Full List
       </button>
     </>
   );
 };
-export default PrintButton;
+export default PrintFull;
