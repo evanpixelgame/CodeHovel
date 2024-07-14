@@ -4,7 +4,11 @@ const PrintNew = ({ themeProperties, initialVarListRef }) => {
   const printNew = () => {
     //  console.log(themeProperties);
     // console.log(initialVarListRef);
-    getObjectDifferences(themeProperties, initialVarListRef);
+    const differences = getObjectDifferences(
+      themeProperties,
+      initialVarListRef.current
+    );
+    console.log(differences);
   };
 
   return (
