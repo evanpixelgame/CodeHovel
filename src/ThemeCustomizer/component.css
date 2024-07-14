@@ -97,6 +97,12 @@ select {
   align-items: center;
 }
 
+#component-title {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-decoration: underline double var(--theme-customizer-border-color) 1px;
+}
+
 .log-buttons {
   margin-top: 10px;
 }
