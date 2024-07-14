@@ -3,11 +3,8 @@
 import React from "react";
 import PrintNew from "./PrintNew";
 import PrintFull from "./PrintFull";
-import useThemeProperties from "../utils/useThemeProperties";
 
-const LogButtons = () => {
-  const [themeProperties, setThemeProperties, initialVarListRef] =
-    useThemeProperties();
+const LogButtons = ({ themeProperties, initialVarListRef }) => {
   return (
     <div className="log-buttons">
       <PrintNew

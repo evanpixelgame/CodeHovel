@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./component.css";
 import { HeaderControls, FooterControls } from "./controls";
-import useThemeProperties from "./utils/useThemeProperties";
+import { useThemeContext } from "./provider/ContextProvider";
 import handleInputChange from "./utils/handleInputChange";
 import PresetSelector from "./subcomponents/PresetSelector";
 import ComponentTitle from "./subcomponents/ComponentTitle";
@@ -10,8 +10,9 @@ import TopButtons from "./subcomponents/TopButtons";
 import Instructions from "./subcomponents/Instructions";
 
 const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
-  const [initialThemeProperties] = useState(useThemeProperties()[0]);
-  const [themeProperties, setThemeProperties] = useThemeProperties();
+  const { themeProperties, setThemeProperties, initialVarListRef } =
+    useThemeContext();
+
   const handleInputChangeWithSetter = handleInputChange(setThemeProperties);
 
   const [selectedSection, setSelectedSection] = useState("header");
@@ -73,7 +74,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
       </select>
       <div className="controls">{renderControls()}</div>
       <PrintButtons
-        initialThemeProperties={initialThemeProperties}
+        initialVarListRef={initialVarListRef}
         themeProperties={themeProperties}
         selectedSection={selectedSection}
       />

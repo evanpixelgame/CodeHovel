@@ -1,11 +1,11 @@
 import React from "react";
-import useThemeProperties from "../utils/useThemeProperties";
+import { useThemeContext } from "../provider/ContextProvider";
 import handleInputChange from "../utils/handleInputChange";
 import { HeaderControls, FooterControls } from "./index";
 import PresetSelector from "../subcomponents/PresetSelector";
 
 const renderControls = (selectedSection, setSelectedSection) => {
-  const [themeProperties, setThemeProperties] = useThemeProperties();
+  const { themeProperties, setThemeProperties } = useThemeContext();
   const handleInputChangeWithSetter = handleInputChange(setThemeProperties);
 
   switch (selectedSection) {
