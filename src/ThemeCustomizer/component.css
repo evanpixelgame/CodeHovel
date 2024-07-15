@@ -3,13 +3,14 @@
   --theme-customizer-button-bg: #9995db;
   --theme-customizer-border-color: #ddd;
   --theme-customizer-border-color-2: #3b3b3b;
+  --theme-customizer-select-bg-color: #1a1a1aeb;
 }
 
 .theme-customizer {
   border: 3px solid var(--theme-customizer-border-color);
   max-width: 15%;
   margin: 10px;
-  padding: 20px;
+  padding: 12px;
 
   background-color: var(--theme-customizer-bg-color);
   opacity: 0.6;
@@ -45,10 +46,15 @@
 select {
   max-width: 70%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  border: 4px solid var(--theme-customizer-border-color);
+  border: 3px solid var(--theme-customizer-border-color);
   border-radius: 10px;
   height: 30px;
   margin: 4px;
+  background-color: var(--theme-customizer-select-bg-color);
+}
+
+select.unit-selector {
+  border: 2px solid var(--theme-customizer-border-color);
 }
 
 .theme-button {
@@ -58,6 +64,49 @@ select {
   padding-top: 4px;
   line-height: 1;
   background-color: var(--theme-customizer-button-bg);
+}
+
+/* CSS */
+.theme-button:not(#info-button):not(#hide-button) {
+  appearance: button;
+  background-color: #716ada;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 2px solid #6058d4;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.theme-button:focus:not(:focus-visible),
+.theme-button:focus {
+  outline: 0;
+}
+
+.theme-button:hover:not(#info-button):not(#hide-button) {
+  background-color: #3633e5b7;
+  border-color: #3633e58e;
 }
 
 #theme-text {
