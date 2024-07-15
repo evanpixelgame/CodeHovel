@@ -5,7 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import {
   HeaderControls,
+  SiteTitleControls,
+  NavBarControls,
+  MainColorControls,
+  MainFontControls,
+  MainPositionControls,
   FooterControls,
+  SideBorderControls,
+  SocialLinkControls,
+  LightDarkToggleControls,
   ThemeCustomizerControls,
 } from "./controls";
 import { useThemeContext } from "./provider/ContextProvider";
@@ -72,9 +80,65 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
             handleInputChange={handleInputChangeWithSetter}
           />
         );
+      case "siteTitle":
+        return (
+          <SiteTitleControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "navBar":
+        return (
+          <NavBarControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "mainColor":
+        return (
+          <MainColorControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "mainFont":
+        return (
+          <MainFontControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "mainPosition":
+        return (
+          <MainPositionControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
       case "footer":
         return (
           <FooterControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "sideBorder":
+        return (
+          <SideBorderControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "socialLink":
+        return (
+          <SocialLinkControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+      case "lightDarkToggle":
+        return (
+          <LightDarkToggleControls
             themeProperties={themeProperties}
             handleInputChange={handleInputChangeWithSetter}
           />
@@ -115,9 +179,16 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
           onChange={(e) => setSelectedSection(e.target.value)}
         >
           <option value="header">Header</option>
-          <option value="main">Main</option>
-          <option value="footer">Footer</option>
           <option value="siteTitle">Site Title</option>
+          <option value="navBar">Nav Bar</option>
+          <option value="mainColor">Main - Colors</option>
+          <option value="mainFont">Main - Fonts</option>
+          <option value="mainPosition">Main - Positions</option>
+
+          <option value="footer">Footer</option>
+          <option value="sideBorder">Side Borders</option>
+          <option value="socialLink">Social Links</option>
+          <option value="lightDarkToggle">Light Mode Toggle</option>
           <option value="themeCustomizer">Theme Customizer</option>
           <option value="presetThemes">Preset Themes</option>
         </select>

@@ -3,7 +3,15 @@ import { useThemeContext } from "../provider/ContextProvider";
 import handleInputChange from "../utils/handleInputChange";
 import {
   HeaderControls,
+  SiteTitleControls,
+  NavBarControls,
+  MainColorControls,
+  MainFontControls,
+  MainPositionControls,
   FooterControls,
+  SideBorderControls,
+  SocialLinkControls,
+  LightDarkToggleControls,
   ThemeCustomizerControls,
 } from "./index";
 import PresetSelector from "../subcomponents/PresetSelector";

@@ -1,3 +1,6 @@
+
+set z index high for customizer so its always on top
+
 add settings button
 -add option to link symmetries
 

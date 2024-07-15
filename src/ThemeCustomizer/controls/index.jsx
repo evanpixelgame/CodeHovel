@@ -1,3 +1,11 @@
 export { default as HeaderControls } from "./HeaderControls";
+export { default as SiteTitleControls } from "./SiteTitleControls";
+export { default as NavBarControls } from "./NavBarControls";
+export { default as MainColorControls } from "./MainColorControls";
+export { default as MainFontControls } from "./MainFontControls.jsx";
+export { default as MainPositionControls } from "./MainPositionControls";
 export { default as FooterControls } from "./FooterControls";
+export { default as SideBorderControls } from "./SideBorderControls";
+export { default as SocialLinkControls } from "./SocialLinkControls";
+export { default as LightDarkToggleControls } from "./LightDarkToggleControls";
 export { default as ThemeCustomizerControls } from "./ThemeCustomizerControls";
