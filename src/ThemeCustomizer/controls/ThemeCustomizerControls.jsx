@@ -15,13 +15,24 @@ const ThemeCustomizerControls = ({ themeProperties, handleInputChange }) => (
       />
     </div>
     <div>
-      <label>Button Background Color:</label>
+      <label>Button Color:</label>
       <input
         type="color"
         className="color-input"
         value={themeProperties.themeCustomizerButtonBg}
         onChange={(e) =>
-          handleInputChange("themeCustomizerButtonBg", e.target.value)
+          handleInputChange("themeCustomizerButtonBgColor", e.target.value)
+        }
+      />
+    </div>
+    <div>
+      <label>Button Border Color:</label>
+      <input
+        type="color"
+        className="color-input"
+        value={themeProperties.themeCustomizerButtonBorderColor}
+        onChange={(e) =>
+          handleInputChange("themeCustomizerButtonBorderColor", e.target.value)
         }
       />
     </div>
@@ -36,19 +47,9 @@ const ThemeCustomizerControls = ({ themeProperties, handleInputChange }) => (
         }
       />
     </div>
+
     <div>
-      <label>Second Border Color:</label>
-      <input
-        type="color"
-        className="color-input"
-        value={themeProperties.themeCustomizerBorderColor2}
-        onChange={(e) =>
-          handleInputChange("themeCustomizerBorderColor2", e.target.value)
-        }
-      />
-    </div>
-    <div>
-      <label>Select Background Color:</label>
+      <label>Background Color:</label>
       <input
         type="color"
         className="color-input"

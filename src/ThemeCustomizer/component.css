@@ -4,6 +4,8 @@
   --theme-customizer-border-color: #ddd;
   --theme-customizer-border-color-2: #3b3b3b;
   --theme-customizer-select-bg-color: #1a1a1aeb;
+  --theme-customizer-button-bg-color: #716ada;
+  --theme-customizer-button-border-color: #6058d4;
 }
 
 .theme-customizer {
@@ -69,13 +71,13 @@ select.unit-selector {
 /* CSS */
 .theme-button:not(#info-button):not(#hide-button) {
   appearance: button;
-  background-color: #716ada;
+  background-color: var(--theme-customizer-button-bg-color);
   background-image: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
-  border: 2px solid #6058d4;
+  border: 2px solid var(--theme-customizer-button-border-color);
   border-radius: 1rem;
   box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
     rgba(46, 54, 80, 0.075) 0 1px 1px;

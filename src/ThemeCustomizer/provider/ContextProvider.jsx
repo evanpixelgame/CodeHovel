@@ -64,12 +64,12 @@ const defaultThemeProperties = {
   //Theme Customizer variables (these are stored in component.css unlike the rest)
   themeCustomizerBgColor:
     getCssVariableValue("--theme-customizer-bg-color") || "#8b85d5",
-  themeCustomizerButtonBg:
+  themeCustomizerButtonBgColor:
     getCssVariableValue("--theme-customizer-button-bg") || "#9995db",
   themeCustomizerBorderColor:
     getCssVariableValue("--theme-customizer-border-color") || "#ddd",
-  themeCustomizerBorderColor2:
-    getCssVariableValue("--theme-customizer-border-color-2") || "#3b3b3b",
+  themeCustomizerButtonBorderColor:
+    getCssVariableValue("--theme-customizer-button-border-color") || "#6058d4",
   themeCustomizerSelectBgColor:
     getCssVariableValue("--theme-customizer-select-bg-color") || "#1a1a1aeb",
 };
