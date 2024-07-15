@@ -19,7 +19,7 @@ const TopButtons = ({
       />
       <div className="top-right-buttons">
         <InfoButton toggleInstructions={toggleInstructions} />
-        <HideComponentButton hideCustomizer={hideCustomizer} />
+        <HideComponentButton hideComponent={hideCustomizer} id="hide-button" />
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const HideComponentButton = ({ hideCustomizer }) => {
+const HideComponentButton = ({ hideComponent, id }) => {
   return (
-    <button className="theme-button" id="hide-button" onClick={hideCustomizer}>
+    <button className="theme-button" id={id} onClick={hideComponent}>
       <FontAwesomeIcon icon={faTimes} />
     </button>
   );

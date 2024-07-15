@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Draggable from "react-draggable";
 import "./component.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboard } from "@fortawesome/free-solid-svg-icons";
 import { HeaderControls, FooterControls } from "./controls";
 import { useThemeContext } from "./provider/ContextProvider";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,6 +12,7 @@ import ComponentTitle from "./subcomponents/ComponentTitle";
 import PrintButtons from "./subcomponents/actionBarBottom/PrintButtons";
 import TopButtons from "./subcomponents/actionBarTop/TopButtons";
 import Instructions from "./subcomponents/messages/Instructions";
+import HideComponentButton from "./subcomponents/actionBarTop/HideComponentButton";
 
 const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   const { themeProperties, setThemeProperties, initialVarListRef } =
@@ -46,6 +49,10 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(JSON.stringify(showMessage, null, 2));
     toast.success("Message copied to clipboard!");
+  };
+
+  const hideMessage = () => {
+    setShowMessage("");
   };
 
   if (!showCustomizer) {
@@ -108,9 +115,17 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
             <div className="message">
               {JSON.stringify(showMessage, null, 2)}
             </div>
-            <button className="copy-button" onClick={copyToClipboard}>
-              Copy to Clipboard
+            <button
+              className="theme-button"
+              onClick={copyToClipboard}
+              id="copy-button"
+            >
+              <FontAwesomeIcon icon={faClipboard} /> Copy
             </button>
+            <HideComponentButton
+              hideComponent={hideMessage}
+              id="hide-msg-button"
+            />
           </div>
         )}
         <PrintButtons
@@ -119,7 +134,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
           selectedSection={selectedSection}
           setShowMessage={setShowMessage}
         />
-        <ToastContainer />
+        {/* <ToastContainer />    // Toast container was placed in App.jsx */}
       </div>
     </Draggable>
   );
