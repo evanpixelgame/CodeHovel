@@ -214,3 +214,16 @@ label {
 select.main-select {
   margin-bottom: 20px;
 }
+
+.message {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 4px solid #ccc;
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  white-space: pre-wrap; /* This ensures that the JSON string is displayed properly */
+  color: var(--theme-customizer-border-color-2);
+  text-align: left;
+  font-size: 0.7em;
+}

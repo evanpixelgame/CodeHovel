@@ -1,6 +1,7 @@
-const PrintFull = ({ themeProperties }) => {
+const PrintFull = ({ themeProperties, setShowMessage }) => {
   const printFull = () => {
     console.log(themeProperties);
+    setShowMessage(themeProperties);
   };
 
   return (

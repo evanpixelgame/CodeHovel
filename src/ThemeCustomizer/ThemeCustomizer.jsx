@@ -18,8 +18,9 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
 
   const [selectedSection, setSelectedSection] = useState("header");
   const [showInstructions, setShowInstructions] = useState(false);
+  const [showMessage, setShowMessage] = useState("");
   const [isDraggable, setIsDraggable] = useState(false);
-  const [isDragging, setIsDragging] = useState(false); // helpful to add logic for when its moving vs not, but may not be needed right away can delete if not used
+  const [isDragging, setIsDragging] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsDraggable(!isDraggable);
@@ -73,6 +74,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
       disabled={!isDraggable}
       onStart={handleDragStart}
       onStop={handleDragStop}
+      bounds="window"
     >
       <div className="theme-customizer">
         <TopButtons
@@ -95,10 +97,14 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
           <option value="presetThemes">Preset Themes</option>
         </select>
         <div className="controls">{renderControls()}</div>
+        {showMessage && (
+          <div className="message">{JSON.stringify(showMessage, null, 2)}</div>
+        )}
         <PrintButtons
           initialVarListRef={initialVarListRef}
           themeProperties={themeProperties}
           selectedSection={selectedSection}
+          setShowMessage={setShowMessage}
         />
       </div>
     </Draggable>

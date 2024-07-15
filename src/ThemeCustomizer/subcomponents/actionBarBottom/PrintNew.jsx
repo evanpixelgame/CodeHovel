@@ -1,6 +1,6 @@
 import getObjectDifferences from "../../utils/getObjectDifferences";
 
-const PrintNew = ({ themeProperties, initialVarListRef }) => {
+const PrintNew = ({ themeProperties, initialVarListRef, setShowMessage }) => {
   const printNew = () => {
     //  console.log(themeProperties);
     // console.log(initialVarListRef);
@@ -9,6 +9,7 @@ const PrintNew = ({ themeProperties, initialVarListRef }) => {
       themeProperties
     );
     console.log(differences);
+    setShowMessage(differences);
   };
 
   return (
