@@ -26,7 +26,7 @@ const UnitAppender = ({ value = "", onChange }) => {
   return (
     <div className="unit-appender">
       <input
-        type="text"
+        type="number"
         value={numericValue}
         onChange={handleNumericChange}
         className="input-field"
