@@ -1,4 +1,9 @@
 
+add option to set side border width individually (maybe even let each border color and width be controlled individually?)
+maybe also add option to upload pictures and videos for main content
+
+add options for symmetrical linking in the controls for header footer and sideborders
+
 set z index high for customizer so its always on top
 
 add settings button

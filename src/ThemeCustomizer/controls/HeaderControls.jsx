@@ -1,7 +1,15 @@
 import UnitAppender from "../subcomponents/UnitAppender";
 import handleInputChangeWithLogging from "../utils/handleInputChangeWithLogging";
+import { useThemeContext } from "../provider/ContextProvider";
 
 const HeaderControls = ({ themeProperties, handleInputChange }) => {
+  const {
+    linkHeaderFooterWidth,
+    setLinkHeaderFooterWidth,
+    linkHeaderFooterColor,
+    setLinkHeaderFooterColor,
+  } = useThemeContext();
+
   const handleInputChangeLogged =
     handleInputChangeWithLogging(handleInputChange);
 
