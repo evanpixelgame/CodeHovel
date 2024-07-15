@@ -3,7 +3,11 @@ import Draggable from "react-draggable";
 import "./component.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard } from "@fortawesome/free-solid-svg-icons";
-import { HeaderControls, FooterControls } from "./controls";
+import {
+  HeaderControls,
+  FooterControls,
+  ThemeCustomizerControls,
+} from "./controls";
 import { useThemeContext } from "./provider/ContextProvider";
 import { ToastContainer, toast } from "react-toastify";
 import handleInputChange from "./utils/handleInputChange";
@@ -75,6 +79,14 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
             handleInputChange={handleInputChangeWithSetter}
           />
         );
+      case "themeCustomizer":
+        return (
+          <ThemeCustomizerControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
+
       case "presetThemes":
         return <PresetSelector />;
       default:
