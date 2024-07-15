@@ -30,13 +30,13 @@ const defaultThemeProperties = {
   primaryTextColor: getCssVariableValue("--primary-text-color") || "#b4b4b4",
   secondaryTextColor:
     getCssVariableValue("--secondary-text-color") || "#ffffff",
-
   mainTextFontSize: getCssVariableValue("--main-text-font-size") || "40px",
   subTextFontSize: getCssVariableValue("--sub-text-font-size") || "16px",
-  siteTitleFontFamily:
-    getCssVariableValue("--site-title-font-family") || '"Roboto"',
+
   //Main Positioning vars
   //Site Title vars
+  siteTitleFontFamily:
+    getCssVariableValue("--site-title-font-family") || '"Roboto"',
   siteTitleColor: getCssVariableValue("--site-title-color") || "#ce721d",
   siteTitleFontSize: getCssVariableValue("--site-title-font-size") || "24px",
   siteTitlePadLeft: getCssVariableValue("--site-title-pad-left") || "1%",

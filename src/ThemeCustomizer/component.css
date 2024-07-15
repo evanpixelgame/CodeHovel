@@ -86,7 +86,7 @@ select.unit-selector {
   cursor: pointer;
   display: inline-block;
   font-family: Inter, sans-serif;
-  font-size: 1rem;
+
   font-weight: 500;
   line-height: 1;
   margin: 0;
@@ -109,6 +109,13 @@ select.unit-selector {
 .theme-button:hover:not(#info-button):not(#hide-button) {
   background-color: #3633e5b7;
   border-color: #3633e58e;
+}
+
+button.theme-button.linking-button {
+}
+
+.matching-grouping {
+  text-align: left;
 }
 
 #theme-text {

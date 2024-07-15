@@ -3,6 +3,21 @@ import React from "react";
 const SiteTitleControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
+      <label>Title Font Family:</label>
+      <input
+        type="text"
+        className="text-input"
+        value={
+          themeProperties.siteTitleFontFamily.startsWith('"')
+            ? themeProperties.siteTitleFontFamily.slice(1, -1) // Remove leading and trailing quotes
+            : themeProperties.siteTitleFontFamily
+        }
+        onChange={(e) =>
+          handleInputChange("siteTitleFontFamily", e.target.value)
+        }
+      />
+    </div>
+    <div>
       <label>Color:</label>
       <input
         type="color"

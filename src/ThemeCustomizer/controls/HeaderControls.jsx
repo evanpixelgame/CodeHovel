@@ -19,20 +19,6 @@ const HeaderControls = ({ themeProperties, handleInputChange }) => {
         />
       </div>
 
-      <label className="match-style-button-container">
-        <button
-          type="button"
-          className="theme-button linking-button"
-          onClick={() =>
-            handleInputChangeLogged(
-              "headerBgColor",
-              themeProperties.footerBgColor
-            )
-          }
-        ></button>
-        Match Footer Color
-      </label>
-
       <div>
         <label>Width:</label>
         <UnitAppender
@@ -41,23 +27,50 @@ const HeaderControls = ({ themeProperties, handleInputChange }) => {
         />
       </div>
 
-      <label className="match-style-button-container">
-        <button
-          type="button"
-          className="theme-button linking-button"
-          onClick={() =>
-            handleInputChangeLogged("headerWidth", themeProperties.footerWidth)
-          }
-        ></button>
-        Match Footer Width
-      </label>
-
       <div>
         <label>Height:</label>
         <UnitAppender
           value={themeProperties.headerHeight}
           onChange={(value) => handleInputChangeLogged("headerHeight", value)}
         />
+      </div>
+      <div className="matching-grouping">
+        <label>
+          Match
+          <br />
+          Footer:
+        </label>
+
+        <div className="link-style-button-container">
+          <label className="match-style-button-container">
+            <button
+              type="button"
+              className="theme-button linking-button"
+              onClick={() =>
+                handleInputChangeLogged(
+                  "headerWidth",
+                  themeProperties.footerWidth
+                )
+              }
+            >
+              Width
+            </button>
+          </label>
+          <label className="match-style-button-container">
+            <button
+              type="button"
+              className="theme-button linking-button"
+              onClick={() =>
+                handleInputChangeLogged(
+                  "headerBgColor",
+                  themeProperties.footerBgColor
+                )
+              }
+            >
+              Color
+            </button>
+          </label>
+        </div>
       </div>
     </>
   );

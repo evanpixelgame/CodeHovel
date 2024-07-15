@@ -26,7 +26,11 @@ const NavBarControls = ({ themeProperties, handleInputChange }) => (
       <input
         type="text"
         className="text-input"
-        value={themeProperties.navLinkFontFamily}
+        value={
+          themeProperties.navLinkFontFamily.startsWith('"')
+            ? themeProperties.navLinkFontFamily.slice(1, -1) // Remove leading and trailing quotes
+            : themeProperties.navLinkFontFamily
+        }
         onChange={(e) => handleInputChange("navLinkFontFamily", e.target.value)}
       />
     </div>
