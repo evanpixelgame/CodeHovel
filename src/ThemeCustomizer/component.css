@@ -89,6 +89,14 @@ select {
   justify-items: flex-end;
 }
 
+#info-button,
+#hide-button {
+  box-shadow: none;
+  border: none;
+  background-color: var(--theme-customizer-bg-color);
+  padding: 0.5em;
+}
+
 #drag-checkbox {
   justify-content: flex-start;
   font-weight: normal;

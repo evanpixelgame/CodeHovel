@@ -1,7 +1,7 @@
 const ComponentTitle = () => {
   return (
     <div id="component-title">
-      <strong>Theme customizer:</strong>
+      <strong>Theme Customizer:</strong>
     </div>
   );
 };

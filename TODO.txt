@@ -1,0 +1,19 @@
+add settings button
+take away div from the top action bar right side buttons
+maybe try linking header and footer colors and other symmetries
+or in settings give symmetry options
+write out full read me on how the code works and how to use it in a project, include code examples
+add on hover effects
+
+have the info button and the instructions for it instead say Tutorial on Use: and then have a list of links of stuff like the select bar, the buttons, etc,
+maybe even have a mini version of the app that users can click to represent the area on the app they need help working
+when clicked on a specific thing, will reference to the relevant section in the README 
+
+add a suggested pallet to the color picker
+
+
+FOR PORTFOLIO:D 
+for portfolio:
+
+ADD A BUNCH OF TINY projects and apps all throughout to demonstrate the abilities without them having to click any links
+add things like the customizer and others and put them in clever places in the site and make them do interesting things while being neatly done to show skill
