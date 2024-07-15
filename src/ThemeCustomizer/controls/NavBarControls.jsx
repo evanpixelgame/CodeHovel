@@ -30,6 +30,27 @@ const NavBarControls = ({ themeProperties, handleInputChange }) => (
         onChange={(e) => handleInputChange("navLinkFontFamily", e.target.value)}
       />
     </div>
+    <div>
+      <label>Width:</label>
+      <UnitAppender
+        value={themeProperties.navWidth}
+        onChange={(value) => handleInputChange("navWidth", value)}
+      />
+    </div>
+    <div>
+      <label>Height:</label>
+      <UnitAppender
+        value={themeProperties.navHeight}
+        onChange={(value) => handleInputChange("navHeight", value)}
+      />
+    </div>
+    <div>
+      <label>Left:</label>
+      <UnitAppender
+        value={themeProperties.navLeft}
+        onChange={(value) => handleInputChange("navLeft", value)}
+      />
+    </div>
   </>
 );
 
