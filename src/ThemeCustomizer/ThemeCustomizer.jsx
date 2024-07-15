@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Draggable from "react-draggable";
 import "./component.css";
 import { HeaderControls, FooterControls } from "./controls";
 import { useThemeContext } from "./provider/ContextProvider";
@@ -18,6 +19,19 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   const [selectedSection, setSelectedSection] = useState("header");
   const [showInstructions, setShowInstructions] = useState(false);
   const [isDraggable, setIsDraggable] = useState(false);
+  const [isDragging, setIsDragging] = useState(false); // helpful to add logic for when its moving vs not, but may not be needed right away can delete if not used
+
+  const handleCheckboxChange = () => {
+    setIsDraggable(!isDraggable);
+  };
+
+  const handleDragStart = () => {
+    setIsDragging(true);
+  };
+
+  const handleDragStop = () => {
+    setIsDragging(false);
+  };
 
   const toggleInstructions = () => {
     setShowInstructions(!showInstructions);
@@ -30,10 +44,6 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   if (!showCustomizer) {
     return null;
   }
-
-  const handleCheckboxChange = () => {
-    setIsDraggable(!isDraggable);
-  };
 
   const renderControls = () => {
     switch (selectedSection) {
@@ -59,33 +69,39 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   };
 
   return (
-    <div className="theme-customizer">
-      <TopButtons
-        toggleInstructions={toggleInstructions}
-        hideCustomizer={hideCustomizer}
-        isDraggable={isDraggable}
-        handleCheckboxChange={handleCheckboxChange}
-      />
-      <ComponentTitle />
-      {showInstructions && <Instructions />}
-      <select
-        value={selectedSection}
-        onChange={(e) => setSelectedSection(e.target.value)}
-      >
-        <option value="header">Header</option>
-        <option value="main">Main</option>
-        <option value="footer">Footer</option>
-        <option value="siteTitle">Site Title</option>
-        <option value="themeCustomizer">Theme Customizer</option>
-        <option value="presetThemes">Preset Themes</option>
-      </select>
-      <div className="controls">{renderControls()}</div>
-      <PrintButtons
-        initialVarListRef={initialVarListRef}
-        themeProperties={themeProperties}
-        selectedSection={selectedSection}
-      />
-    </div>
+    <Draggable
+      disabled={!isDraggable}
+      onStart={handleDragStart}
+      onStop={handleDragStop}
+    >
+      <div className="theme-customizer">
+        <TopButtons
+          toggleInstructions={toggleInstructions}
+          hideCustomizer={hideCustomizer}
+          isDraggable={isDraggable}
+          handleCheckboxChange={handleCheckboxChange}
+        />
+        <ComponentTitle />
+        {showInstructions && <Instructions />}
+        <select
+          value={selectedSection}
+          onChange={(e) => setSelectedSection(e.target.value)}
+        >
+          <option value="header">Header</option>
+          <option value="main">Main</option>
+          <option value="footer">Footer</option>
+          <option value="siteTitle">Site Title</option>
+          <option value="themeCustomizer">Theme Customizer</option>
+          <option value="presetThemes">Preset Themes</option>
+        </select>
+        <div className="controls">{renderControls()}</div>
+        <PrintButtons
+          initialVarListRef={initialVarListRef}
+          themeProperties={themeProperties}
+          selectedSection={selectedSection}
+        />
+      </div>
+    </Draggable>
   );
 };
 
