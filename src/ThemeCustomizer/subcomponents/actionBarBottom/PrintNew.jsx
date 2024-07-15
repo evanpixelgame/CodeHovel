@@ -1,4 +1,4 @@
-import getObjectDifferences from "../utils/getObjectDifferences";
+import getObjectDifferences from "../../utils/getObjectDifferences";
 
 const PrintNew = ({ themeProperties, initialVarListRef }) => {
   const printNew = () => {

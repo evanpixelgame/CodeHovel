@@ -6,9 +6,9 @@ import { useThemeContext } from "./provider/ContextProvider";
 import handleInputChange from "./utils/handleInputChange";
 import PresetSelector from "./subcomponents/PresetSelector";
 import ComponentTitle from "./subcomponents/ComponentTitle";
-import PrintButtons from "./subcomponents/PrintButtons";
-import TopButtons from "./subcomponents/TopButtons";
-import Instructions from "./subcomponents/Instructions";
+import PrintButtons from "./subcomponents/actionBarBottom/PrintButtons";
+import TopButtons from "./subcomponents/actionBarTop/TopButtons";
+import Instructions from "./subcomponents/messages/Instructions";
 
 const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
   const { themeProperties, setThemeProperties, initialVarListRef } =
