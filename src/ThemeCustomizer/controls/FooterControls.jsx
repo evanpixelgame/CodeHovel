@@ -11,6 +11,16 @@ const FooterControls = ({ themeProperties, handleInputChange }) => (
         onChange={(e) => handleInputChange("footerBgColor", e.target.value)}
       />
     </div>
+    <label className="match-style-button-container">
+      <button
+        type="button"
+        className="theme-button linking-button"
+        onClick={() =>
+          handleInputChange("footerBgColor", themeProperties.headerBgColor)
+        }
+      ></button>
+      Match Header Color
+    </label>
     <div>
       <label>Width:</label>
       <UnitAppender
@@ -18,6 +28,18 @@ const FooterControls = ({ themeProperties, handleInputChange }) => (
         onChange={(value) => handleInputChange("footerWidth", value)}
       />
     </div>
+
+    <label className="match-style-button-container">
+      <button
+        type="button"
+        className="theme-button linking-button"
+        onClick={() =>
+          handleInputChange("footerWidth", themeProperties.headerWidth)
+        }
+      ></button>
+      Match Header Width
+    </label>
+
     <div>
       <label>Height:</label>
       <UnitAppender

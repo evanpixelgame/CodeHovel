@@ -59,8 +59,6 @@ export function ThemeProvider({ children }) {
   const [themeProperties, setThemeProperties] = useState(
     defaultThemeProperties
   );
-  const [linkHeaderFooterWidth, setLinkHeaderFooterWidth] = useState(false);
-  const [linkHeaderFooterColor, setLinkHeaderFooterColor] = useState(false);
   const initialVarListRef = useRef(themeProperties);
 
   useEffect(() => {
@@ -76,25 +74,6 @@ export function ThemeProvider({ children }) {
     setTheme(newTheme);
   };
 
-  const handleInputChange = (property, value) => {
-    setThemeProperties((prevProps) => {
-      const updatedProps = { ...prevProps, [property]: value };
-      if (
-        linkHeaderFooterWidth &&
-        (property === "headerWidth" || property === "footerWidth")
-      ) {
-        updatedProps.headerWidth = updatedProps.footerWidth = value;
-      }
-      if (
-        linkHeaderFooterColor &&
-        (property === "headerBgColor" || property === "footerBgColor")
-      ) {
-        updatedProps.headerBgColor = updatedProps.footerBgColor = value;
-      }
-      return updatedProps;
-    });
-  };
-
   return (
     <ThemeContext.Provider
       value={{
@@ -103,11 +82,6 @@ export function ThemeProvider({ children }) {
         themeProperties,
         setThemeProperties,
         initialVarListRef,
-        handleInputChange,
-        linkHeaderFooterWidth,
-        setLinkHeaderFooterWidth,
-        linkHeaderFooterColor,
-        setLinkHeaderFooterColor,
       }}
     >
       {children}

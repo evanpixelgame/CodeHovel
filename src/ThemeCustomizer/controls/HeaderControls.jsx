@@ -1,15 +1,7 @@
 import UnitAppender from "../subcomponents/UnitAppender";
 import handleInputChangeWithLogging from "../utils/handleInputChangeWithLogging";
-import { useThemeContext } from "../provider/ContextProvider";
 
 const HeaderControls = ({ themeProperties, handleInputChange }) => {
-  const {
-    linkHeaderFooterWidth,
-    setLinkHeaderFooterWidth,
-    linkHeaderFooterColor,
-    setLinkHeaderFooterColor,
-  } = useThemeContext();
-
   const handleInputChangeLogged =
     handleInputChangeWithLogging(handleInputChange);
 
@@ -26,6 +18,21 @@ const HeaderControls = ({ themeProperties, handleInputChange }) => {
           }
         />
       </div>
+
+      <label className="match-style-button-container">
+        <button
+          type="button"
+          className="theme-button linking-button"
+          onClick={() =>
+            handleInputChangeLogged(
+              "headerBgColor",
+              themeProperties.footerBgColor
+            )
+          }
+        ></button>
+        Match Footer Color
+      </label>
+
       <div>
         <label>Width:</label>
         <UnitAppender
@@ -33,6 +40,18 @@ const HeaderControls = ({ themeProperties, handleInputChange }) => {
           onChange={(value) => handleInputChangeLogged("headerWidth", value)}
         />
       </div>
+
+      <label className="match-style-button-container">
+        <button
+          type="button"
+          className="theme-button linking-button"
+          onClick={() =>
+            handleInputChangeLogged("headerWidth", themeProperties.footerWidth)
+          }
+        ></button>
+        Match Footer Width
+      </label>
+
       <div>
         <label>Height:</label>
         <UnitAppender

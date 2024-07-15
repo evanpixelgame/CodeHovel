@@ -1,4 +1,6 @@
 
+
+
 add option to set side border width individually (maybe even let each border color and width be controlled individually?)
 maybe also add option to upload pictures and videos for main content
 
@@ -8,6 +10,7 @@ set z index high for customizer so its always on top
 
 add settings button
 -add option to link symmetries
+--in the symmetry options, can check box which controls you want to always stay linked
 
 maybe try linking header and footer colors and other symmetries
 or in settings give symmetry options
