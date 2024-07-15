@@ -3,6 +3,7 @@ import Draggable from "react-draggable";
 import "./component.css";
 import { HeaderControls, FooterControls } from "./controls";
 import { useThemeContext } from "./provider/ContextProvider";
+import { ToastContainer, toast } from "react-toastify";
 import handleInputChange from "./utils/handleInputChange";
 import PresetSelector from "./subcomponents/PresetSelector";
 import ComponentTitle from "./subcomponents/ComponentTitle";
@@ -40,6 +41,11 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
 
   const hideCustomizer = () => {
     setShowCustomizer(false);
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(JSON.stringify(showMessage, null, 2));
+    toast.success("Message copied to clipboard!");
   };
 
   if (!showCustomizer) {
@@ -98,7 +104,14 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
         </select>
         <div className="controls">{renderControls()}</div>
         {showMessage && (
-          <div className="message">{JSON.stringify(showMessage, null, 2)}</div>
+          <div className="message-container">
+            <div className="message">
+              {JSON.stringify(showMessage, null, 2)}
+            </div>
+            <button className="copy-button" onClick={copyToClipboard}>
+              Copy to Clipboard
+            </button>
+          </div>
         )}
         <PrintButtons
           initialVarListRef={initialVarListRef}
