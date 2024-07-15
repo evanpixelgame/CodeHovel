@@ -80,7 +80,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
       disabled={!isDraggable}
       onStart={handleDragStart}
       onStop={handleDragStop}
-      bounds="window"
+      bounds="body"
     >
       <div className="theme-customizer">
         <TopButtons
@@ -119,6 +119,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
           selectedSection={selectedSection}
           setShowMessage={setShowMessage}
         />
+        <ToastContainer />
       </div>
     </Draggable>
   );
