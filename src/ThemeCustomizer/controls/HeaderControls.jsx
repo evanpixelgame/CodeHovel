@@ -11,6 +11,7 @@ const HeaderControls = ({ themeProperties, handleInputChange }) => {
         <label>Background Color:</label>
         <input
           type="color"
+          className="color-input"
           value={themeProperties.headerBgColor}
           onChange={(e) =>
             handleInputChangeLogged("headerBgColor", e.target.value)

@@ -185,6 +185,11 @@ input {
   line-height: 1.5;
 }
 
+.color-input {
+  padding: 0;
+  border-width: 0;
+}
+
 .unit-appender {
   display: flex;
   max-width: fit-content;

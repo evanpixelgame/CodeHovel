@@ -6,6 +6,7 @@ const FooterControls = ({ themeProperties, handleInputChange }) => (
       <label>Background Color:</label>
       <input
         type="color"
+        className="color-input"
         value={themeProperties.footerBgColor}
         onChange={(e) => handleInputChange("footerBgColor", e.target.value)}
       />
