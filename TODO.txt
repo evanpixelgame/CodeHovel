@@ -1,4 +1,5 @@
 add settings button
+-add option to link symmetries
 
 maybe try linking header and footer colors and other symmetries
 or in settings give symmetry options
