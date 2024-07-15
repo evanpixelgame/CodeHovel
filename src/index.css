@@ -49,6 +49,7 @@
 
   --side-border-bg-color: #343434;
   --side-border-display: none;
+  --side-border-width: calc(50% - var(--header-width) / 2);
 
   --social-links-gap: 20%;
 }

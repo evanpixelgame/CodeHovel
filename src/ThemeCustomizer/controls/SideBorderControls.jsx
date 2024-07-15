@@ -1,31 +1,35 @@
+import React from "react";
 import UnitAppender from "../subcomponents/UnitAppender";
 
-const SideBorderControls = ({ themeProperties, handleInputChange }) => (
-  <>
-    <div>
-      <label>Background Color:</label>
-      <input
-        type="color"
-        className="color-input"
-        value={themeProperties.sideBorderBgColor}
-        onChange={(e) => handleInputChange("sideBorderBgColor", e.target.value)}
-      />
-    </div>
-    <div>
-      <label>Width:</label>
-      <UnitAppender
-        value={themeProperties.sideBorderWidth}
-        onChange={(value) => handleInputChange("sideBorderWidth", value)}
-      />
-    </div>
-    <div>
-      <label>Height:</label>
-      <UnitAppender
-        value={themeProperties.sideBorderHeight}
-        onChange={(value) => handleInputChange("sideBorderHeight", value)}
-      />
-    </div>
-  </>
-);
+const SideBorderControls = ({ themeProperties, handleInputChange }) => {
+  const handleCheckboxChange = (e) => {
+    const displayValue = e.target.checked ? "block" : "none";
+    handleInputChange("sideBorderDisplay", displayValue);
+  };
+
+  return (
+    <>
+      <div>
+        <label>Display:</label>
+        <input
+          type="checkbox"
+          checked={themeProperties.sideBorderDisplay === "block"}
+          onChange={handleCheckboxChange}
+        />
+      </div>
+      <div>
+        <label>Background Color:</label>
+        <input
+          type="color"
+          className="color-input"
+          value={themeProperties.sideBorderBgColor}
+          onChange={(e) =>
+            handleInputChange("sideBorderBgColor", e.target.value)
+          }
+        />
+      </div>
+    </>
+  );
+};
 
 export default SideBorderControls;
