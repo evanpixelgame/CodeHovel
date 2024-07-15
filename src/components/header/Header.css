@@ -31,8 +31,9 @@
   box-sizing: border-box;
 
   position: relative;
-  width: 40%;
-  height: 50%;
+  width: var(--nav-width);
+  height: var(--nav-height);
+  left: var(--nav-left);
 
   background: var(--nav-bg-color);
   border: 1px solid #d3d3d3;

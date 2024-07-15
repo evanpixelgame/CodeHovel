@@ -44,6 +44,9 @@ const defaultThemeProperties = {
   navBgColor: getCssVariableValue("--nav-bg-color") || "#f5f5f5",
   navLinkColor: getCssVariableValue("--nav-link-color") || "#3b3b3b",
   navLinkFontFamily: getCssVariableValue("--nav-link-font-family") || '"Inter"',
+  navWidth: getCssVariableValue("--nav-width") || "40%",
+  navHeight: getCssVariableValue("--nav-height") || "50%",
+  navLeft: getCssVariableValue("--nav-link-font-family") || "0",
   //Header vars
   headerWidth: getCssVariableValue("--header-width") || "80%",
   headerHeight: getCssVariableValue("--header-height") || "15%",

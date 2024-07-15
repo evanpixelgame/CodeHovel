@@ -1,4 +1,6 @@
 
+make it so the position slides can change positioning to fixed to move outside their container and then do some logic to make the other elements reassemble with appropriate spacing
+
 Turn ContextProvider's defaultThemeProperties into an object with different nested objects with those properties, so do defaultThemeProperties{darkDefault: {}, lightDefault: {}} etc.
 This will make is so that the object differences works from a different starting theme (can just do ...props and then modify any different features for the different default objects after dark)
 

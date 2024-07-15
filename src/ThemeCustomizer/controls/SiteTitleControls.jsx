@@ -33,7 +33,7 @@ const SiteTitleControls = ({ themeProperties, handleInputChange }) => (
         onChange={(e) =>
           handleInputChange("siteTitlePadLeft", `${e.target.value}%`)
         }
-        min="-50"
+        min="0"
         max="70"
         step="1"
       />

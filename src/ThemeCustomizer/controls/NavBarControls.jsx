@@ -1,3 +1,4 @@
+import React from "react";
 import UnitAppender from "../subcomponents/UnitAppender";
 
 const NavBarControls = ({ themeProperties, handleInputChange }) => (
@@ -7,22 +8,26 @@ const NavBarControls = ({ themeProperties, handleInputChange }) => (
       <input
         type="color"
         className="color-input"
-        value={themeProperties.navBarBgColor}
-        onChange={(e) => handleInputChange("navBarBgColor", e.target.value)}
+        value={themeProperties.navBgColor}
+        onChange={(e) => handleInputChange("navBgColor", e.target.value)}
       />
     </div>
     <div>
-      <label>Width:</label>
-      <UnitAppender
-        value={themeProperties.navBarWidth}
-        onChange={(value) => handleInputChange("navBarWidth", value)}
+      <label>Link Color:</label>
+      <input
+        type="color"
+        className="color-input"
+        value={themeProperties.navLinkColor}
+        onChange={(e) => handleInputChange("navLinkColor", e.target.value)}
       />
     </div>
     <div>
-      <label>Height:</label>
-      <UnitAppender
-        value={themeProperties.navBarHeight}
-        onChange={(value) => handleInputChange("navBarHeight", value)}
+      <label>Link Font Family:</label>
+      <input
+        type="text"
+        className="text-input"
+        value={themeProperties.navLinkFontFamily}
+        onChange={(e) => handleInputChange("navLinkFontFamily", e.target.value)}
       />
     </div>
   </>
