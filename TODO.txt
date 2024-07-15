@@ -1,5 +1,6 @@
 
-
+Turn ContextProvider's defaultThemeProperties into an object with different nested objects with those properties, so do defaultThemeProperties{darkDefault: {}, lightDefault: {}} etc.
+This will make is so that the object differences works from a different starting theme (can just do ...props and then modify any different features for the different default objects after dark)
 
 add option to set side border width individually (maybe even let each border color and width be controlled individually?)
 maybe also add option to upload pictures and videos for main content

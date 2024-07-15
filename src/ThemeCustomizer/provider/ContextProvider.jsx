@@ -16,6 +16,7 @@ const getCssVariableValue = (variableName) => {
 };
 
 const defaultThemeProperties = {
+  //Main Colors
   primaryBgColor: getCssVariableValue("--primary-bg-color") || "#3b3b3b",
   secondaryBgColor: getCssVariableValue("--secondary-bg-color") || "#343434",
   primaryAccentColor:
@@ -24,32 +25,42 @@ const defaultThemeProperties = {
     getCssVariableValue("--secondary-accent-color") || "#ed6a5a",
   tertiaryAccentColor:
     getCssVariableValue("--tertiary-accent-color") || "#fb8b24",
+  //Main Fonts vars
   primaryFontFamily: getCssVariableValue("--primary-font-family") || '"Roboto"',
   primaryTextColor: getCssVariableValue("--primary-text-color") || "#b4b4b4",
   secondaryTextColor:
     getCssVariableValue("--secondary-text-color") || "#ffffff",
+
   mainTextFontSize: getCssVariableValue("--main-text-font-size") || "40px",
   subTextFontSize: getCssVariableValue("--sub-text-font-size") || "16px",
   siteTitleFontFamily:
     getCssVariableValue("--site-title-font-family") || '"Roboto"',
+  //Main Positioning vars
+  //Site Title vars
   siteTitleColor: getCssVariableValue("--site-title-color") || "#ce721d",
   siteTitleFontSize: getCssVariableValue("--site-title-font-size") || "24px",
   siteTitlePadLeft: getCssVariableValue("--site-title-pad-left") || "1%",
+  //Nav Bar vars
   navBgColor: getCssVariableValue("--nav-bg-color") || "#f5f5f5",
   navLinkColor: getCssVariableValue("--nav-link-color") || "#3b3b3b",
   navLinkFontFamily: getCssVariableValue("--nav-link-font-family") || '"Inter"',
+  //Header vars
   headerWidth: getCssVariableValue("--header-width") || "80%",
   headerHeight: getCssVariableValue("--header-height") || "15%",
   headerBgColor: getCssVariableValue("--header-bg-color") || "#343434",
+  //Footer vars
   footerWidth: getCssVariableValue("--footer-width") || "80%",
   footerHeight: getCssVariableValue("--footer-height") || "15%",
   footerBgColor: getCssVariableValue("--footer-bg-color") || "#343434",
+  //Toggle vars
   togglePlacementTop: getCssVariableValue("--toggle-placement-top") || "5%",
   togglePlacementRight: getCssVariableValue("--toggle-placement-right") || "5%",
   themeSelectorBgColor:
     getCssVariableValue("--theme-selector-bg-color") || "#8b85d5",
+  //Side Border vars
   sideBorderBgColor: getCssVariableValue("--side-border-bg-color") || "#343434",
   sideBorderDisplay: getCssVariableValue("--side-border-display") || "none",
+  //Social Link vars
   socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
 };
 
@@ -94,40 +105,3 @@ export function ThemeProvider({ children }) {
 export function useThemeContext() {
   return useContext(ThemeContext);
 }
-
-//************************************************************************************************************************************************************************************** */
-//************************************************************************************************************************************************************************************** */
-//************************************************************************************************************************************************************************************** */
-
-/*
-
-// the themes are affected by the variables in index.css in root directory, preset themes outlined there too
-
-import React, { createContext, useState, useContext } from "react";
-
-// Create the context
-const ThemeContext = createContext();
-
-// Create a provider component / set default
-export function ThemeProvider({ children }) {
-  //set useState with initial value of dark theme
-  const [theme, setTheme] = useState("dark");
-
-  const selectTheme = (newTheme) => {
-    setTheme(newTheme);
-  };
-
-  //could also define an object above and pass it as an arg in values so its accessible everywhere
-  //for example, could add a themes object with various theme css settings listed
-  return (
-    <ThemeContext.Provider value={{ theme, selectTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
-
-export function useThemeContext() {
-  return useContext(ThemeContext);
-}
-
-*/
