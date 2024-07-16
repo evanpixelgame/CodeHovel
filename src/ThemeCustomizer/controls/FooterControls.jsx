@@ -11,16 +11,7 @@ const FooterControls = ({ themeProperties, handleInputChange }) => (
         onChange={(e) => handleInputChange("footerBgColor", e.target.value)}
       />
     </div>
-    <label className="match-style-button-container">
-      <button
-        type="button"
-        className="theme-button linking-button"
-        onClick={() =>
-          handleInputChange("footerBgColor", themeProperties.headerBgColor)
-        }
-      ></button>
-      Match Header Color
-    </label>
+
     <div>
       <label>Width:</label>
       <UnitAppender
@@ -29,23 +20,44 @@ const FooterControls = ({ themeProperties, handleInputChange }) => (
       />
     </div>
 
-    <label className="match-style-button-container">
-      <button
-        type="button"
-        className="theme-button linking-button"
-        onClick={() =>
-          handleInputChange("footerWidth", themeProperties.headerWidth)
-        }
-      ></button>
-      Match Header Width
-    </label>
-
     <div>
       <label>Height:</label>
       <UnitAppender
         value={themeProperties.footerHeight}
         onChange={(value) => handleInputChange("footerHeight", value)}
       />
+    </div>
+    <div className="matching-grouping">
+      <label>
+        Match
+        <br />
+        Header:
+      </label>
+
+      <div className="link-style-button-container">
+        <label className="match-style-button-container">
+          <button
+            type="button"
+            className="theme-button linking-button"
+            onClick={() =>
+              handleInputChange("footerWidth", themeProperties.headerWidth)
+            }
+          >
+            Width
+          </button>
+        </label>
+        <label className="match-style-button-container">
+          <button
+            type="button"
+            className="theme-button linking-button"
+            onClick={() =>
+              handleInputChange("footerBgColor", themeProperties.headerBgColor)
+            }
+          >
+            Color
+          </button>
+        </label>
+      </div>
     </div>
   </>
 );

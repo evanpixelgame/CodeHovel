@@ -63,6 +63,9 @@ const defaultThemeProperties = {
   //Side Border vars
   sideBorderBgColor: getCssVariableValue("--side-border-bg-color") || "#343434",
   sideBorderDisplay: getCssVariableValue("--side-border-display") || "none",
+  sideBorderWidth:
+    getCssVariableValue("--side-border-width") ||
+    "calc(50% - var(--header-width) / 2)",
   //Social Link vars
   socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
 };

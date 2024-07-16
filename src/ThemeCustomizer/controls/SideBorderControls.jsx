@@ -28,6 +28,82 @@ const SideBorderControls = ({ themeProperties, handleInputChange }) => {
           }
         />
       </div>
+      <div className="matching-grouping">
+        <label>
+          Match
+          <br />
+          Header:
+        </label>
+
+        <div className="link-style-button-container">
+          <label className="match-style-button-container">
+            <button
+              type="button"
+              className="theme-button linking-button"
+              onClick={() =>
+                handleInputChange(
+                  "sideBorderWidth",
+                  themeProperties.headerWidth
+                )
+              }
+            >
+              Width
+            </button>
+          </label>
+          <label className="match-style-button-container">
+            <button
+              type="button"
+              className="theme-button linking-button"
+              onClick={() =>
+                handleInputChange(
+                  "sideBorderBgColor",
+                  themeProperties.headerBgColor
+                )
+              }
+            >
+              Color
+            </button>
+          </label>
+        </div>
+      </div>
+      <div className="matching-grouping">
+        <label>
+          Match
+          <br />
+          Footer:
+        </label>
+
+        <div className="link-style-button-container">
+          <label className="match-style-button-container">
+            <button
+              type="button"
+              className="theme-button linking-button"
+              onClick={() =>
+                handleInputChange(
+                  "sideBorderWidth",
+                  themeProperties.footerWidth
+                )
+              }
+            >
+              Width
+            </button>
+          </label>
+          <label className="match-style-button-container">
+            <button
+              type="button"
+              className="theme-button linking-button"
+              onClick={() =>
+                handleInputChange(
+                  "sideBorderBgColor",
+                  themeProperties.footerBgColor
+                )
+              }
+            >
+              Color
+            </button>
+          </label>
+        </div>
+      </div>
     </>
   );
 };
