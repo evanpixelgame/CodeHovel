@@ -1,6 +1,6 @@
-import github from "../../assets/githubIcon.png";
-import twitter from "../../assets/twitterIcon.png";
-import email from "../../assets/emailIcon.png";
+import Github from "../../assets/github.svg";
+import Twitter from "../../assets/twitter.svg";
+import Email from "../../assets/email.svg";
 
 const SocialLinks = () => {
   return (
@@ -10,21 +10,21 @@ const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={github} alt="email" />
+        <img src={Github} alt="Github" />
       </a>
       <a
         href="https://github.com/evanpixelgame"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={twitter} alt="email" />
+        <img src={Twitter} alt="Twitter" />
       </a>
       <a
         href="https://github.com/evanpixelgame"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={email} alt="email" />
+        <img src={Email} alt="Email" />
       </a>
     </div>
   );

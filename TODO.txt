@@ -8,6 +8,8 @@ add a checkbox at top to toggle between default of relative position to option t
 add additional objects to demonstrate secondary and tertriary color properties like adding more colored things to main and/or dynamically coloring the svg
   -also add stuff with the secondary font color
 
+-change the svg of the profile image, maybe add some color animations or something
+
 make it so the position slides can change positioning to fixed to move outside their container and then do some logic to make the other elements reassemble with appropriate spacing
 
 Turn ContextProvider's defaultThemeProperties into an object with different nested objects with those properties, so do defaultThemeProperties{darkDefault: {}, lightDefault: {}} etc.
