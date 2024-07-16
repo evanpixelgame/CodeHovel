@@ -3,6 +3,9 @@ switch the pngs for the toggle and the profile picture back to SVGs
 
 add some sort of fonts library for more font selection options
 
+add additional objects to demonstrate secondary and tertriary color properties like adding more colored things to main and/or dynamically coloring the svg
+  -also add stuff with the secondary font color
+
 make it so the position slides can change positioning to fixed to move outside their container and then do some logic to make the other elements reassemble with appropriate spacing
 
 Turn ContextProvider's defaultThemeProperties into an object with different nested objects with those properties, so do defaultThemeProperties{darkDefault: {}, lightDefault: {}} etc.
