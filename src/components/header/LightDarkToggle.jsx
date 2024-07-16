@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import darkIcon from "../../assets/darkIcon.png";
-import lightIcon from "../../assets/lightIcon.png";
-import toggleOnDark from "../../assets/toggleDarkIcon.png";
-import toggleOnLight from "../../assets/toggleLightIcon.png";
+import darkIcon from "../../assets/dark_mode.svg";
+import lightIcon from "../../assets/light_mode.svg";
+import toggleOnDark from "../../assets/toggle_dark.svg";
+import toggleOnLight from "../../assets/toggle_light.svg";
 import { useThemeContext } from "../../ThemeCustomizer/provider/ContextProvider";
 
 //add theme functioning
