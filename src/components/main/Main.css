@@ -44,7 +44,7 @@
   font-style: normal;
   font-weight: 800;
   font-family: var(--primary-font-family);
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
 }
 
 #mainText {

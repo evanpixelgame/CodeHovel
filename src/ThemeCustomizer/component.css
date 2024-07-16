@@ -1,4 +1,5 @@
 :root {
+  --theme-customizer-position: relative;
   --theme-customizer-bg-color: #8b85d5;
   --theme-customizer-button-bg: #9995db;
   --theme-customizer-border-color: #dddddd;
@@ -10,6 +11,7 @@
 }
 
 .theme-customizer {
+  position: var(--theme-customizer-position);
   border: 3px solid var(--theme-customizer-border-color);
   max-width: 15%;
   margin: 10px;

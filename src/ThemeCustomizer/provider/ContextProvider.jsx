@@ -27,9 +27,9 @@ const defaultThemeProperties = {
     getCssVariableValue("--tertiary-accent-color") || "#fb8b24",
   //Main Fonts vars
   primaryFontFamily: getCssVariableValue("--primary-font-family") || '"Roboto"',
-  primaryTextColor: getCssVariableValue("--primary-text-color") || "#b4b4b4",
+  primaryTextColor: getCssVariableValue("--primary-text-color") || "#ffffff",
   secondaryTextColor:
-    getCssVariableValue("--secondary-text-color") || "#ffffff",
+    getCssVariableValue("--secondary-text-color") || "#b4b4b4",
   mainTextFontSize: getCssVariableValue("--main-text-font-size") || "40px",
   subTextFontSize: getCssVariableValue("--sub-text-font-size") || "16px",
 

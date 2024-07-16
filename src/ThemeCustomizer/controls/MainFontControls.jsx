@@ -4,16 +4,7 @@ import UnitAppender from "../subcomponents/UnitAppender";
 const MainFontControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
-      <label>Background Color:</label>
-      <input
-        type="color"
-        className="color-input"
-        value={themeProperties.mainFontBgColor}
-        onChange={(e) => handleInputChange("mainFontBgColor", e.target.value)}
-      />
-    </div>
-    <div>
-      <label>Primary Font Family:</label>
+      <label>Primary Font:</label>
       <input
         type="text"
         className="text-input"
@@ -26,7 +17,7 @@ const MainFontControls = ({ themeProperties, handleInputChange }) => (
       />
     </div>
     <div>
-      <label>Primary Text Color:</label>
+      <label>Primary Color:</label>
       <input
         type="color"
         className="color-input"
@@ -35,7 +26,7 @@ const MainFontControls = ({ themeProperties, handleInputChange }) => (
       />
     </div>
     <div>
-      <label>Secondary Text Color:</label>
+      <label>Secondary Color:</label>
       <input
         type="color"
         className="color-input"
@@ -46,14 +37,14 @@ const MainFontControls = ({ themeProperties, handleInputChange }) => (
       />
     </div>
     <div>
-      <label>Main Text Font Size:</label>
+      <label>H1 Size:</label>
       <UnitAppender
         value={themeProperties.mainTextFontSize}
         onChange={(value) => handleInputChange("mainTextFontSize", value)}
       />
     </div>
     <div>
-      <label>Sub Text Font Size:</label>
+      <label>H3 Size:</label>
       <UnitAppender
         value={themeProperties.subTextFontSize}
         onChange={(value) => handleInputChange("subTextFontSize", value)}
