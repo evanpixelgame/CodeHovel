@@ -26,9 +26,10 @@
   height: 195px;
 
   border-radius: 90px;
-  margin-right: 100px;
+  right: var(--home-image-right);
+  top: var(--home-image-top);
 
-  transform: scale(1.2);
+  transform: scale(var(--home-image-scale));
   transform-origin: center;
 }
 
@@ -36,7 +37,9 @@
   /* HomeTextGroup */
 
   position: relative;
-  max-width: 60%;
+  max-width: var(--home-text-group-max-width);
+  right: var(--home-text-group-right);
+  top: var(--home-text-group-top);
   text-align: left;
   font-style: normal;
   font-weight: 800;

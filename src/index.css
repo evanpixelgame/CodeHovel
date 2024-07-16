@@ -25,6 +25,13 @@
   --main-text-font-size: 40px;
   --sub-text-font-size: 16px;
 
+  --home-image-scale: scale(1.2);
+  --home-image-right: 100px;
+  --home-image-top: 0;
+  --home-text-group-max-width: 60%;
+  --home-text-group-right: 0;
+  --home-text-group-top: 0;
+
   --site-title-font-family: "Roboto";
   --site-title-color: #ce721d;
   --site-title-font-size: 24px;

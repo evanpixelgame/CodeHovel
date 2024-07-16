@@ -1,30 +1,55 @@
+import React from "react";
 import UnitAppender from "../subcomponents/UnitAppender";
 
 const MainPositionControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
-      <label>Background Color:</label>
+      <label>Home Image Scale:</label>
       <input
-        type="color"
-        className="color-input"
-        value={themeProperties.mainPositionBgColor}
+        type="range"
+        className="range-input"
+        value={themeProperties.homeImageScale}
+        onChange={(e) => handleInputChange("homeImageScale", e.target.value)}
+        min="0"
+        max="3"
+        step=".1"
+      />
+    </div>
+    <div>
+      <label>Home Image Right:</label>
+      <input
+        type="range"
+        className="range-input"
+        value={themeProperties.homeImageRight}
+        onChange={(e) => handleInputChange("homeImageRight", e.target.value)}
+        min="0"
+        max="100"
+      />
+    </div>
+    <div>
+      <label>Main Text Max-Width:</label>
+      <input
+        type="range"
+        className="range-input"
+        value={themeProperties.homeTextGroupMaxWidth}
         onChange={(e) =>
-          handleInputChange("mainPositionBgColor", e.target.value)
+          handleInputChange("homeTextGroupMaxWidth", e.target.value)
         }
+        min="0"
+        max="100"
       />
     </div>
     <div>
-      <label>Width:</label>
-      <UnitAppender
-        value={themeProperties.mainPositionWidth}
-        onChange={(value) => handleInputChange("mainPositionWidth", value)}
-      />
-    </div>
-    <div>
-      <label>Height:</label>
-      <UnitAppender
-        value={themeProperties.mainPositionHeight}
-        onChange={(value) => handleInputChange("mainPositionHeight", value)}
+      <label>Home Text Right:</label>
+      <input
+        type="range"
+        className="range-input"
+        value={themeProperties.homeTextGroupRight}
+        onChange={(e) =>
+          handleInputChange("homeTextGroupRight", e.target.value)
+        }
+        min="0"
+        max="100"
       />
     </div>
   </>

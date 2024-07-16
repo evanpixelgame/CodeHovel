@@ -34,6 +34,14 @@ const defaultThemeProperties = {
   subTextFontSize: getCssVariableValue("--sub-text-font-size") || "16px",
 
   //Main Positioning vars
+  homeImageScale: getCssVariableValue("--home-image-scale") || "1.2",
+  homeImageRight: getCssVariableValue("--home-image-right") || "100px",
+  homeImageTop: getCssVariableValue("--home-image-top") || "0",
+  homeTextGroupMaxWidth:
+    getCssVariableValue("--home-text-group-max-width") || "60%",
+  homeTextGroupRight: getCssVariableValue("--home-text-group-right") || "0",
+  homeTextGroupTop: getCssVariableValue("--home-text-group-top") || "0",
+
   //Site Title vars
   siteTitleFontFamily:
     getCssVariableValue("--site-title-font-family") || '"Roboto"',
