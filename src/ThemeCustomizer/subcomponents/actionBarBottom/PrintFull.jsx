@@ -6,7 +6,11 @@ const PrintFull = ({ themeProperties, setShowMessage }) => {
 
   return (
     <>
-      <button onClick={printFull} type="button" className="theme-button">
+      <button
+        onClick={printFull}
+        type="button"
+        className="theme-button print-button"
+      >
         Print Full
       </button>
     </>

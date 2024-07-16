@@ -14,7 +14,11 @@ const PrintNew = ({ themeProperties, initialVarListRef, setShowMessage }) => {
 
   return (
     <>
-      <button onClick={printNew} type="button" className="theme-button">
+      <button
+        onClick={printNew}
+        type="button"
+        className="theme-button print-button"
+      >
         Print New
       </button>
     </>

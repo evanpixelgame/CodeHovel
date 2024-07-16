@@ -6,7 +6,10 @@ const ShowCustomizerButton = ({ showCustomizer, setShowCustomizer }) => {
   };
 
   return (
-    <button className="theme-button" onClick={toggleCustomizer}>
+    <button
+      className="theme-button show-customizer-button"
+      onClick={toggleCustomizer}
+    >
       {showCustomizer ? "Hide Customizer" : "Show Customizer"}
     </button>
   );

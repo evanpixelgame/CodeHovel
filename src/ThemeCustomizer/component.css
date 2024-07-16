@@ -105,6 +105,11 @@ select.unit-selector {
   touch-action: manipulation;
   vertical-align: middle;
 }
+.theme-button:not(#info-button):not(#hide-button):not(
+    .show-customizer-button
+  ):not(.print-button) {
+  filter: brightness(0.85);
+}
 
 .theme-button:focus:not(:focus-visible),
 .theme-button:focus {
