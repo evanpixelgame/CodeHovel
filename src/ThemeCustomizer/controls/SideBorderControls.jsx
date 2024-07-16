@@ -39,6 +39,7 @@ const SideBorderControls = ({ themeProperties, handleInputChange }) => {
         <UnitAppender
           value={themeProperties.sideBorderWidth}
           onChange={(value) => handleInputChange("sideBorderWidth", value)}
+          defaultUnit="%"
         />
       </div>
       <div className="matching-grouping">

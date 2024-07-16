@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const UnitAppender = ({ value = "", onChange }) => {
+const UnitAppender = ({ value = "", onChange, defaultUnit = "px" }) => {
   // Separate the numeric value and unit from the incoming value
   const initialNumericValue = value.replace(/[^\d.-]/g, "") || "";
-  const initialUnit = value.replace(/[^a-z%]/g, "") || "px"; // Default unit
+  const initialUnit = value.replace(/[^a-z%]/g, "") || defaultUnit; // Use defaultUnit if no unit is provided
 
   // Initialize state variables with initial values based on props
   const [numericValue, setNumericValue] = useState(initialNumericValue);
