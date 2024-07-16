@@ -55,6 +55,7 @@
   --side-border-width: calc(50% - var(--header-width) / 2);
 
   --social-links-gap: 20%;
+  --social-links-top: 0;
 }
 
 .light,

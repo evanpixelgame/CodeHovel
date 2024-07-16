@@ -68,6 +68,7 @@ const defaultThemeProperties = {
     "calc(50% - var(--header-width) / 2)",
   //Social Link vars
   socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
+  socialLinksTop: getCssVariableValue("--social-links-top") || "0",
 };
 
 // Create a Provider component, this gets imported in main.js to wrap <app>

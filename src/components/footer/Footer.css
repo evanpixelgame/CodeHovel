@@ -17,4 +17,6 @@
   justify-content: center;
   align-items: center;
   gap: var(--social-links-gap);
+  top: var(--social-links-top);
+  position: relative;
 }

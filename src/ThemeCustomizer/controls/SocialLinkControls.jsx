@@ -1,29 +1,29 @@
+import React from "react";
 import UnitAppender from "../subcomponents/UnitAppender";
 
 const SocialLinkControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
-      <label>Background Color:</label>
+      <label>Gap:</label>
+      <UnitAppender
+        value={themeProperties.socialLinksGap}
+        onChange={(value) => handleInputChange("socialLinksGap", value)}
+      />
+    </div>
+    <div>
+      <label>Vertical Position:</label>
       <input
-        type="color"
-        className="color-input"
-        value={themeProperties.socialLinkBgColor}
-        onChange={(e) => handleInputChange("socialLinkBgColor", e.target.value)}
+        type="range"
+        className="range-input"
+        value={parseInt(themeProperties.socialLinksTop, 10)}
+        onChange={(e) =>
+          handleInputChange("socialLinksTop", `${e.target.value}%`)
+        }
+        min="-30"
+        max="30"
+        step="1"
       />
-    </div>
-    <div>
-      <label>Width:</label>
-      <UnitAppender
-        value={themeProperties.socialLinkWidth}
-        onChange={(value) => handleInputChange("socialLinkWidth", value)}
-      />
-    </div>
-    <div>
-      <label>Height:</label>
-      <UnitAppender
-        value={themeProperties.socialLinkHeight}
-        onChange={(value) => handleInputChange("socialLinkHeight", value)}
-      />
+      <span>{themeProperties.socialLinksTop}</span>
     </div>
   </>
 );
