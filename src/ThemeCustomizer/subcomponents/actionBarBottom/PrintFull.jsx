@@ -7,9 +7,7 @@ const PrintFull = ({ themeProperties, setShowMessage }) => {
   return (
     <>
       <button onClick={printFull} type="button" className="theme-button">
-        Print New
-        <br />
-        Full List
+        Print Full
       </button>
     </>
   );

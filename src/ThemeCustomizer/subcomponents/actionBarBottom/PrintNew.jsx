@@ -16,8 +16,6 @@ const PrintNew = ({ themeProperties, initialVarListRef, setShowMessage }) => {
     <>
       <button onClick={printNew} type="button" className="theme-button">
         Print New
-        <br />
-        CSS Vars
       </button>
     </>
   );
