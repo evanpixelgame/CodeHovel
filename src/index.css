@@ -48,8 +48,6 @@
   --toggle-placement-top: 5%;
   --toggle-placement-right: 5%;
 
-  --theme-selector-bg-color: #8b85d5;
-
   --side-border-bg-color: #343434;
   --side-border-display: none;
   --side-border-width: calc(50% - var(--header-width) / 2);

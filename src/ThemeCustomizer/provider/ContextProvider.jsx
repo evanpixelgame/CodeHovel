@@ -58,17 +58,32 @@ const defaultThemeProperties = {
   //Toggle vars
   togglePlacementTop: getCssVariableValue("--toggle-placement-top") || "5%",
   togglePlacementRight: getCssVariableValue("--toggle-placement-right") || "5%",
-  themeSelectorBgColor:
-    getCssVariableValue("--theme-selector-bg-color") || "#8b85d5",
   //Side Border vars
   sideBorderBgColor: getCssVariableValue("--side-border-bg-color") || "#343434",
   sideBorderDisplay: getCssVariableValue("--side-border-display") || "none",
   sideBorderWidth:
     getCssVariableValue("--side-border-width") ||
     "calc(50% - var(--header-width) / 2)",
-  //Social Link vars
+  // Social Link vars
   socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
   socialLinksTop: getCssVariableValue("--social-links-top") || "0",
+  // Theme Customizer links (these css variables come from components.css (:root))
+  themeCustomizerBgColor:
+    getCssVariableValue("--theme-customizer-bg-color") || "#8b85d5",
+  themeCustomizerButtonBg:
+    getCssVariableValue("--theme-customizer-button-bg") || "#9995db",
+  themeCustomizerBorderColor:
+    getCssVariableValue("--theme-customizer-border-color") || "#dddddd",
+  themeCustomizerBorderColor2:
+    getCssVariableValue("--theme-customizer-border-color-2") || "#3b3b3b",
+  themeCustomizerSelectBgColor:
+    getCssVariableValue("--theme-customizer-select-bg-color") || "#1a1a1aeb",
+  themeCustomizerButtonBgColor:
+    getCssVariableValue("--theme-customizer-button-bg-color") || "#716ada",
+  themeCustomizerButtonBorderColor:
+    getCssVariableValue("--theme-customizer-button-border-color") || "#6058d4",
+  themeSelectorBgColor:
+    getCssVariableValue("--theme-selector-bg-color") || "#8b85d5",
 };
 
 // Create a Provider component, this gets imported in main.js to wrap <app>
