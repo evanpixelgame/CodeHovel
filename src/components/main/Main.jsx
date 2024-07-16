@@ -18,11 +18,11 @@ const Main = () => {
           showCustomizer={showCustomizer}
           setShowCustomizer={setShowCustomizer}
         />
-        <ThemeCustomizer
-          showCustomizer={showCustomizer}
-          setShowCustomizer={setShowCustomizer}
-        />
       </div>
+      <ThemeCustomizer
+        showCustomizer={showCustomizer}
+        setShowCustomizer={setShowCustomizer}
+      />
     </div>
   );
 };

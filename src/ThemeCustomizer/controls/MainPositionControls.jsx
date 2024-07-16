@@ -20,10 +20,13 @@ const MainPositionControls = ({ themeProperties, handleInputChange }) => (
       <input
         type="range"
         className="range-input"
-        value={themeProperties.homeImageRight}
-        onChange={(e) => handleInputChange("homeImageRight", e.target.value)}
-        min="0"
-        max="100"
+        value={parseInt(themeProperties.homeImageRight, 10)}
+        onChange={(e) =>
+          handleInputChange("homeImageRight", `${e.target.value}vw`)
+        }
+        min="-60"
+        max="20"
+        step=".1"
       />
     </div>
     <div>
@@ -31,12 +34,13 @@ const MainPositionControls = ({ themeProperties, handleInputChange }) => (
       <input
         type="range"
         className="range-input"
-        value={themeProperties.homeTextGroupMaxWidth}
+        value={parseInt(themeProperties.homeTextGroupMaxWidth, 10)}
         onChange={(e) =>
-          handleInputChange("homeTextGroupMaxWidth", e.target.value)
+          handleInputChange("homeTextGroupMaxWidth", `${e.target.value}%`)
         }
-        min="0"
-        max="100"
+        min="30"
+        max="70"
+        step=".1"
       />
     </div>
     <div>
@@ -44,12 +48,13 @@ const MainPositionControls = ({ themeProperties, handleInputChange }) => (
       <input
         type="range"
         className="range-input"
-        value={themeProperties.homeTextGroupRight}
+        value={parseInt(themeProperties.homeTextGroupRight, 10)}
         onChange={(e) =>
-          handleInputChange("homeTextGroupRight", e.target.value)
+          handleInputChange("homeTextGroupRight", `${e.target.value}%`)
         }
-        min="0"
-        max="100"
+        min="-40"
+        max="40"
+        step=".1"
       />
     </div>
   </>
