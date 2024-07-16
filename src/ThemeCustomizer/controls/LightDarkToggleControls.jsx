@@ -1,30 +1,20 @@
+import React from "react";
 import UnitAppender from "../subcomponents/UnitAppender";
 
 const LightDarkToggleControls = ({ themeProperties, handleInputChange }) => (
   <>
     <div>
-      <label>Background Color:</label>
-      <input
-        type="color"
-        className="color-input"
-        value={themeProperties.lightDarkToggleBgColor}
-        onChange={(e) =>
-          handleInputChange("lightDarkToggleBgColor", e.target.value)
-        }
+      <label>Top:</label>
+      <UnitAppender
+        value={themeProperties.togglePlacementTop}
+        onChange={(value) => handleInputChange("togglePlacementTop", value)}
       />
     </div>
     <div>
-      <label>Width:</label>
+      <label>Right:</label>
       <UnitAppender
-        value={themeProperties.lightDarkToggleWidth}
-        onChange={(value) => handleInputChange("lightDarkToggleWidth", value)}
-      />
-    </div>
-    <div>
-      <label>Height:</label>
-      <UnitAppender
-        value={themeProperties.lightDarkToggleHeight}
-        onChange={(value) => handleInputChange("lightDarkToggleHeight", value)}
+        value={themeProperties.togglePlacementRight}
+        onChange={(value) => handleInputChange("togglePlacementRight", value)}
       />
     </div>
   </>
