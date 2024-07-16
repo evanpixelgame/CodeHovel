@@ -33,3 +33,5 @@ for portfolio:
 
 ADD A BUNCH OF TINY projects and apps all throughout to demonstrate the abilities without them having to click any links
 add things like the customizer and others and put them in clever places in the site and make them do interesting things while being neatly done to show skill
+
+
