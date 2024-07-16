@@ -56,8 +56,8 @@
 
 #border-left,
 #border-right {
-  position: absolute;
-  width: calc(50% - var(--header-width) / 2);
+  position: fixed;
+  width: var(--side-border-width);
   height: 100%;
 
   background: var(--side-border-bg-color);

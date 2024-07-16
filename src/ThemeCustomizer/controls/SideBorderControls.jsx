@@ -7,6 +7,12 @@ const SideBorderControls = ({ themeProperties, handleInputChange }) => {
     handleInputChange("sideBorderDisplay", displayValue);
   };
 
+  const handleWidthMatch = (widthType) => {
+    const widthValue = themeProperties[widthType];
+    const calcValue = `calc(50% - ${widthValue} / 2)`;
+    handleInputChange("sideBorderWidth", calcValue);
+  };
+
   return (
     <>
       <div>
@@ -28,24 +34,25 @@ const SideBorderControls = ({ themeProperties, handleInputChange }) => {
           }
         />
       </div>
+      <div>
+        <label>Width:</label>
+        <UnitAppender
+          value={themeProperties.sideBorderWidth}
+          onChange={(value) => handleInputChange("sideBorderWidth", value)}
+        />
+      </div>
       <div className="matching-grouping">
         <label>
           Match
           <br />
           Header:
         </label>
-
         <div className="link-style-button-container">
           <label className="match-style-button-container">
             <button
               type="button"
               className="theme-button linking-button"
-              onClick={() =>
-                handleInputChange(
-                  "sideBorderWidth",
-                  themeProperties.headerWidth
-                )
-              }
+              onClick={() => handleWidthMatch("headerWidth")}
             >
               Width
             </button>
@@ -72,18 +79,12 @@ const SideBorderControls = ({ themeProperties, handleInputChange }) => {
           <br />
           Footer:
         </label>
-
         <div className="link-style-button-container">
           <label className="match-style-button-container">
             <button
               type="button"
               className="theme-button linking-button"
-              onClick={() =>
-                handleInputChange(
-                  "sideBorderWidth",
-                  themeProperties.footerWidth
-                )
-              }
+              onClick={() => handleWidthMatch("footerWidth")}
             >
               Width
             </button>
