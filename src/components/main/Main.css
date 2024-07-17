@@ -24,6 +24,7 @@
   position: relative;
   width: 209px;
   height: 195px;
+  max-height: 500px;
 
   border-radius: 90px;
   right: var(--home-image-right);
