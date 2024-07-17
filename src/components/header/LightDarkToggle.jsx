@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import darkIcon from "../../assets/dark_mode.svg";
-import lightIcon from "../../assets/light_mode.svg";
-import toggleOnDark from "../../assets/toggle_dark.svg";
-import toggleOnLight from "../../assets/toggle_light.svg";
+import moon from "../../assets/moon.svg";
+import sun from "../../assets/sun.svg";
+import toggle from "../../assets/toggle.svg";
 import { useThemeContext } from "../../ThemeCustomizer/provider/ContextProvider";
 
 //add theme functioning
@@ -21,15 +20,20 @@ const LightDarkToggle = () => {
     <div id="toggleDiv" onClick={handleNextTheme}>
       {theme === "dark" ? (
         <>
-          <img src={lightIcon} alt="lightIcon" className="icon" />
-          <img src={toggleOnDark} alt="toggleOnLight" className="toggle" />
-          <img src={darkIcon} alt="darkIcon" className="icon" />
+          <img src={sun} alt="sun" className="icon" />
+          <img src={toggle} alt="toggleOnLight" className="toggle" />
+          <img src={moon} alt="moon" className="icon" />
         </>
       ) : (
         <>
-          <img src={lightIcon} alt="lightIcon" className="icon" />
-          <img src={toggleOnLight} alt="toggleOnDark" className="toggle" />
-          <img src={darkIcon} alt="darkIcon" className="icon" />
+          <img src={sun} alt="sun" className="icon" />
+          <img
+            src={toggle}
+            alt="toggle"
+            className="toggle"
+            style={{ transform: "scaleX(-1)" }}
+          />
+          <img src={moon} alt="moon" className="icon" />
         </>
       )}
     </div>
