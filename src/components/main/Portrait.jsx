@@ -1,4 +1,4 @@
-import avatar from "../../assets/home_avatar.svg";
+import avatar from "../../assets/finalfinalnonsimple.svg";
 
 const Portrait = () => {
   return (

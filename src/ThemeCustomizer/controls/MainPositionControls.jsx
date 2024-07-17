@@ -11,7 +11,7 @@ const MainPositionControls = ({ themeProperties, handleInputChange }) => (
         value={themeProperties.homeImageScale}
         onChange={(e) => handleInputChange("homeImageScale", e.target.value)}
         min="0"
-        max="3"
+        max="5"
         step=".1"
       />
     </div>
