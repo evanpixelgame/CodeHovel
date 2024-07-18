@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import moon from "../../assets/moon.svg";
 import sun from "../../assets/sun.svg";
 import toggle from "../../assets/toggle.svg";
-import { useThemeContext } from "../../ThemeCustomizer/provider/ContextProvider";
+import { useThemeContext } from "../../components/ThemeCustomizer/provider/ContextProvider";
 
 //add theme functioning
 

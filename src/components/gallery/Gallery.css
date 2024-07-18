@@ -1,0 +1,21 @@
+/* Gallery.css */
+.gallery-masonry {
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+}
+
+.gallery-masonry-column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.gallery-item {
+  margin-bottom: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

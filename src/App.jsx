@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useThemeContext } from "./ThemeCustomizer/provider/ContextProvider";
+import { useThemeContext } from "./components/ThemeCustomizer/provider/ContextProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HomePage, About, Projects, Contact } from "./pages";
