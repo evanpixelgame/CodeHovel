@@ -1,4 +1,5 @@
-import avatar from "../../assets/homeImage7.svg";
+//coolors.co/9995db-7d2e68-854d27-251351-f9dbbd
+
 import React, { useState } from "react";
 
 const Portrait = () => {

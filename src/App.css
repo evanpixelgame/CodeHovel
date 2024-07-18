@@ -40,17 +40,26 @@
 }
 
 .animated-svg path.animated-fill {
-  animation: animateFill 5s infinite alternate;
+  animation: animateFill 10s infinite alternate;
 }
 
 @keyframes animateFill {
   0% {
-    fill: #5b39ac; /* Start color */
+    fill: var(--animation-color-1);
   }
-  50% {
-    fill: #fedede; /* Middle color */
+  20% {
+    fill: var(--animation-color-2);
+  }
+  40% {
+    fill: var(--animation-color-3);
+  }
+  60% {
+    fill: var(--animation-color-4);
+  }
+  80% {
+    fill: var(--animation-color-5);
   }
   100% {
-    fill: #9995db; /* End color */
+    fill: var(--animation-color-6);
   }
 }

@@ -32,6 +32,13 @@
   --home-text-group-right: 0;
   --home-text-group-top: 0;
 
+  --animation-color-1: #5b39ac;
+  --animation-color-2: #7d2e68;
+  --animation-color-3: #e09f3e;
+  --animation-color-4: #fff3b0;
+  --animation-color-5: #52d1dc;
+  --animation-color-6: #a5be00;
+
   --site-title-font-family: "Roboto";
   --site-title-color: #ce721d;
   --site-title-font-size: 24px;
@@ -299,20 +306,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-@keyframes colorChange {
-  0% {
-    fill: #5b39ac;
-  }
-  50% {
-    fill: #39ac5b; /* Change this to your desired intermediate color */
-  }
-  100% {
-    fill: #ac395b; /* Change this to your final color */
-  }
-}
-
-.animated-fill {
-  animation: colorChange 5s infinite;
 }
