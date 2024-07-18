@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav id="navBar">
       <ul>
         <li>
-          <Link to="/CodeHovel/">Home</Link>
+          <Link to="/CodeHovel">Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
