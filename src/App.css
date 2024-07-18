@@ -38,3 +38,19 @@
 .read-the-docs {
   color: #888;
 }
+
+.animated-svg path.animated-fill {
+  animation: animateFill 5s infinite alternate;
+}
+
+@keyframes animateFill {
+  0% {
+    fill: #5b39ac; /* Start color */
+  }
+  50% {
+    fill: #fedede; /* Middle color */
+  }
+  100% {
+    fill: #9995db; /* End color */
+  }
+}

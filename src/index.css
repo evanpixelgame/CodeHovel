@@ -25,7 +25,7 @@
   --main-text-font-size: 40px;
   --sub-text-font-size: 16px;
 
-  --home-image-scale: 2.6;
+  --home-image-scale: 2.7;
   --home-image-right: 100px;
   --home-image-top: 0;
   --home-text-group-max-width: 60%;
@@ -299,4 +299,20 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #5b39ac;
+  }
+  50% {
+    fill: #39ac5b; /* Change this to your desired intermediate color */
+  }
+  100% {
+    fill: #ac395b; /* Change this to your final color */
+  }
+}
+
+.animated-fill {
+  animation: colorChange 5s infinite;
 }

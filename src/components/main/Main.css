@@ -22,9 +22,8 @@
 
 #homeImage {
   position: relative;
-  width: 209px;
-  height: 195px;
-  max-height: 500px;
+  width: 20%;
+  height: 20%;
 
   border-radius: 90px;
   right: var(--home-image-right);

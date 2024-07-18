@@ -34,7 +34,7 @@ const defaultThemeProperties = {
   subTextFontSize: getCssVariableValue("--sub-text-font-size") || "16px",
 
   //Main Positioning vars
-  homeImageScale: getCssVariableValue("--home-image-scale") || "2.6",
+  homeImageScale: getCssVariableValue("--home-image-scale") || "2.7",
   homeImageRight: getCssVariableValue("--home-image-right") || "100px",
   homeImageTop: getCssVariableValue("--home-image-top") || "0",
   homeTextGroupMaxWidth:
