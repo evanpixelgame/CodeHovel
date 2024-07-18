@@ -1,10 +1,9 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useThemeContext } from "./ThemeCustomizer/provider/ContextProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Main from "./components/main/Main";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import { HomePage, About, Projects, Contact } from "./pages";
 
 function App() {
   const { theme } = useThemeContext();
@@ -12,9 +11,14 @@ function App() {
   return (
     <div className={`app ${theme}`}>
       <ToastContainer />
-      <Header />
-      <Main />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/CodeHovel/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

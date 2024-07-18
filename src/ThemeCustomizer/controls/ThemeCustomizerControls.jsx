@@ -1,5 +1,10 @@
 import React from "react";
 import UnitAppender from "../subcomponents/UnitAppender";
+const handleRangeInput = () => {
+  console.log(
+    'change themeProperties.themeCustomizerPositionType from "relative" to fixed'
+  );
+};
 
 const ThemeCustomizerControls = ({ themeProperties, handleInputChange }) => (
   <>
@@ -67,9 +72,10 @@ const ThemeCustomizerControls = ({ themeProperties, handleInputChange }) => (
         type="range"
         className="range-input"
         value={themeProperties.themeCustomizerOpacity}
-        onChange={(e) =>
-          handleInputChange("themeCustomizerOpacity", e.target.value)
-        }
+        onChange={(e) => {
+          handleRangeInput();
+          handleInputChange("themeCustomizerOpacity", e.target.value);
+        }}
         min=".05"
         max="1"
         step=".01"
