@@ -25,7 +25,21 @@ const MainPositionControls = ({ themeProperties, handleInputChange }) => (
           handleInputChange("homeImageRight", `${e.target.value}vw`)
         }
         min="-60"
-        max="20"
+        max="40"
+        step=".1"
+      />
+    </div>
+    <div>
+      <label>Home Image Top:</label>
+      <input
+        type="range"
+        className="range-input"
+        value={parseInt(themeProperties.homeImageTop, 10)}
+        onChange={(e) =>
+          handleInputChange("homeImageTop", `${e.target.value}vh`)
+        }
+        min="-40"
+        max="40"
         step=".1"
       />
     </div>
