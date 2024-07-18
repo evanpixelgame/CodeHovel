@@ -8,68 +8,68 @@ const MainAnimationControls = ({ themeProperties, handleInputChange }) => {
   return (
     <>
       <div>
-        <label>Animation Color 1:</label>
+        <label>Animation Color One:</label>
         <input
           type="color"
           className="color-input"
-          value={themeProperties.animationColor1}
+          value={themeProperties.animationColorOne}
           onChange={(e) =>
-            handleInputChangeLogged("animationColor1", e.target.value)
+            handleInputChangeLogged("animationColorOne", e.target.value)
           }
         />
       </div>
       <div>
-        <label>Animation Color 2:</label>
+        <label>Animation Color Two:</label>
         <input
           type="color"
           className="color-input"
-          value={themeProperties.animationColor2}
+          value={themeProperties.animationColorTwo}
           onChange={(e) =>
-            handleInputChangeLogged("animationColor2", e.target.value)
+            handleInputChangeLogged("animationColorTwo", e.target.value)
           }
         />
       </div>
       <div>
-        <label>Animation Color 3:</label>
+        <label>Animation Color Three:</label>
         <input
           type="color"
           className="color-input"
-          value={themeProperties.animationColor3}
+          value={themeProperties.animationColorThree}
           onChange={(e) =>
-            handleInputChangeLogged("animationColor3", e.target.value)
+            handleInputChangeLogged("animationColorThree", e.target.value)
           }
         />
       </div>
       <div>
-        <label>Animation Color 4:</label>
+        <label>Animation Color Four:</label>
         <input
           type="color"
           className="color-input"
-          value={themeProperties.animationColor4}
+          value={themeProperties.animationColorFour}
           onChange={(e) =>
-            handleInputChangeLogged("animationColor4", e.target.value)
+            handleInputChangeLogged("animationColorFour", e.target.value)
           }
         />
       </div>
       <div>
-        <label>Animation Color 5:</label>
+        <label>Animation Color Five:</label>
         <input
           type="color"
           className="color-input"
-          value={themeProperties.animationColor5}
+          value={themeProperties.animationColorFive}
           onChange={(e) =>
-            handleInputChangeLogged("animationColor5", e.target.value)
+            handleInputChangeLogged("animationColorFive", e.target.value)
           }
         />
       </div>
       <div>
-        <label>Animation Color 6:</label>
+        <label>Animation Color Six:</label>
         <input
           type="color"
           className="color-input"
-          value={themeProperties.animationColor6}
+          value={themeProperties.animationColorSix}
           onChange={(e) =>
-            handleInputChangeLogged("animationColor6", e.target.value)
+            handleInputChangeLogged("animationColorSix", e.target.value)
           }
         />
       </div>

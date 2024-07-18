@@ -32,12 +32,12 @@
   --home-text-group-right: 0;
   --home-text-group-top: 0;
 
-  --animation-color-1: #5b39ac;
-  --animation-color-2: #7d2e68;
-  --animation-color-3: #e09f3e;
-  --animation-color-4: #fff3b0;
-  --animation-color-5: #52d1dc;
-  --animation-color-6: #a5be00;
+  --animation-color-one: #5b39ac;
+  --animation-color-two: #7d2e68;
+  --animation-color-three: #e09f3e;
+  --animation-color-four: #fff3b0;
+  --animation-color-five: #52d1dc;
+  --animation-color-six: #a5be00;
 
   --site-title-font-family: "Roboto";
   --site-title-color: #ce721d;
