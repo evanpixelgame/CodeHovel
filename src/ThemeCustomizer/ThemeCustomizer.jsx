@@ -10,6 +10,7 @@ import {
   MainColorControls,
   MainFontControls,
   MainPositionControls,
+  MainAnimationControls,
   FooterControls,
   SideBorderControls,
   SocialLinkControls,
@@ -115,6 +116,13 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
             handleInputChange={handleInputChangeWithSetter}
           />
         );
+      case "mainAnimation":
+        return (
+          <MainAnimationControls
+            themeProperties={themeProperties}
+            handleInputChange={handleInputChangeWithSetter}
+          />
+        );
       case "footer":
         return (
           <FooterControls
@@ -184,7 +192,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
           <option value="mainColor">Main - Colors</option>
           <option value="mainFont">Main - Fonts</option>
           <option value="mainPosition">Main - Positions</option>
-
+          <option value="mainAnimation">Animation Colors</option>
           <option value="footer">Footer</option>
           <option value="sideBorder">Side Borders</option>
           <option value="socialLink">Social Links</option>

@@ -4,6 +4,7 @@ export { default as NavBarControls } from "./NavBarControls";
 export { default as MainColorControls } from "./MainColorControls";
 export { default as MainFontControls } from "./MainFontControls.jsx";
 export { default as MainPositionControls } from "./MainPositionControls";
+export { default as MainAnimationControls } from "./MainAnimationControls";
 export { default as FooterControls } from "./FooterControls";
 export { default as SideBorderControls } from "./SideBorderControls";
 export { default as SocialLinkControls } from "./SocialLinkControls";

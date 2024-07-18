@@ -42,6 +42,14 @@ const defaultThemeProperties = {
   homeTextGroupRight: getCssVariableValue("--home-text-group-right") || "0",
   homeTextGroupTop: getCssVariableValue("--home-text-group-top") || "0",
 
+  // Animation Colors
+  animationColor1: getCssVariableValue("--animation-color-1") || "#5b39ac",
+  animationColor2: getCssVariableValue("--animation-color-2") || "#7d2e68",
+  animationColor3: getCssVariableValue("--animation-color-3") || "#e09f3e",
+  animationColor4: getCssVariableValue("--animation-color-4") || "#fff3b0",
+  animationColor5: getCssVariableValue("--animation-color-5") || "#52d1dc",
+  animationColor6: getCssVariableValue("--animation-color-6") || "#a5be00",
+
   //Site Title vars
   siteTitleFontFamily:
     getCssVariableValue("--site-title-font-family") || '"Roboto"',
