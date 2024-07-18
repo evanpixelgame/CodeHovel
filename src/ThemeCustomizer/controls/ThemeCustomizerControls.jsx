@@ -60,6 +60,21 @@ const ThemeCustomizerControls = ({ themeProperties, handleInputChange }) => (
         }
       />
     </div>
+
+    <div>
+      <label>Opacity:</label>
+      <input
+        type="range"
+        className="range-input"
+        value={themeProperties.themeCustomizerOpacity}
+        onChange={(e) =>
+          handleInputChange("themeCustomizerOpacity", e.target.value)
+        }
+        min=".05"
+        max="1"
+        step=".1"
+      />
+    </div>
   </>
 );
 
