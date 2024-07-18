@@ -1,4 +1,11 @@
 
+WHEN using range sliders, make the theme customizer automatically fixed in position while the range is being used
+-opacity change on the theme customizer 
+-
+-
+-
+
+
 switch the pngs for the toggle and the profile picture back to SVGs
 
 add some sort of fonts library for more font selection options

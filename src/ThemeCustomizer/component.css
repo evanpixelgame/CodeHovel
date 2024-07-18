@@ -8,6 +8,7 @@
   --theme-customizer-button-bg-color: #716ada;
   --theme-customizer-button-border-color: #6058d4;
   --theme-selector-bg-color: #8b85d5;
+  --theme-customizer-opacity: 0.8;
 }
 
 .theme-customizer {
@@ -18,7 +19,7 @@
   padding: 12px;
 
   background-color: var(--theme-customizer-bg-color);
-  opacity: 0.6;
+  opacity: var(--theme-customizer-opacity);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   margin-top: 0px;
