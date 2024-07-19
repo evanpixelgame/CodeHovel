@@ -72,7 +72,7 @@ const defaultThemeProperties = {
   headerBgColor: getCssVariableValue("--header-bg-color") || "#343434",
   //Footer vars
   footerWidth: getCssVariableValue("--footer-width") || "80%",
-  footerHeight: getCssVariableValue("--footer-height") || "15%",
+  footerHeight: getCssVariableValue("--footer-height") || "15vh",
   footerBgColor: getCssVariableValue("--footer-bg-color") || "#343434",
   //Toggle vars
   togglePlacementTop: getCssVariableValue("--toggle-placement-top") || "5%",

@@ -6,8 +6,6 @@ import ThemeCustomizer from "../components/ThemeCustomizer/ThemeCustomizer";
 import ShowCustomizerButton from "../components/ThemeCustomizer/subcomponents/ShowCustomizerButton";
 import Gallery from "../components/imageDisplay/gallery/Gallery";
 import Carousel from "../components/imageDisplay/carousel/Carousel";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Projects = () => {
   return (
@@ -16,7 +14,6 @@ const Projects = () => {
         <Header />
         <div>Projects</div>
         <Carousel />
-        <Gallery />
         <Footer />
       </div>
     </>
