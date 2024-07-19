@@ -105,6 +105,8 @@ const defaultThemeProperties = {
     getCssVariableValue("--theme-selector-bg-color") || "#8b85d5",
   themeCustomizerOpacity:
     getCssVariableValue("--theme-customizer-opacity") || "0.8",
+  themeCustomizerPositionType:
+    getCssVariableValue("--theme-customizer-position-type") || "relative",
 };
 
 // Create a Provider component, this gets imported in main.js to wrap <app>
