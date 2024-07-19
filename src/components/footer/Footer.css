@@ -1,5 +1,5 @@
 #footer {
-  position: absolute;
+  position: relative;
   width: var(--footer-width);
   height: var(--footer-height);
   left: calc(50% - var(--footer-width) / 2);

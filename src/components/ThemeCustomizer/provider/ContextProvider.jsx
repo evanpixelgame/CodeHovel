@@ -65,7 +65,7 @@ const defaultThemeProperties = {
   navLinkFontFamily: getCssVariableValue("--nav-link-font-family") || '"Inter"',
   navWidth: getCssVariableValue("--nav-width") || "40%",
   navHeight: getCssVariableValue("--nav-height") || "50%",
-  navLeft: getCssVariableValue("--nav-link-font-family") || "0",
+  navLeft: getCssVariableValue("--nav-link-font-family") || "0%",
   //Header vars
   headerWidth: getCssVariableValue("--header-width") || "80%",
   headerHeight: getCssVariableValue("--header-height") || "15%",
@@ -85,7 +85,7 @@ const defaultThemeProperties = {
     "calc(50% - var(--header-width) / 2)",
   // Social Link vars
   socialLinksGap: getCssVariableValue("--social-links-gap") || "20%",
-  socialLinksTop: getCssVariableValue("--social-links-top") || "0",
+  socialLinksTop: getCssVariableValue("--social-links-top") || "0%",
   // Theme Customizer links (these css variables come from components.css (:root))
   themeCustomizerBgColor:
     getCssVariableValue("--theme-customizer-bg-color") || "#8b85d5",

@@ -1,25 +1,24 @@
+import "../pageStyles/projects.css";
 import { useState } from "react";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import ThemeCustomizer from "../components/ThemeCustomizer/ThemeCustomizer";
 import ShowCustomizerButton from "../components/ThemeCustomizer/subcomponents/ShowCustomizerButton";
+import Gallery from "../components/imageDisplay/gallery/Gallery";
+import Carousel from "../components/imageDisplay/carousel/Carousel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Projects = () => {
-  const [showCustomizer, setShowCustomizer] = useState(false);
   return (
     <>
-      <Header />
-      <div>Projects</div>
-      <ThemeCustomizer
-        showCustomizer={showCustomizer}
-        setShowCustomizer={setShowCustomizer}
-      />
-      {showCustomizer && <ThemeCustomizer />}
-      <ShowCustomizerButton
-        showCustomizer={showCustomizer}
-        setShowCustomizer={setShowCustomizer}
-      />
-      <Footer />
+      <div id="projects-page">
+        <Header />
+        <div>Projects</div>
+        <Carousel />
+        <Gallery />
+        <Footer />
+      </div>
     </>
   );
 };

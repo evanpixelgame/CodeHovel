@@ -2,9 +2,22 @@ import React from "react";
 import Masonry from "react-masonry-css";
 import "./Gallery.css";
 
-const Gallery = ({ images }) => {
+// Dynamically import all images in the specified directory
+const images = import.meta.glob(
+  "/src/assets/images/testPhotos/*.{jpg,png,jpeg}",
+  {
+    eager: true,
+  }
+);
+
+const Gallery = () => {
+  const imageList = Object.keys(images).map((key) => ({
+    src: images[key].default,
+    alt: key,
+  }));
+
   const breakpointColumnsObj = {
-    default: 4,
+    default: 2,
     1100: 3,
     700: 2,
     500: 1,
@@ -16,7 +29,7 @@ const Gallery = ({ images }) => {
       className="gallery-masonry"
       columnClassName="gallery-masonry-column"
     >
-      {images.map((image, index) => (
+      {imageList.map((image, index) => (
         <div key={index} className="gallery-item">
           <img src={image.src} alt={image.alt} className="gallery-image" />
         </div>

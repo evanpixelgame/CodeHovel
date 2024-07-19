@@ -45,7 +45,7 @@ const ThemeCustomizer = ({ showCustomizer, setShowCustomizer }) => {
 
   const handleDragStart = (e) => {
     console.log("drag start");
-    if (e.target.matches("input.range-input")) {
+    if (e.target.matches("input") || e.target.matches("select")) {
       // if target is an input with class 'range-input' prevents dragging of component instead of slide
       return false;
     }
