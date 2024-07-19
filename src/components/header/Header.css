@@ -1,5 +1,5 @@
 #header {
-  position: fixed;
+  position: sticky;
   width: var(--header-width);
   height: var(--header-height);
   left: calc(50% - var(--header-width) / 2);
