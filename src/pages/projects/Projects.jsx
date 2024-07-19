@@ -1,23 +1,27 @@
-import "./Project.css";
-import { useState } from "react";
+import "./Projects.css";
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
-import ThemeCustomizer from "../../components/ThemeCustomizer/ThemeCustomizer";
-import ShowCustomizerButton from "../../components/ThemeCustomizer/subcomponents/ShowCustomizerButton";
-import Gallery from "../../components/imageDisplay/gallery/Gallery";
-import Carousel from "../../components/imageDisplay/carousel/Carousel";
 
 const Projects = () => {
   return (
     <>
-      <div id="projects-page">
+      <div className="projects-page">
         <Header />
-        <div>Projects</div>
-        <Carousel />
-        <Gallery />
+        <div className="project-list-container">
+          <h3> Projects</h3>
+          <nav>
+            <button type="button" className="project-link-button">
+              <Link to="imageDisplay">Image Display Components</Link>
+            </button>
+          </nav>
+          <Outlet />
+        </div>
         <Footer />
       </div>
     </>
   );
 };
+
 export default Projects;

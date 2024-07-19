@@ -1,0 +1,53 @@
+.project-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-link-button a {
+  color: #ffffff;
+}
+
+.project-link-button {
+  appearance: button;
+  background-color: #1a8fe36c;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 2px solid #2898e7a1;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+
+  filter: brightness(1);
+}
+
+.project-link-button:focus:not(:focus-visible),
+.project-link-button:focus {
+  outline: 0;
+}
+.project-link-button:hover {
+  background-color: #3633e5b7;
+  border-color: #3633e58e;
+}
