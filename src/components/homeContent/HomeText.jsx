@@ -1,6 +1,6 @@
 import React from "react";
-import ThemeCustomizer from "../../components/ThemeCustomizer/ThemeCustomizer";
-import ShowCustomizerButton from "../../components/ThemeCustomizer/subcomponents/ShowCustomizerButton";
+import ThemeCustomizer from "../ThemeCustomizer/ThemeCustomizer";
+import ShowCustomizerButton from "../ThemeCustomizer/subcomponents/ShowCustomizerButton";
 
 const HomeText = ({ showCustomizer, setShowCustomizer }) => {
   return (
