@@ -1,33 +1,19 @@
 
-WHEN using range sliders, make the theme customizer automatically fixed in position while the range is being used
--opacity change on the theme customizer 
--
--
--
 
+add robot.txt for SEO and other SEO things
 
-switch the pngs for the toggle and the profile picture back to SVGs
 
 add some sort of fonts library for more font selection options
-
-add a checkbox at top to toggle between default of relative position to option to "Anchor Position" or "Fix Position" 
 
 add additional objects to demonstrate secondary and tertriary color properties like adding more colored things to main and/or dynamically coloring the svg
   -also add stuff with the secondary font color
 
--change the svg of the profile image, maybe add some color animations or something
+-change the svg of the profile image background and give bg more options
 
 make it so the position slides can change positioning to fixed to move outside their container and then do some logic to make the other elements reassemble with appropriate spacing
 
 Turn ContextProvider's defaultThemeProperties into an object with different nested objects with those properties, so do defaultThemeProperties{darkDefault: {}, lightDefault: {}} etc.
 This will make is so that the object differences works from a different starting theme (can just do ...props and then modify any different features for the different default objects after dark)
-
-add option to set side border width individually (maybe even let each border color and width be controlled individually?)
-maybe also add option to upload pictures and videos for main content
-
-add options for symmetrical linking in the controls for header footer and sideborders
-
-set z index high for customizer so its always on top
 
 add settings button
 -add option to link symmetries

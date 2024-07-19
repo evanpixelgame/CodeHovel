@@ -1,0 +1,12 @@
+header {
+  position: fixed;
+  width: var(--header-width);
+  height: var(--header-height);
+  left: calc(50% - var(--header-width) / 2);
+  top: 0px;
+  background: var(--header-bg-color);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
