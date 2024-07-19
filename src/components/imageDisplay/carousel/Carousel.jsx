@@ -1,8 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
 import "./Carousel.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import { Carousel as ResponsiveCarousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 // Dynamically import all images in the specified directory
 const images = import.meta.glob(
@@ -18,30 +17,23 @@ const Carousel = () => {
     alt: key,
   }));
 
-  // Debugging: Log the images
-  console.log("Images List:", imageList);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-  };
-
   return (
-    <Slider {...settings}>
-      {imageList.map((image, index) => (
-        <div key={index} className="carousel-item">
-          {/* Debugging: Log the image source */}
-          <img src={image.src} alt={image.alt} className="carousel-image" />
-          {console.log("Rendering Image:", image.src)}
-        </div>
-      ))}
-    </Slider>
+    <div className="carousel-container">
+      <ResponsiveCarousel
+        showThumbs={false}
+        autoPlay
+        infiniteLoop
+        showStatus={false}
+        showIndicators={true}
+        dynamicHeight={true}
+      >
+        {imageList.map((image, index) => (
+          <div key={index}>
+            <img src={image.src} alt={image.alt} />
+          </div>
+        ))}
+      </ResponsiveCarousel>
+    </div>
   );
 };
 

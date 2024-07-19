@@ -36,11 +36,11 @@ const defaultThemeProperties = {
   //Main Positioning vars
   homeImageScale: getCssVariableValue("--home-image-scale") || "2.7",
   homeImageRight: getCssVariableValue("--home-image-right") || "100px",
-  homeImageTop: getCssVariableValue("--home-image-top") || "0",
+  homeImageTop: getCssVariableValue("--home-image-top") || "0%",
   homeTextGroupMaxWidth:
     getCssVariableValue("--home-text-group-max-width") || "60%",
-  homeTextGroupRight: getCssVariableValue("--home-text-group-right") || "0",
-  homeTextGroupTop: getCssVariableValue("--home-text-group-top") || "0",
+  homeTextGroupRight: getCssVariableValue("--home-text-group-right") || "0%",
+  homeTextGroupTop: getCssVariableValue("--home-text-group-top") || "0%",
 
   // Animation Colors
   animationColorOne: getCssVariableValue("--animation-color-one") || "#5b39ac",
@@ -68,7 +68,7 @@ const defaultThemeProperties = {
   navLeft: getCssVariableValue("--nav-link-font-family") || "0%",
   //Header vars
   headerWidth: getCssVariableValue("--header-width") || "80%",
-  headerHeight: getCssVariableValue("--header-height") || "15%",
+  headerHeight: getCssVariableValue("--header-height") || "15vh",
   headerBgColor: getCssVariableValue("--header-bg-color") || "#343434",
   //Footer vars
   footerWidth: getCssVariableValue("--footer-width") || "80%",

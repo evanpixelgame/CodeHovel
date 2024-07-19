@@ -52,11 +52,11 @@
   --nav-left: 0%;
 
   --header-width: 80%;
-  --header-height: 15%;
+  --header-height: 15vh;
   --header-bg-color: #343434;
 
   --footer-width: 80%;
-  --footer-height: 20vh;
+  --footer-height: 15vh;
   --footer-bg-color: #343434;
 
   --toggle-placement-top: 5%;

@@ -14,6 +14,7 @@ const Projects = () => {
         <Header />
         <div>Projects</div>
         <Carousel />
+        <Gallery />
         <Footer />
       </div>
     </>
