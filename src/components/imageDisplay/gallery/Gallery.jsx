@@ -31,7 +31,12 @@ const Gallery = () => {
     >
       {imageList.map((image, index) => (
         <div key={index} className="gallery-item">
-          <img src={image.src} alt={image.alt} className="gallery-image" />
+          <img
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            className="gallery-image"
+          />
         </div>
       ))}
     </Masonry>
