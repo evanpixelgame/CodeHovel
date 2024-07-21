@@ -22,7 +22,12 @@ const HomeText = ({ showCustomizer, setShowCustomizer }) => {
           id="baby-bird-button"
           style={{ margin: "10px", backgroundColor: "lightcoral" }}
         >
-          <h1 style={{ fontSize: "15px" }}>
+          <h1
+            style={{
+              fontSize: "15px",
+              color: "black",
+            }}
+          >
             BABY BIRD <br /> VIDEOS <br /> BUTTON
           </h1>
         </button>
