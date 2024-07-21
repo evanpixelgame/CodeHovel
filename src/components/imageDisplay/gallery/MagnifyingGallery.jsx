@@ -30,7 +30,7 @@ const Gallery = () => {
   return (
     <div>
       {showCarousel && (
-        <div className="carousel-overlay" onClick={closeCarousel}>
+        <div className="carousel-overlay">
           <button onClick={closeCarousel} className="close-carousel">
             Close
           </button>

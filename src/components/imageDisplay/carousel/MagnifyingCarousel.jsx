@@ -1,10 +1,13 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { Carousel as ResponsiveCarousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Carousel.css";
+import Modal from "../modal/Modal";
 
 const Carousel = ({ initialImage, images }) => {
-  // Convert images object to array and ensure src is correct
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState({ src: "", alt: "" });
+
   const imageList = useMemo(
     () =>
       Object.keys(images).map((key) => ({
@@ -14,18 +17,22 @@ const Carousel = ({ initialImage, images }) => {
     [images]
   );
 
-  // Find the index of the initial image
   const initialIndex = useMemo(
     () => imageList.findIndex((image) => image.src === initialImage.src),
     [imageList, initialImage]
   );
 
-  // Ensure valid index
   const validIndex = initialIndex >= 0 ? initialIndex : 0;
 
-  console.log("Initial Image:", initialImage);
-  console.log("Image List:", imageList);
-  console.log("Initial Index:", validIndex);
+  const openModal = (src, alt) => {
+    setModalImage({ src, alt });
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImage({ src: "", alt: "" });
+  };
 
   return (
     <div className="carousel-container">
@@ -39,11 +46,15 @@ const Carousel = ({ initialImage, images }) => {
         selectedItem={validIndex} // Set initial item
       >
         {imageList.map((image, index) => (
-          <div key={index} onClick={() => window.open(image.src, "_blank")}>
+          <div key={index} onClick={() => openModal(image.src, image.alt)}>
             <img src={image.src} alt={image.alt} loading="lazy" />
           </div>
         ))}
       </ResponsiveCarousel>
+
+      {isModalOpen && (
+        <Modal src={modalImage.src} alt={modalImage.alt} onClose={closeModal} />
+      )}
     </div>
   );
 };
