@@ -4,7 +4,7 @@ import "./Gallery.css";
 import Carousel from "../carousel/MagnifyingCarousel";
 
 const images = import.meta.glob(
-  "/src/assets/images/testPhotos/*.{jpg,png,jpeg}",
+  "/src/assets/images/fullSizePhotos/*.{jpg,png,jpeg}",
   { eager: true }
 );
 

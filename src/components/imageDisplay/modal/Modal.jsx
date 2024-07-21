@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import interact from "interactjs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import "./Modal.css"; // Include your styles for the modal
 
 const stopProp = (e) => {
@@ -52,6 +54,20 @@ const Modal = ({ src, alt, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={stopProp}>
         <div className="modal-image-wrapper">
+          <button
+            type="button"
+            onClick={onClose}
+            style={{
+              zIndex: 5000,
+              position: "absolute",
+              top: "20px",
+              right: "20px",
+              backgroundColor: "transparent",
+              mixBlendMode: "difference",
+            }}
+          >
+            <FontAwesomeIcon icon={faX} />
+          </button>
           <img
             src={src}
             alt={alt}
