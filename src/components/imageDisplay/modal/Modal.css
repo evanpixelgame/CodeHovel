@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1005;
 }
 
 .modal-content {
@@ -17,8 +18,16 @@
 }
 
 .modal-image {
+  overflow: scroll;
+  /*
+    width: 100%;
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 100vh; */
+  cursor: grab;
+}
+
+.modal-image:active {
+  cursor: grabbing;
 }
 
 /* Gallery.css */

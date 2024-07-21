@@ -32,6 +32,17 @@
   cursor: pointer;
 }
 
+.close-carousel {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .carousel-image {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }

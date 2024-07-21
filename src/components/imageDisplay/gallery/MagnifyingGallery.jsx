@@ -31,9 +31,9 @@ const Gallery = () => {
     <div>
       {showCarousel && (
         <div className="carousel-overlay">
-          <button onClick={closeCarousel} className="close-carousel">
-            Close
-          </button>
+          <div onClick={closeCarousel} className="close-carousel">
+            Click Outside Image Close
+          </div>
           {selectedImage && (
             <Carousel initialImage={selectedImage} images={images} />
           )}

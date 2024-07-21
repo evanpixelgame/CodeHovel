@@ -8,6 +8,9 @@ const Carousel = ({ initialImage, images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState({ src: "", alt: "" });
 
+  // State for controlling autoPlay
+  const [autoPlay, setAutoPlay] = useState(true);
+
   const imageList = useMemo(
     () =>
       Object.keys(images).map((key) => ({
@@ -27,18 +30,20 @@ const Carousel = ({ initialImage, images }) => {
   const openModal = (src, alt) => {
     setModalImage({ src, alt });
     setIsModalOpen(true);
+    setAutoPlay(false); // Pause the carousel
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setModalImage({ src: "", alt: "" });
+    setAutoPlay(true); // Resume the carousel
   };
 
   return (
     <div className="carousel-container">
       <ResponsiveCarousel
         showThumbs={false}
-        autoPlay
+        autoPlay={autoPlay}
         infiniteLoop
         showStatus={false}
         showIndicators={true}
