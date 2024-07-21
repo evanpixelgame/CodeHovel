@@ -31,8 +31,8 @@ const VideoGallery = () => {
         await new Promise((resolve) => {
           video.addEventListener("loadedmetadata", () => {
             // Set canvas size to video size
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
+            canvas.width = (video.videoWidth * 2) / 3;
+            canvas.height = (video.videoHeight * 2) / 3;
 
             // Seek to the start of the video
             video.currentTime = 0;
