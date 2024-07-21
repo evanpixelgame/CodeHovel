@@ -28,7 +28,7 @@ const HomeText = ({ showCustomizer, setShowCustomizer }) => {
               color: "black",
             }}
           >
-            BABY BIRD <br /> VIDEOS <br /> BUTTON
+            BABY BIRD <br /> VIDEO <br /> GALLERY <br /> BUTTON
           </h1>
         </button>
       </Link>

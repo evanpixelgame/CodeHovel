@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Masonry from "react-masonry-css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import "./VideoGallery.css";
 
 const videos = import.meta.glob("/src/assets/videos/*.{mp4,webm,ogg}", {
@@ -103,8 +105,9 @@ const VideoGallery = () => {
 
       {playingVideo && (
         <div className="video-overlay">
+          <div onClick={handleClose} className="close-div"></div>
           <button onClick={handleClose} className="close-overlay">
-            Close
+            <FontAwesomeIcon icon={faX} />
           </button>
           <video controls autoPlay className="video-fullscreen">
             <source src={playingVideo} type="video/mp4" />
