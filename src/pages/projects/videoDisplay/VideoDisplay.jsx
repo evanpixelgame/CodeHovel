@@ -1,7 +1,5 @@
 import "./VideoDisplay.css";
-import Gallery from "../../../components/imageDisplay/gallery/MagnifyingGallery";
-import Carousel from "../../../components/imageDisplay//carousel/MagnifyingCarousel";
-import Videos from "../../../components/mediaDisplay/videoDisplay/videoGallery/VideoGallery";
+import Videos from "../../../components/MediaDisplay/VideoDisplay/VideoGallery";
 
 const VideoDisplay = () => {
   return (

@@ -1,6 +1,6 @@
 import "./ImageDisplay.css";
-import Gallery from "../../../components/imageDisplay/gallery/MagnifyingGallery";
-import Carousel from "../../../components/imageDisplay//carousel/MagnifyingCarousel";
+import Gallery from "../../../components/MediaDisplay/ImageDisplay/Gallery/MagnifyingGallery";
+import Carousel from "../../../components/MediaDisplay/ImageDisplay/Carousel/MagnifyingCarousel";
 
 const ImageDisplay = () => {
   return (

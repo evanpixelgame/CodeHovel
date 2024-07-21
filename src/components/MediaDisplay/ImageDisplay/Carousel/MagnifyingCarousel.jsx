@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect } from "react";
 import { Carousel as ResponsiveCarousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Carousel.css";
-import Modal from "../modal/Modal";
+import Modal from "../Modal/Modal";
 
 const Carousel = ({ initialImage, images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Masonry from "react-masonry-css";
 import "./Gallery.css";
-import Carousel from "../carousel/MagnifyingCarousel";
+//Magnifying Gallery REQUIRES magnifying carousel import to work
+import Carousel from "../Carousel/MagnifyingCarousel";
 
 const images = import.meta.glob(
   "/src/assets/images/fullSizePhotos/*.{jpg,png,jpeg}",
