@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 import ThemeCustomizer from "../../components/ThemeCustomizer/ThemeCustomizer";
 import ShowCustomizerButton from "../../components/ThemeCustomizer/subcomponents/ShowCustomizerButton";
 

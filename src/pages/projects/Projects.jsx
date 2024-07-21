@@ -1,8 +1,8 @@
 import "./Projects.css";
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 const Projects = () => {
   return (
