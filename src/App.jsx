@@ -8,6 +8,7 @@ import {
   About,
   Contact,
   Projects,
+  NoFormat,
   ImageDisplay,
   VideoDisplay,
 } from "./pages";
@@ -26,6 +27,10 @@ function App() {
           <Route path="/projects/*" element={<Projects />}>
             <Route path="imageDisplay" element={<ImageDisplay />} />
             <Route path="videoDisplay" element={<VideoDisplay />} />
+          </Route>
+          <Route path="/noFormat/*" element={<NoFormat />}>
+            <Route path="imageDisplayNoFormat" element={<ImageDisplay />} />
+            <Route path="videoDisplayNoFormat" element={<VideoDisplay />} />
           </Route>
           <Route path="*" element={<HomePage />} />
         </Routes>

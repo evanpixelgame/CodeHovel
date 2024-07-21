@@ -15,7 +15,7 @@ const HomeText = ({ showCustomizer, setShowCustomizer }) => {
         showCustomizer={showCustomizer}
         setShowCustomizer={setShowCustomizer}
       />
-      <Link to="/projects/videoDisplay">
+      <Link to="/noFormat/videoDisplay">
         <button
           type="button"
           className="theme-button"
