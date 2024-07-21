@@ -39,11 +39,17 @@ const Carousel = ({ initialImage, images }) => {
     setAutoPlay(true); // Resume the carousel
   };
 
+  /*
+ instead of autoPlay={false} can change to below for it to auto stop auto loop when opening modal
+ autoPlay={autoPlay} 
+
+ */
+
   return (
     <div className="carousel-container">
       <ResponsiveCarousel
         showThumbs={false}
-        autoPlay={autoPlay}
+        autoPlay={false}
         infiniteLoop
         showStatus={false}
         showIndicators={false}
