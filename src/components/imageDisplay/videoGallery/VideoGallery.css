@@ -1,16 +1,16 @@
 .video-gallery-masonry {
   display: flex;
-  margin-left: -30px; /* Adjust to your spacing */
+  margin-left: -10px; /* Adjust to your spacing */
   width: auto;
 }
 
 .video-gallery-masonry-column {
-  padding-left: 30px; /* Adjust to your spacing */
+  padding-left: 10px; /* Adjust to your spacing */
   background-clip: padding-box;
 }
 
 .video-gallery-item {
-  margin-bottom: 30px; /* Adjust to your spacing */
+  margin-bottom: 10px; /* Adjust to your spacing */
 }
 
 .video-gallery-button {
@@ -23,10 +23,14 @@
   height: 100%;
 }
 
-.video-gallery-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+.video-thumbnail {
   width: 100%;
   height: 100%;
+  background: #ccc; /* Placeholder background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
 }
 
 .video-overlay {
@@ -50,12 +54,16 @@
 .close-overlay {
   position: absolute;
   top: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  right: 20vw;
+  background: rgba(95, 6, 6, 0.8);
   border: none;
   border-radius: 50%;
   padding: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
   z-index: 1001; /* Ensure it is above the video */
+}
+
+.video-thumbnail {
+  height: 500px;
 }

@@ -18,7 +18,6 @@ const Projects = () => {
           </nav>
           <Outlet />
         </div>
-        <Footer />
       </div>
     </>
   );

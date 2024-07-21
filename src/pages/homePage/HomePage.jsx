@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <Header />
       <Main />
-      <Footer />
+      <Footer style={{ position: "fixed" }} />
     </>
   );
 };
