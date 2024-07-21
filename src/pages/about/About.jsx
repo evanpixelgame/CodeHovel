@@ -21,7 +21,6 @@ const About = () => {
         showCustomizer={showCustomizer}
         setShowCustomizer={setShowCustomizer}
       />
-      <Footer />
     </>
   );
 };
