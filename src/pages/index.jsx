@@ -1,6 +1,6 @@
-export { default as HomePage } from "./homePage/HomePage";
-export { default as About } from "./about/About";
-export { default as Contact } from "./contact/Contact";
-export { default as Projects } from "./projects/Projects";
-export { default as ImageDisplay } from "./projects/imageDisplay/ImageDisplay";
-export { default as VideoDisplay } from "./projects/videoDisplay/VideoDisplay";
+export { default as HomePage } from "./HomePage/HomePage";
+export { default as About } from "./About/About";
+export { default as Contact } from "./Contact/Contact";
+export { default as Projects } from "./Projects/Projects";
+export { default as ImageDisplay } from "./Projects/ImageDisplay/ImageDisplay";
+export { default as VideoDisplay } from "./Projects/VideoDisplay/VideoDisplay";
