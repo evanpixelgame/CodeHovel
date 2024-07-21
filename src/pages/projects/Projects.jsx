@@ -14,14 +14,10 @@ const Projects = () => {
         <div className="project-list-container">
           <h3> Projects</h3>
           <button type="button" className="project-link-button">
-            <Link to="/noFormat/videoDisplayNoFormat">
-              Baby Bird Video Gallery
-            </Link>
+            <Link to="/noFormat/videoDisplay">Baby Bird Video Gallery</Link>
           </button>
           <button type="button" className="project-link-button">
-            <Link to="/noFormat/imageDisplayNoFormat">
-              Image Display Components
-            </Link>
+            <Link to="/noFormat/imageDisplay">Image Display Components</Link>
           </button>
 
           <Outlet />

@@ -24,13 +24,10 @@ function App() {
           <Route path="/CodeHovel" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects/*" element={<Projects />}>
+          <Route path="/projects/*" element={<Projects />}></Route>
+          <Route path="/noFormat/*" element={<NoFormat />}>
             <Route path="imageDisplay" element={<ImageDisplay />} />
             <Route path="videoDisplay" element={<VideoDisplay />} />
-          </Route>
-          <Route path="/noFormat/*" element={<NoFormat />}>
-            <Route path="imageDisplayNoFormat" element={<ImageDisplay />} />
-            <Route path="videoDisplayNoFormat" element={<VideoDisplay />} />
           </Route>
           <Route path="*" element={<HomePage />} />
         </Routes>
