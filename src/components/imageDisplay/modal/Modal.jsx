@@ -21,8 +21,13 @@ const Modal = ({ src, alt, onClose }) => {
         ],
         onmove: (event) => {
           const { target } = event;
-          const x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-          const y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+          const sensitivity = 0.5; // Reduce to make dragging slower
+          const x =
+            (parseFloat(target.getAttribute("data-x")) || 0) +
+            event.dx * sensitivity;
+          const y =
+            (parseFloat(target.getAttribute("data-y")) || 0) +
+            event.dy * sensitivity;
 
           target.style.transform = `translate(${x}px, ${y}px)`;
           target.setAttribute("data-x", x);
