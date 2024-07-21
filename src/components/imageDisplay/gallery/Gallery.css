@@ -1,9 +1,10 @@
 /* Gallery.css */
 .gallery-masonry {
+  justify-content: center;
   display: flex;
-  margin-left: -30px; /* gutter size offset */
-  width: 70%;
-  max-width: 80%;
+  width: 80%;
+  margin: auto;
+  padding: auto;
 }
 
 .gallery-masonry-column {
@@ -19,6 +20,13 @@
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.image-button {
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Show pointer cursor */
 }
 
 /* new stuff below */
