@@ -73,7 +73,7 @@
   background: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
-  z-index: 500; /* Ensure it is above the video */
+  z-index: 500; /* Ensure it is below the video */
 }
 
 .video-thumbnail {

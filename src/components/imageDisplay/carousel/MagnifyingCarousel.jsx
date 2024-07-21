@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Carousel as ResponsiveCarousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Carousel.css";
@@ -7,9 +7,9 @@ import Modal from "../modal/Modal";
 const Carousel = ({ initialImage, images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState({ src: "", alt: "" });
-
-  // State for controlling autoPlay
   const [autoPlay, setAutoPlay] = useState(true);
+  const [currentOrientation, setCurrentOrientation] = useState("landscape");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const imageList = useMemo(
     () =>
@@ -30,31 +30,52 @@ const Carousel = ({ initialImage, images }) => {
   const openModal = (src, alt) => {
     setModalImage({ src, alt });
     setIsModalOpen(true);
-    setAutoPlay(false); // Pause the carousel
+    setAutoPlay(false);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setModalImage({ src: "", alt: "" });
-    setAutoPlay(true); // Resume the carousel
+    setAutoPlay(true);
   };
 
-  /*
- instead of autoPlay={false} can change to below for it to auto stop auto loop when opening modal
- autoPlay={autoPlay} 
+  const getOrientation = (src) => {
+    const img = new Image();
+    img.src = src;
+    return new Promise((resolve) => {
+      img.onload = () => {
+        resolve(img.width > img.height ? "landscape" : "portrait");
+      };
+    });
+  };
 
- */
+  useEffect(() => {
+    const updateOrientation = async () => {
+      const currentImage = imageList[currentIndex];
+      const orientation = await getOrientation(currentImage.src);
+      setCurrentOrientation(orientation);
+    };
+
+    updateOrientation();
+  }, [currentIndex, imageList]);
 
   return (
-    <div className="carousel-container">
+    <div className={`carousel-container ${currentOrientation}`}>
       <ResponsiveCarousel
         showThumbs={false}
-        autoPlay={false}
+        autoPlay={autoPlay}
         infiniteLoop
         showStatus={false}
         showIndicators={false}
         dynamicHeight={true}
-        selectedItem={validIndex} // Set initial item
+        selectedItem={validIndex}
+        onChange={(index) => {
+          setCurrentIndex(index);
+          const currentImage = imageList[index];
+          getOrientation(currentImage.src).then((orientation) =>
+            setCurrentOrientation(orientation)
+          );
+        }}
       >
         {imageList.map((image, index) => (
           <div key={index} onClick={() => openModal(image.src, image.alt)}>

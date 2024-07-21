@@ -49,3 +49,11 @@
   height: auto;
   width: auto;
 }
+
+/* Styles for landscape images */
+.carousel-container.landscape {
+}
+
+/* Styles for portrait images */
+.carousel-container.portrait {
+}
