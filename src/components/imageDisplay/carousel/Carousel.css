@@ -6,3 +6,37 @@
 .carousel.carousel-slider .control-arrow {
   width: 80px;
 }
+
+/* new stuff below */
+
+.carousel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.close-carousel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.carousel-image.styled {
+  transform: scale(1.1); /* Example: slightly zoom in */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Example: add shadow */
+}

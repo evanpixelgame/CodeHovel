@@ -31,12 +31,20 @@ const Gallery = () => {
     >
       {imageList.map((image, index) => (
         <div key={index} className="gallery-item">
-          <img
-            src={image.src}
-            alt={image.alt}
-            loading="lazy"
-            className="gallery-image"
-          />
+          <button
+            type="button"
+            className="image-button"
+            onClick={() => {
+              console.log("clicked");
+            }}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              className="gallery-image"
+            />
+          </button>
         </div>
       ))}
     </Masonry>
