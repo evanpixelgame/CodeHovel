@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Masonry from "react-masonry-css";
 import "./Gallery.css";
-import Carousel from "../carousel/Carousel";
+import Carousel from "../carousel/MagnifyingCarousel";
 
 const images = import.meta.glob(
   "/src/assets/images/testPhotos/*.{jpg,png,jpeg}",
