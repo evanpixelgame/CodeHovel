@@ -1,15 +1,15 @@
-import "./ImageDisplay.css";
+import "./VideoDisplay.css";
 import Gallery from "../../../components/imageDisplay/gallery/MagnifyingGallery";
 import Carousel from "../../../components/imageDisplay//carousel/MagnifyingCarousel";
 import Videos from "../../../components/imageDisplay/videoGallery/VideoGallery";
 
-const ImageDisplay = () => {
+const VideoDisplay = () => {
   return (
     <>
       <div id="image-display-page">
-        <Gallery />
+        <Videos />
       </div>
     </>
   );
 };
-export default ImageDisplay;
+export default VideoDisplay;

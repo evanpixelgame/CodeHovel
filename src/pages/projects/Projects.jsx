@@ -11,11 +11,14 @@ const Projects = () => {
         <Header />
         <div className="project-list-container">
           <h3> Projects</h3>
-          <nav>
-            <button type="button" className="project-link-button">
-              <Link to="imageDisplay">Image Display Components</Link>
-            </button>
-          </nav>
+
+          <button type="button" className="project-link-button">
+            <Link to="videoDisplay">Baby Bird Video Gallery</Link>
+          </button>
+          <button type="button" className="project-link-button">
+            <Link to="imageDisplay">Image Display Components</Link>
+          </button>
+
           <Outlet />
         </div>
       </div>

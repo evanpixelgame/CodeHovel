@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useThemeContext } from "./components/ThemeCustomizer/provider/ContextProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { HomePage, About, Contact, Projects, ImageDisplay } from "./pages";
+import {
+  HomePage,
+  About,
+  Contact,
+  Projects,
+  ImageDisplay,
+  VideoDisplay,
+} from "./pages";
 
 function App() {
   const { theme } = useThemeContext();
@@ -18,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects/*" element={<Projects />}>
             <Route path="imageDisplay" element={<ImageDisplay />} />
+            <Route path="videoDisplay" element={<VideoDisplay />} />
           </Route>
           <Route path="*" element={<HomePage />} />
         </Routes>
