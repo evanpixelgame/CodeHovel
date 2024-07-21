@@ -69,6 +69,9 @@ const VideoGallery = () => {
 
   return (
     <div>
+      <h1 id="baby-bird-message">
+        Click <br /> to play <br /> Baby Bird <br /> Videos!
+      </h1>
       <Masonry
         breakpointCols={{
           default: 2,
