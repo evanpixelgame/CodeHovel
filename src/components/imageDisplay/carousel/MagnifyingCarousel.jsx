@@ -46,13 +46,18 @@ const Carousel = ({ initialImage, images }) => {
         autoPlay={autoPlay}
         infiniteLoop
         showStatus={false}
-        showIndicators={true}
+        showIndicators={false}
         dynamicHeight={true}
         selectedItem={validIndex} // Set initial item
       >
         {imageList.map((image, index) => (
           <div key={index} onClick={() => openModal(image.src, image.alt)}>
-            <img src={image.src} alt={image.alt} loading="lazy" />
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              className="carousel-img"
+            />
           </div>
         ))}
       </ResponsiveCarousel>

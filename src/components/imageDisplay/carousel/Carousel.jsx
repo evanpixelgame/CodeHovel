@@ -29,7 +29,9 @@ const Carousel = () => {
       >
         {imageList.map((image, index) => (
           <div key={index}>
-            <img src={image.src} alt={image.alt} loading="lazy" />
+            <div className="carousel-image-wrapper">
+              <img src={image.src} alt={image.alt} loading="lazy" />
+            </div>
           </div>
         ))}
       </ResponsiveCarousel>

@@ -43,11 +43,8 @@
   cursor: pointer;
 }
 
-.carousel-image {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.carousel-image.styled {
-  transform: scale(1.1); /* Example: slightly zoom in */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Example: add shadow */
+.carousel-img {
+  padding: 10%;
+  height: auto;
+  width: auto;
 }
