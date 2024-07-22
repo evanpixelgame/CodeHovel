@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useThemeContext } from "./components/ThemeCustomizer/provider/ContextProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,25 +13,51 @@ import {
   VideoDisplay,
 } from "./pages";
 
+// Define your routes using createBrowserRouter
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/projects",
+    element: <Projects />,
+  },
+  {
+    path: "/noFormat",
+    element: <NoFormat />,
+    children: [
+      {
+        path: "imageDisplay",
+        element: <ImageDisplay />,
+      },
+      {
+        path: "videoDisplay",
+        element: <VideoDisplay />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <HomePage />,
+  },
+]);
+
 function App() {
   const { theme } = useThemeContext();
 
   return (
     <div className={`app ${theme}`}>
       <ToastContainer />
-      <Router>
-        <Routes>
-          <Route path="/CodeHovel" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/noFormat/*" element={<NoFormat />}>
-            <Route path="imageDisplay" element={<ImageDisplay />} />
-            <Route path="videoDisplay" element={<VideoDisplay />} />
-          </Route>
-          <Route path="*" element={<HomePage />} />
-        </Routes>
-      </Router>
+      <RouterProvider router={router} />
     </div>
   );
 }
