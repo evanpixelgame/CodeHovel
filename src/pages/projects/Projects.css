@@ -52,3 +52,7 @@
   background-color: #3633e5b7;
   border-color: #3633e58e;
 }
+
+.theme-customizer-button-container {
+  padding-top: 10px;
+}

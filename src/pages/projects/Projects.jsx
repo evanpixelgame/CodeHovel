@@ -1,10 +1,13 @@
 import "./Projects.css";
-import React from "react";
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import ThemeCustomizer from "../../components/ThemeCustomizer/ThemeCustomizer";
+import ShowCustomizerButton from "../../components/ThemeCustomizer/subcomponents/ShowCustomizerButton";
 
 const Projects = () => {
+  const [showCustomizer, setShowCustomizer] = useState(false);
   return (
     <>
       <div className="projects-page">
@@ -19,6 +22,20 @@ const Projects = () => {
           </button>
 
           <Outlet />
+
+          <ThemeCustomizer
+            showCustomizer={showCustomizer}
+            setShowCustomizer={setShowCustomizer}
+          />
+          {showCustomizer && <ThemeCustomizer />}
+
+          <div className="theme-customizer-button-container">
+            <ShowCustomizerButton
+              showCustomizer={showCustomizer}
+              setShowCustomizer={setShowCustomizer}
+            />
+          </div>
+          <Footer />
         </div>
       </div>
     </>
