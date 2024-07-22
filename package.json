@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "/CodeHovel",
+  "homepage": "https://github.com/evanpixelgame/CodeHovel.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
