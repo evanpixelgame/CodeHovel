@@ -2,14 +2,13 @@
 .gallery-masonry {
   justify-content: center;
   display: flex;
-  width: 80%;
+  width: 90%; /* for most uses 80% is plenty, 90% just for somee photo sites to really highlight the photo/photo quality */
   margin: auto;
   padding: auto;
 }
 
 .gallery-masonry-column {
   padding-left: 30px; /* gutter size */
-  background-clip: padding-box;
 }
 
 .gallery-item {
@@ -20,13 +19,15 @@
   width: 100%;
   display: block;
   object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.gallery-image:hover {
+  filter: brightness(50%); /* Darken the image on hover */
 }
 
 .image-button {
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  padding: 0; /* Remove padding */
-  cursor: pointer; /* Show pointer cursor */
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
-
-/* new stuff below */
