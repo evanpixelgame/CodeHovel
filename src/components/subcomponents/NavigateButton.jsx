@@ -10,7 +10,17 @@ const NavigateButton = ({ path, id }) => {
   };
 
   return (
-    <button className="theme-button" id={id} onClick={handleClick}>
+    <button
+      className="navigate-button"
+      id={id}
+      onClick={handleClick}
+      style={{
+        backgroundColor: "transparent",
+        position: "absolute",
+        left: "20px",
+        top: "20px",
+      }}
+    >
       <FontAwesomeIcon icon={faChevronLeft} />
     </button>
   );
