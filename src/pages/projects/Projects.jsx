@@ -4,8 +4,6 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
-// if its a direct route subpath can shorten it to relative to the parent like this if this route/link was child of projects route ex:  <Link to="videoDisplayNoFormat">
-
 const Projects = () => {
   return (
     <>
