@@ -24,7 +24,7 @@ function App() {
           <Route path="/CodeHovel" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects/*" element={<Projects />}></Route>
+          <Route path="/projects" element={<Projects />} />
           <Route path="/noFormat/*" element={<NoFormat />}>
             <Route path="imageDisplay" element={<ImageDisplay />} />
             <Route path="videoDisplay" element={<VideoDisplay />} />

@@ -37,3 +37,46 @@ ADD A BUNCH OF TINY projects and apps all throughout to demonstrate the abilitie
 add things like the customizer and others and put them in clever places in the site and make them do interesting things while being neatly done to show skills
 
 
+
+{
+  "name": "code-hovel-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://github.com/evanpixelgame/CodeHovel.git",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "interactjs": "^1.10.27",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-draggable": "^4.4.6",
+    "react-masonry-css": "^1.0.16",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.25.1",
+    "react-toastify": "^10.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.3.1",
+    "vite-plugin-svgr": "^4.2.0"
+  }
+}
+
+
+
