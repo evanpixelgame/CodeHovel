@@ -2,12 +2,14 @@ import "./ImageDisplay.css";
 import Gallery from "../../../components/MediaDisplay/ImageDisplay/Gallery/MagnifyingGallery";
 import Carousel from "../../../components/MediaDisplay/ImageDisplay/Carousel/MagnifyingCarousel";
 import HellerPhotoLogo from "../../../assets/media/logos/HellerPhotoLogoLightBlueLetterCrop.png";
+import NavigateButton from "../../../components/subcomponents/NavigateButton";
 
 const ImageDisplay = () => {
   return (
     <>
       <div id="image-display-page">
         <div class="title-container">
+          <NavigateButton path="/projects" id="go-back-button" />
           <img src={HellerPhotoLogo} alt="" />
           <div class="vertical-line"></div>
           <h1

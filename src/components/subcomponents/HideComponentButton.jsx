@@ -10,3 +10,5 @@ const HideComponentButton = ({ hideComponent, id }) => {
 };
 
 export default HideComponentButton;
+
+///MAKE A RETURN COMPONENT
